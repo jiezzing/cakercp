@@ -46,7 +46,6 @@
 			'bootstrap.js',
 			'inspinia.js',
 
-			// Plugins
             'plugins/metisMenu/jquery.metisMenu.js',
             'plugins/slimscroll/jquery.slimscroll.min.js',
             'plugins/flot/jquery.flot.js',
@@ -78,7 +77,6 @@
             'plugins/chosen/chosen.jquery.js',
             'plugins/fullcalendar/moment.min.js',
 			'plugins/daterangepicker/daterangepicker.js',
-
 			'plugins/switchery/switchery.js'
 		));
 

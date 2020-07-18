@@ -4,7 +4,23 @@
 
 	class RCPController extends Controller {
 
+		public $uses = array(
+            'Company'
+		);
+
+		public function beforeFilter() {
+            parent::beforeFilter();
+        }
+
 		public function create() {
-			# code...
+			$companies = $this->Company->find('all', array(
+				'fields' => array(
+					'Company.id',
+					'Company.code',
+					'Company.name',
+				)
+			));
+
+			debug($companies);
 		}
 	}
