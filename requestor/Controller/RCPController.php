@@ -1,8 +1,6 @@
 <?php
 
-	App::uses('Controller', 'Controller');
-
-	class RCPController extends Controller {
+	class RCPController extends AppController {
 
 		public $uses = array(
             'Company'
@@ -20,7 +18,5 @@
 					'Company.name',
 				)
 			));
-
-			debug($companies);
 		}
 	}

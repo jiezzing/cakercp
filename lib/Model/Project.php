@@ -6,9 +6,4 @@
 
         public $usesTable = 'projects';
 
-		public function all() {
-			$projects = $this->find('all');
-
-			return $projects;
-		}
     }

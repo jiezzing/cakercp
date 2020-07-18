@@ -15,10 +15,10 @@
         }
 
 		public function create() {
-			$companies = $this->Company->all();
-			$departments = $this->Department->all();
-			$projects = $this->Project->all();
-			$userTypes = $this->UserType->all();
+			$companies = $this->Company->find('all');
+			$departments = $this->Department->find('all');
+			$projects = $this->Project->find('all');
+			$userTypes = $this->UserType->find('all');
 
 			$this->set('companies', $companies);
 			$this->set('departments', $departments);
