@@ -2,7 +2,7 @@
 	<div>
 		<div>
 
-			<h1 class="logo-name">RCP</h1>
+			<h1 class="logo-name">RCP Test</h1>
 
 		</div>
 		<h3>Request for Check Payment</h3>
