@@ -6,9 +6,4 @@
 
         public $usesTable = 'companies';
 
-		public function all() {
-			$companies = $this->find('all');
-
-			return $companies;
-		}
     }

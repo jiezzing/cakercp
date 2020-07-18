@@ -6,29 +6,29 @@
 		public $components = array(
 			'RequestHandler',
 			'Session',
-			'Auth' => array(
-				'loginRedirect' => array(
-					'controller' => 'home',
-					'action' => 'index'
-				),
-				'logoutRedirect' => array(
-					'controller' => 'login',
-					'action' => 'index'
-				),
-				'authenticate' => array(
-					'Form' => array(
-						'userModel' => 'User',
-						'fields' => array(
-							'username' => 'email',
-							'password' => 'password'
-						)
-					)
-				),
-				'loginAction' => array(
-					'controller' => 'login',
-					'action' => 'index'
-				)
-			)
+			// 'Auth' => array(
+			// 	'loginRedirect' => array(
+			// 		'controller' => 'home',
+			// 		'action' => 'index'
+			// 	),
+			// 	'logoutRedirect' => array(
+			// 		'controller' => 'login',
+			// 		'action' => 'index'
+			// 	),
+			// 	'authenticate' => array(
+			// 		'Form' => array(
+			// 			'userModel' => 'User',
+			// 			'fields' => array(
+			// 				'username' => 'email',
+			// 				'password' => 'password'
+			// 			)
+			// 		)
+			// 	),
+			// 	'loginAction' => array(
+			// 		'controller' => 'login',
+			// 		'action' => 'index'
+			// 	)
+			// )
 		);
 
 		public function beforeFilter() {
