@@ -109,8 +109,8 @@
 
 
 		<li>
-			<a href="login.html">
-				<i class="fa fa-sign-out"></i> Log out
+			<a href="<?php echo $this->params->base . "/logout" ?>">
+				<i class="fa fa-sign-out"></i> Logout
 			</a>
 		</li>
 	</ul>

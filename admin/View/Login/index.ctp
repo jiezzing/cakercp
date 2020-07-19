@@ -6,19 +6,50 @@
 
 		</div>
 		<h3>Request for Check Payment</h3>
-		<form class="m-t" role="form" action="index.html">
 			<div class="form-group">
-				<input type="email" class="form-control" placeholder="Username" required="">
+				<input type="email" class="form-control" placeholder="Username" id="username" required="">
 			</div>
 			<div class="form-group">
-				<input type="password" class="form-control" placeholder="Password" required="">
+				<input type="password" class="form-control" placeholder="Password" id="password" required="">
 			</div>
-			<button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+			<a href="<?php echo $this->params->base . '/login' ?>" class="btn btn-primary block full-width m-b" id="login_btn">Login</a>
 
 			<a href="#"><small>Forgot password?</small></a>
-			<p class="text-muted text-center"><small>Do not have an account?</small></p>
-			<a class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>
 		</form>
 		<p class="m-t"> <small>Innoland Development Corp. &copy; <?php echo $currentYear ?></small> </p>
 	</div>
 </div>
+
+<script>
+	$(document).ready(function() {
+		$('#login_btn').on('click', function(event) {
+			event.preventDefault();
+
+			var  url = $(this).attr('href');
+			var  username = $('#username').val().trim();
+			var  password = $('#password').val().trim();
+
+			$.ajax({
+				type: 'POST',
+				url: url,
+				cache: false,
+				data: {
+					username: username,
+					password: password
+				},
+				dataType: 'json',
+				success: function(response) {
+					if (response.status) {
+						return window.location.href = response.url;
+					}
+					else {
+						return toastr.error(response.message, response.type);
+					}
+				},
+				error: function (response, desc, exception) {
+					alert(exception);
+				}
+			})
+		})
+	})
+</script>

@@ -1,10 +1,13 @@
 <?php
 
-	App::uses('Controller', 'Controller');
+	class DashboardController extends AppController {
 
-	class DashboardController extends Controller {
-
+		public function beforeFilter() {
+			parent::beforeFilter();
+        }
 		public function index() {
-
+			if(!$this->Auth->loggedIn()) {
+                return $this->redirect($this->Auth->logoutRedirect);
+            }
 		}
 	}

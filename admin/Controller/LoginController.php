@@ -2,11 +2,13 @@
 
 	class LoginController extends AppController {
 
-		public $uses = array('Company');
+		public function beforeFilter() {
+			parent::beforeFilter();
+        }
 
 		public function index() {
-			$currentYear = date('Y');
-
-			$this->set('currentYear', $currentYear);
+			if($this->Auth->loggedIn()) {
+                return $this->redirect($this->Auth->loginRedirect);
+            }
 		}
 	}
