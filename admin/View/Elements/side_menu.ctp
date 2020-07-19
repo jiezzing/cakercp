@@ -24,6 +24,9 @@
 				<a href="<?php echo $this->params->base . '/dashboard'?>"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
 			</li>
 			<li>
+				<a href="<?php echo $this->params->base . '/rcp'?>"><i class="fa fa-file"></i> <span class="nav-label">RCP</span></a>
+			</li>
+			<li>
 				<a href="#"><i class="fa fa-home fa-lg"></i><span class="nav-label">Organizations </span><span class="fa arrow"></span></a>
 				<ul class="nav nav-second-level collapse" aria-expanded="false">
 					<li><a href="<?php echo $this->params->base . '/departments' ?>">Departments</a></li>
@@ -32,16 +35,7 @@
 				</ul>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-users"></i> <span class="nav-label">Users </span><span class="fa arrow"></span></a>
-				<ul class="nav nav-second-level collapse" aria-expanded="false">
-					<li><a href="<?php echo $this->params->base . '/create' ?>">Add User</a></li>
-					<li><a href="form_basic.html">Administrator</a></li>
-					<li><a href="form_advanced.html">Requestor</a></li>
-					<li><a href="form_wizard.html">Primary</a></li>
-					<li><a href="form_wizard.html">Alternate Primary</a></li>
-					<li><a href="form_wizard.html">Secondary</a></li>
-					<li><a href="form_wizard.html">Alternate Secondary</a></li>
-				</ul>
+				<a href="<?php echo $this->params->base . '/users'?>"><i class="fa fa-users"></i> <span class="nav-label">Users</span></a>
 			</li>
 		</ul>
     </div>

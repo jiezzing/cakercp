@@ -9,6 +9,8 @@
 	Router::connect('/departments', array('controller' => 'departments', 'action' => 'index'));
 	Router::connect('/companies', array('controller' => 'companies', 'action' => 'index'));
 	Router::connect('/projects', array('controller' => 'projects', 'action' => 'index'));
+	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
+	Router::connect('/rcp', array('controller' => 'rcp', 'action' => 'index'));
 
 	CakePlugin::routes();
 

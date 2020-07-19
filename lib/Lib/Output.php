@@ -34,7 +34,13 @@
 				'failed' => 'An error has occured. Please try again',
 				'emptyField' => 'Some fields are missing. Please fill the fields required.',
 				'credential' => 'Username and password must not be empty.',
-				'invalidCredential' => 'Please check your username and password or contact the System Administrator.'
+				'invalidCredential' => 'Please check your username and password or contact the System Administrator.',
+				'noApprover' => 'No primary approver',
+				'noAltApprover' => 'No alternate primary approver',
+				'noSecondary' => 'No secondary approver',
+				'noAltSecondary' => 'No alternate secondary approver',
+				'projectExpense' => 'PROJECT EXPENSE',
+				'departmentExpense' => 'DEPARTMENT EXPENSE',
             );
 
             return $data[$key];

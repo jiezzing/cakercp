@@ -46,7 +46,6 @@
 			'bootstrap.js',
 			'inspinia.js',
 
-			// Plugins
             'plugins/metisMenu/jquery.metisMenu.js',
             'plugins/slimscroll/jquery.slimscroll.min.js',
             'plugins/flot/jquery.flot.js',
@@ -78,7 +77,6 @@
             'plugins/chosen/chosen.jquery.js',
             'plugins/fullcalendar/moment.min.js',
 			'plugins/daterangepicker/daterangepicker.js',
-
 			'plugins/switchery/switchery.js'
 		));
 
@@ -87,24 +85,34 @@
 		echo $this->fetch('script');
 	?>
 </head>
-    <body>
-		<div class="pace  pace-inactive">
-            <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
-              <div class="pace-progress-inner"></div>
-            </div>
-            <div class="pace-activity"></div>
-        </div>
-        <div id="wrapper">
-            <?php echo $this->element('side_menu') ?>
-            <div id="page-wrapper" class="gray-bg dashbard-1" style="min-height: 937px;">
+	<?php if (AuthComponent::user('id')) : ?>
+		<body>
+			<div class="pace  pace-inactive">
+				<div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+				<div class="pace-progress-inner"></div>
+				</div>
+				<div class="pace-activity"></div>
+			</div>
+			<div id="wrapper">
+				<?php echo $this->element('side_menu') ?>
+				<div id="page-wrapper" class="gray-bg dashbard-1" style="min-height: 937px;">
+					<?php
+						echo $this->element('navbar');
+						echo $this->element('header');
+						echo $this->element('floating_cog');
+						echo $this->fetch('content');
+						echo $this->element('footer');
+					?>
+				</div>
+			</div>
+		</body>
+	<?php else : ?>
+		<body class="gray-bg">
+			<div id="wrapper">
 				<?php
-					echo $this->element('navbar');
-					echo $this->element('header');
-					echo $this->element('floating_cog');
 					echo $this->fetch('content');
-					echo $this->element('footer');
 				?>
-            </div>
-        </div>
-    </body>
+			</div>
+		</body>
+	<?php endif ?>
 </html>
