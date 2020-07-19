@@ -7,6 +7,7 @@
 					<thead>
 						<tr>
 						<th><input type="checkbox" class="i-checks" name="input[]"></th>
+							<th>Code</th>
 							<th>Department</th>
 							<th>Created</th>
 							<th>Modified</th>
@@ -19,6 +20,7 @@
 								<td>
 									<input type="checkbox" class="i-checks" name="input[]">
 								</td>
+								<td><?php echo $department['Department']['code'] ?></td>
 								<td><?php echo $department['Department']['name'] ?></td>
 								<td><?php echo $department['Department']['created'] ?></td>
 								<td><?php echo $department['Department']['modified'] ?></td>
