@@ -24,6 +24,14 @@
 				<a href="<?php echo $this->params->base . '/dashboard'?>"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
 			</li>
 			<li>
+				<a href="#"><i class="fa fa-home fa-lg"></i><span class="nav-label">Organizations </span><span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse" aria-expanded="false">
+					<li><a href="<?php echo $this->params->base . '/departments' ?>">Departments</a></li>
+					<li><a href="<?php echo $this->params->base . '/companies' ?>">Companies</a></li>
+					<li><a href="<?php echo $this->params->base . '/projects' ?>">Projects</a></li>
+				</ul>
+			</li>
+			<li>
 				<a href="#"><i class="fa fa-users"></i> <span class="nav-label">Users </span><span class="fa arrow"></span></a>
 				<ul class="nav nav-second-level collapse" aria-expanded="false">
 					<li><a href="<?php echo $this->params->base . '/create' ?>">Add User</a></li>
