@@ -12,7 +12,7 @@
 			<div class="form-group">
 				<input type="password" class="form-control" placeholder="Password" id="password" required="">
 			</div>
-			<a href="<?php echo $this->params->base . '/login' ?>" class="btn btn-primary block full-width m-b" id="login_btn">Login</a>
+			<a href="<?php echo $this->params->base . '/login_user' ?>" class="btn btn-primary block full-width m-b" id="login_btn">Login</a>
 
 			<a href="#"><small>Forgot password?</small></a>
 		</form>

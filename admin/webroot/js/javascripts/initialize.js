@@ -14,16 +14,21 @@ function jsSwitch(selector, hexColor) {
 	});
 }
 
-function dataTable(selector, buttons) {
+function organizationTable(selector, text) {
 	$(selector).DataTable({
 		pageLength: 25,
-		bPaginate: false,
-		info: false,
+		bPaginate: true,
+		info: true,
 		ordering: false,
 		responsive: true,
-		searching: false,
-		dom: 'Bfrtip',
-        buttons: [buttons]
+		searching: true,
+		dom: '<"html5buttons"B>lTfgitp',
+        buttons: [{
+			text: text,
+			action: function (e, dt, node, config) {
+				alert( 'Button activated' );
+			}
+		}]
     });
 }
 
@@ -34,5 +39,12 @@ function datePicker(selector) {
 		forceParse: false,
 		calendarWeeks: true,
 		autoclose: true
+	});
+}
+
+function iChecks(selector) {
+	$(selector).iCheck({
+		checkboxClass: 'icheckbox_square-green',
+		radioClass: 'iradio_square-green',
 	});
 }
