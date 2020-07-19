@@ -16,12 +16,13 @@
             return $data;
         }
 
-        public static function success($message = null, $result = null) {
+        public static function success($message = null, $result = null, $url = null) {
             $data = array(
                 'status' => 1,
                 'message' => $message,
                 'type' => 'Success',
-                'result' => $result
+				'result' => $result,
+				'url' => $url
             );
 
             return $data;
@@ -31,7 +32,17 @@
             $data = array(
                 'register' => 'User has been successfully registered.',
 				'failed' => 'An error has occured. Please try again',
-				'emptyField' => 'Some fields are missing. Please fill the fields required.'
+				'emptyField' => 'Some fields are missing. Please fill the fields required.',
+				'credential' => 'Username and password must not be empty.',
+				'invalidCredential' => 'Please check your username and password or contact the System Administrator.'
+            );
+
+            return $data[$key];
+		}
+
+		public static function loginRedirect() {
+            $data = array(
+                'url' => $this->params->base . '/dashboard'
             );
 
             return $data[$key];

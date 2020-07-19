@@ -11,7 +11,9 @@
 		);
 
 		public function beforeFilter() {
-            parent::beforeFilter();
+			parent::beforeFilter();
+
+			$this->Auth->allow('login');
         }
 
 		public function create() {
@@ -57,7 +59,7 @@
 
 						$data['user_id'] = $result['User']['id'];
 						$data['username'] = $this->request->data['username'];
-						$data['password'] = 'password123';
+						$data['password'] = AuthComponent::password($this->request->data['username']);
 						$data['log_count'] = 0;
 						$data['email'] = $this->request->data['email'];
 
@@ -74,5 +76,44 @@
 			}
 
 			return Output::response($response);
+		}
+
+		public function login() {
+			$this->autoRender = false;
+
+			if ($this->request->is('ajax')) {
+				$hasEmptyField = Validate::loginEmptyField($this->request->data);
+
+				if ($hasEmptyField) {
+					$message = Output::message('credential');
+					$response = Output::failed($message);
+				}
+				else {
+
+					$result = $this->UserAccount->loginByUsernameAndPassword(
+						$this->request->data['username'],
+						AuthComponent::password($this->request->data['password'])
+					);
+
+					if ($result) {
+						$this->Auth->login($result['User']);
+
+						$url = $this->params->base . '/dashboard';
+						$response = Output::success(null, null, $url);
+					}
+					else {
+						$message = Output::message('invalidCredential');
+						$response = Output::failed($message);
+					}
+				}
+			}
+
+			return Output::response($response);
+		}
+
+		public function logout() {
+			$this->Auth->logout();
+
+			return $this->redirect($this->Auth->logoutRedirect);
 		}
 	}

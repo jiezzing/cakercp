@@ -80,7 +80,7 @@
 					<div class="hr-line-dashed"></div>
 					<div class="form-group row">
 						<div class="col-sm-12 col-sm-offset-2">
-							<a href="<?php echo $this->params->base . '/' . $this->params->controller . '/registerUser' ?>" class="btn btn-primary btn-sm float-right" type="submit" id="register_btn">Register User</a>
+							<a href="<?php echo $this->params->base . '/register' ?>" class="btn btn-primary btn-sm float-right" type="submit" id="register_btn">Register User</a>
 						</div>
 					</div>
 				</div>
