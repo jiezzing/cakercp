@@ -19,7 +19,7 @@ function organizationTable(selector, text) {
 		pageLength: 25,
 		bPaginate: true,
 		info: true,
-		ordering: false,
+		ordering: true,
 		responsive: true,
 		searching: true,
 		dom: '<"html5buttons"B>lTfgitp',
