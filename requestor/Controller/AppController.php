@@ -6,29 +6,25 @@
 		public $components = array(
 			'RequestHandler',
 			'Session',
-			// 'Auth' => array(
-			// 	'loginRedirect' => array(
-			// 		'controller' => 'home',
-			// 		'action' => 'index'
-			// 	),
-			// 	'logoutRedirect' => array(
-			// 		'controller' => 'login',
-			// 		'action' => 'index'
-			// 	),
-			// 	'authenticate' => array(
-			// 		'Form' => array(
-			// 			'userModel' => 'User',
-			// 			'fields' => array(
-			// 				'username' => 'email',
-			// 				'password' => 'password'
-			// 			)
-			// 		)
-			// 	),
-			// 	'loginAction' => array(
-			// 		'controller' => 'login',
-			// 		'action' => 'index'
-			// 	)
-			// )
+			'Auth' => array(
+				'loginRedirect' => array(
+					'controller' => 'dashboard',
+					'action' => 'index'
+				),
+				'logoutRedirect' => array(
+					'controller' => 'login',
+					'action' => 'index'
+				),
+				'authenticate' => array(
+					'Form' => array(
+						'userModel' => 'UserAccount'
+					)
+				),
+				'loginAction' => array(
+					'controller' => 'login',
+					'action' => 'index'
+				)
+			)
 		);
 
 		public function beforeFilter() {
@@ -42,5 +38,10 @@
 
 			// autoload library
 			App::uses('Output', 'Lib');
+			App::uses('Validate', 'Lib');
+
+			$currentYear = date('Y');
+
+			$this->set('currentYear', $currentYear);
 		}
 	}

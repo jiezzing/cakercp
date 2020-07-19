@@ -20,54 +20,35 @@
 								<div class="row" data-select2-id="11">
 									<div class="col-md-4" data-select2-id="10">
 										<h5>Department</h5>
-										<select class="form-control select2-hidden-accessible chosen_select" id="department" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option data-select2-id="8"></option>
-											<option value="Bahamas" data-select2-id="21">Bahamas</option>
-											<option value="Bahrain" data-select2-id="22">Bahrain</option>
-											<option value="Bangladesh" data-select2-id="23">Bangladesh</option>
-											<option value="Barbados" data-select2-id="24">Barbados</option>
-											<option value="Belarus" data-select2-id="25">Belarus</option>
-											<option value="Belgium" data-select2-id="26">Belgium</option>
-											<option value="Belize" data-select2-id="27">Belize</option>
-											<option value="Benin" data-select2-id="28">Benin</option>
+										<select class="form-control select2-hidden-accessible chosen_select" id="department" data-select2-id="6" tabindex="-1" aria-hidden="true" url="<?php echo $this->params->base . "/dept_approvers" ?>">
+											<option data-select2-id="8">Select Department</option>
+											<?php foreach ($departments as $department) : ?>
+												<option value="<?php echo $department['Department']['id'] ?>" data-select2-id="21"><?php echo $department['Department']['name'] ?></option>
+											<?php endforeach ?>
 										</select>
 									</div>
 
 									<div class="col-md-3" data-select2-id="20">
 										<h5>Approver</h5>
 										<select class="form-control select2-hidden-accessible chosen_select" id="approver" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option data-select2-id="8"></option>
-											<option value="Bahamas" data-select2-id="21">Bahamas</option>
-											<option value="Bahrain" data-select2-id="22">Bahrain</option>
-											<option value="Bangladesh" data-select2-id="23">Bangladesh</option>
-											<option value="Barbados" data-select2-id="24">Barbados</option>
-											<option value="Belarus" data-select2-id="25">Belarus</option>
-											<option value="Belgium" data-select2-id="26">Belgium</option>
-											<option value="Belize" data-select2-id="27">Belize</option>
-											<option value="Benin" data-select2-id="28">Benin</option>
+											<option data-select2-id="8">Select Department First</option>
 										</select>
 									</div>
 									<div class="col-md-3" data-select2-id="20">
 										<h5>Project</h5>
 										<select class="form-control select2-hidden-accessible chosen_select" id="project" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option data-select2-id="8"></option>
-											<option value="Bahamas" data-select2-id="21">Bahamas</option>
-											<option value="Bahrain" data-select2-id="22">Bahrain</option>
-											<option value="Bangladesh" data-select2-id="23">Bangladesh</option>
-											<option value="Barbados" data-select2-id="24">Barbados</option>
-											<option value="Belarus" data-select2-id="25">Belarus</option>
-											<option value="Belgium" data-select2-id="26">Belgium</option>
-											<option value="Belize" data-select2-id="27">Belize</option>
-											<option value="Benin" data-select2-id="28">Benin</option>
+											<option data-select2-id="8">Select Project</option>
+											<?php foreach ($projects as $project) : ?>
+												<option value="<?php echo $project['Project']['id'] ?>" data-select2-id="21"><?php echo $project['Project']['name'] ?></option>
+											<?php endforeach ?>
 										</select>
 									</div>
 									<div class="col-md-2" data-select2-id="20">
 
-									<h5>Construction Type</h5>
+									<h5 id="expense_title">PROJECT EXPENSE</h5>
 										<div>
 											<span >
-												<input type="checkbox" class="expense_type switcher" checked="" data-switchery="true" style="display: none;">
-												<label class="ml-2">PROJECT EXPENSE</label>
+												<input type="checkbox" class="expense_type switcher" checked="" data-switchery="true" style="display: none;" id="expense_type" url="<?php echo $this->params->base . '/expense_type' ?>">
 											</span>
 										</div>
 
@@ -83,15 +64,10 @@
 									<div class="col-md-4" data-select2-id="10">
 										<h5>Company</h5>
 										<select class="form-control select2-hidden-accessible chosen_select" id="company" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option data-select2-id="8"></option>
-											<option value="Bahamas" data-select2-id="21">Bahamas</option>
-											<option value="Bahrain" data-select2-id="22">Bahrain</option>
-											<option value="Bangladesh" data-select2-id="23">Bangladesh</option>
-											<option value="Barbados" data-select2-id="24">Barbados</option>
-											<option value="Belarus" data-select2-id="25">Belarus</option>
-											<option value="Belgium" data-select2-id="26">Belgium</option>
-											<option value="Belize" data-select2-id="27">Belize</option>
-											<option value="Benin" data-select2-id="28">Benin</option>
+											<option data-select2-id="8">Select Company</option>
+											<?php foreach ($companies as $company) : ?>
+												<option value="<?php echo $company['Company']['id'] ?>" data-select2-id="21"><?php echo $company['Company']['name'] ?></option>
+											<?php endforeach ?>
 										</select>
 									</div>
 
@@ -261,6 +237,57 @@
 		dataTable('#rcp_table', buttons);
 		datePicker('#data_1 .input-group.date');
 
+		$('#department').on('change', function(event) {
+			event.preventDefault();
 
+			var id = $('#department').val();
+			var url = $(this).attr('url');
+
+
+
+			$.ajax({
+				type: 'POST',
+				url: url,
+				cache: false,
+				data: {
+					id: id
+				},
+				dataType: 'json',
+				success: function(response) {
+					$.each(response, function(index, value) {
+						$('#approver').append(`<option value="${value.id}">${value.approver}</option>`).trigger("chosen:updated");
+					})
+
+				},
+				error: function (response, desc, exception) {
+					alert(exception);
+				}
+			}).done(function() {
+				$('#approver').children().remove();
+			})
+		})
+
+		$('#expense_type').on('change', function(event) {
+			event.preventDefault();
+
+			var checked = $(this).prop("checked");
+			var url = $(this).attr("url");
+
+			$.ajax({
+				type: 'POST',
+				url: url,
+				cache: false,
+				data: {
+					checked: checked
+				},
+				dataType: 'json',
+				success: function(response) {
+					$('#expense_title').text(response.message);
+				},
+				error: function (response, desc, exception) {
+					alert(exception);
+				}
+			})
+		})
 	});
 </script>

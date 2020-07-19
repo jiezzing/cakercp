@@ -16,6 +16,74 @@
 			$this->Auth->allow('login');
         }
 
+		public function index() {
+			if(!$this->Auth->loggedIn()) {
+                return $this->redirect($this->Auth->loginRedirect);
+			}
+
+			$users = $this->User->find('all', array(
+				'joins' => array(
+					array(
+        				'alias' => 'Department',
+        				'table' => 'departments',
+        				'type' => 'INNER',
+        				'conditions' => array(
+        					'Department.id = User.dept_id'
+        				)
+					),
+					array(
+        				'alias' => 'Company',
+        				'table' => 'companies',
+        				'type' => 'INNER',
+        				'conditions' => array(
+        					'Company.id = User.comp_id'
+        				)
+					),
+					array(
+        				'alias' => 'Project',
+        				'table' => 'projects',
+        				'type' => 'INNER',
+        				'conditions' => array(
+        					'Project.id = User.proj_id'
+        				)
+					),
+					array(
+        				'alias' => 'UserType',
+        				'table' => 'user_types',
+        				'type' => 'INNER',
+        				'conditions' => array(
+        					'UserType.id = User.type_id'
+        				)
+        			),
+					array(
+        				'alias' => 'UserAccount',
+        				'table' => 'user_accounts',
+        				'type' => 'INNER',
+        				'conditions' => array(
+        					'UserAccount.user_id = User.id'
+        				)
+        			)
+				),
+				'fields' => array(
+					'User.firstname',
+					'User.lastname',
+					'User.middle_initial',
+					'User.created',
+					'User.modified',
+					'Department.name',
+					'Project.name',
+					'Company.name',
+					'UserType.name',
+					'UserAccount.username',
+					'UserAccount.password',
+					'UserAccount.email',
+					'UserAccount.log_count'
+				)
+			));
+
+			$this->set('users', $users);
+		}
+
 		public function create() {
 			$companies = $this->Company->find('all');
 			$departments = $this->Department->find('all');
@@ -44,6 +112,7 @@
 					$data['comp_id'] = $this->request->data['company'];
 					$data['dept_id'] = $this->request->data['department'];
 					$data['proj_id'] = $this->request->data['project'];
+					$data['type_id'] = $this->request->data['userType'];
 					$data['firstname'] = $this->request->data['firstname'];
 					$data['lastname'] = $this->request->data['lastname'];
 					$data['middle_initial'] = $this->request->data['middleInitial'];

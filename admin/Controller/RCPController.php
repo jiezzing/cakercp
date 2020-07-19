@@ -1,14 +1,18 @@
 <?php
 
-	class LoginController extends AppController {
+	class RCPController extends AppController {
+
+		public $uses = array(
+			'Rcp'
+		);
 
 		public function beforeFilter() {
 			parent::beforeFilter();
         }
 
 		public function index() {
-			if($this->Auth->loggedIn()) {
+			if(!$this->Auth->loggedIn()) {
                 return $this->redirect($this->Auth->loginRedirect);
-            }
+			}
 		}
 	}
