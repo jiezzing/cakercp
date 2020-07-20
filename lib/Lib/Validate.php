@@ -20,29 +20,26 @@
 
 		public static function rcpEmptyField($data = array()) {
             foreach ($data as $key => $value) {
-				if (empty($value) && ($key != 'rushDate' && $key != 'justification')) {
+				if (empty($value) && ($key != 'dueDate' && $key != 'justification')) {
 					return true;
 				}
 			}
         }
 
-		public static function isRushEmpty($data = array()) {
-            foreach ($data as $key => $value) {
-				if ($key == 'dueDate' || $key == 'justification') {
-					if (empty($value)) {
-						return true;
-					}
+		public static function rushHasBeenFilled($data = array()) {
+			if (!empty($data['dueDate']) && empty($data['justification'])) {
+				return true;
+			}
+			else {
+				if (empty($data['dueDate']) && !empty($data['justification'])) {
+					return true;
 				}
 			}
 		}
 
 		public static function isRush($data = array()) {
-            foreach ($data as $key => $value) {
-				if ($key == 'dueDate' || $key == 'justification') {
-					if (!empty($value)) {
-						return true;
-					}
-				}
+            if (!empty($data['dueDate']) && !empty($data['justification'])) {
+				return true;
 			}
         }
 	}

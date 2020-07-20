@@ -20,6 +20,16 @@
 			if(!$this->Auth->loggedIn()) {
                 return $this->redirect($this->Auth->loginRedirect);
 			}
+
+			$rcps = $this->Rcp->all($this->Auth->user('id'));
+			$pending = $this->Rcp->all($this->Auth->user('id'), 1);
+			$approved = $this->Rcp->all($this->Auth->user('id'), 2);
+			$declined = $this->Rcp->all($this->Auth->user('id'), 3);
+
+			$this->set('rcps', $rcps);
+			$this->set('pending', $pending);
+			$this->set('approved', $approved);
+			$this->set('declined', $declined);
 		}
 
 		public function create() {
@@ -238,29 +248,13 @@
 			return Output::response($response);
 		}
 
-		public function expenseType() {
-			$this->autoRender = false;
-
-			if ($this->request->is('ajax')) {
-				if ($this->request->data['checked'] == 'true') {
-					$message = Output::message('projectExpense');
-				}
-				else {
-					$message = Output::message('departmentExpense');
-				}
-
-				$response = Output::success($message);
-			}
-
-			return Output::response($response);
-		}
-
 		public function sendRcp() {
 			$this->autoRender = false;
 
 			if ($this->request->is('ajax')) {
 				$hasEmpty = Validate::rcpEmptyField($this->request->data);
-				$isRushEmpty = Validate::isRushEmpty($this->request->data);
+				$isRushEmpty = Validate::rushHasBeenFilled($this->request->data);
+				$isRush = Validate::isRush($this->request->data);
 
 				if ($hasEmpty) {
 					$message = Output::message('emptyField');
@@ -285,7 +279,7 @@
 					$data['amount_in_words'] = $this->request->data['amountInWords'];
 					$data['expense_type'] = $this->request->data['expenseType'];
 
-					if ($isRushEmpty) {
+					if ($isRush) {
 						$data['is_rush'] = 1;
 					}
 					else {
@@ -295,7 +289,6 @@
 					$data['is_vatable'] = 0;
 					$data['is_edited'] = 0;
 					$data['created'] = date('Y-m-d H:i:s');
-					$data['status_id'] = 1;
 
 					$this->Rcp->set($data);
 
@@ -305,8 +298,6 @@
 						$message = Output::message('rcp');
 						$response = Output::success($message);
 
-						$isRush = Validate::isRush($this->request->data);
-
 						if ($isRush) {
 							$this->RcpRush->create();
 
@@ -314,7 +305,6 @@
 							$data['due_date'] = date('Y-m-d', strtotime($this->request->data['dueDate']));
 							$data['justification'] = $this->request->data['justification'];
 							$data['created'] = date('Y-m-d H:i:s');
-							$data['status_id'] = 1;
 
 							$this->RcpRush->set($data);
 
@@ -336,7 +326,6 @@
 							$data['refCode'] = $refCode[$key];
 							$data['amount'] = $amount[$key];
 							$data['created'] = date('Y-m-d H:i:s');
-							$data['status_id'] = 1;
 
 							$this->RcpParticular->set($data);
 

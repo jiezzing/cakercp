@@ -1,7 +1,7 @@
 <div class="theme-config">
     <div class="theme-config-box">
         <div class="spin-icon">
-            <i class="fa fa-send fa-spin"></i>
+            <i class="fa fa-send"></i>
         </div>
         <div class="skin-settings">
 			<div class="title">Request for Check Payment<br>
@@ -92,7 +92,7 @@
 				processData: false,
 				success: function(response) {
 					if (response.status) {
-						return toastr.success(response.message, response.type)
+						return toastr.success(response.message, response.rcp_no)
 					}
 					else {
 						return toastr.error(response.message, response.type)

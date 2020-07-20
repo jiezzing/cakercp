@@ -48,7 +48,7 @@
 									<h5 id="expense_title">PROJECT EXPENSE</h5>
 										<div>
 											<span >
-												<input type="checkbox" class="expense_type switcher" checked="" data-switchery="true" style="display: none;" id="expense_type" url="<?php echo $this->params->base . '/expense_type' ?>">
+												<input type="checkbox" class="expense_type switcher" checked="" data-switchery="true" style="display: none;" id="expense_type"">
 											</span>
 										</div>
 
@@ -222,11 +222,6 @@
 
 <script>
 	$(document).ready(function() {
-		// initializations
-		chosenSelect('.chosen_select');
-		jsSwitch('.switcher', '#ED5565');
-		dataTable('#rcp_table', buttons);
-		datePicker('#data_1 .input-group.date');
 		var buttons = {
                 text: 'Add New Row',
                 action: function (e, dt, node, config) {
@@ -253,6 +248,12 @@
 					}
 				}
             }
+
+		// initializations
+		chosenSelect('.chosen_select');
+		jsSwitch('.switcher', '#ED5565');
+		rcpTable('#rcp_table', buttons);
+		datePicker('#data_1 .input-group.date');
 
 		$('#department').on('change', function(event) {
 			event.preventDefault();
@@ -287,21 +288,12 @@
 			var checked = $(this).prop("checked");
 			var url = $(this).attr("url");
 
-			$.ajax({
-				type: 'POST',
-				url: url,
-				cache: false,
-				data: {
-					checked: checked
-				},
-				dataType: 'json',
-				success: function(response) {
-					$('#expense_title').text(response.message);
-				},
-				error: function (response, desc, exception) {
-					alert(exception);
-				}
-			})
+			if (checked) {
+				$('#expense_title').text("PROJECT EXPENSE");
+			}
+			else {
+				$('#expense_title').text("DEPARTMENT EXPENSE");
+			}
 		})
 
 		$(document).on('click', '.remove', function(event) {

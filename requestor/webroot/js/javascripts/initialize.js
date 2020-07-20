@@ -14,7 +14,7 @@ function jsSwitch(selector, hexColor) {
 	});
 }
 
-function dataTable(selector, buttons) {
+function rcpTable(selector, buttons) {
 	$(selector).DataTable({
 		pageLength: 25,
 		bPaginate: false,
@@ -24,6 +24,26 @@ function dataTable(selector, buttons) {
 		searching: false,
 		dom: 'Bfrtip',
 		buttons: [buttons]
+    });
+}
+
+function iChecks(selector) {
+	$(selector).iCheck({
+		checkboxClass: 'icheckbox_square-green',
+		radioClass: 'iradio_square-green',
+	});
+}
+
+function dataTable(selector) {
+	$(selector).DataTable({
+		pageLength: 25,
+		bPaginate: true,
+		info: true,
+		ordering: true,
+		responsive: true,
+		searching: true,
+		dom: '<"html5buttons"B>lTfgitp',
+		buttons: []
     });
 }
 

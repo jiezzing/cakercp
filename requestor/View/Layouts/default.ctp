@@ -100,6 +100,9 @@
 				<div id="page-wrapper" class="gray-bg dashbard-1" style="min-height: 937px;">
 					<?php
 						echo $this->element('navbar');
+						if ($this->params->controller == 'dashboard') {
+							echo $this->element('sidebar_panel');
+						}
 						echo $this->element('header');
 						if ($this->params->controller == "rcp") {
 							echo $this->element('floating_cog');

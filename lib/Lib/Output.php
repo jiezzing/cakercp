@@ -41,7 +41,7 @@
 				'noAltSecondary' => 'No alternate secondary approver',
 				'projectExpense' => 'PROJECT EXPENSE',
 				'departmentExpense' => 'DEPARTMENT EXPENSE',
-				'rcp' => 'Request for Check Payment has been sent.',
+				'rcp' => 'Request for Check Payment has been successfully sent.',
 				'rush' => 'It seems that this RCP is rushed. Please have your due date, justifcation and an attached file.'
             );
 

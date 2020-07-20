@@ -20,25 +20,20 @@
 					IN+
 				</div>
 			</li>
-			<li>
-				<a href="<?php echo $this->params->base . '/dashboard'?>"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
-			</li>
-			<li>
-				<a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Check Payments </span><span class="fa arrow"></span></a>
-				<ul class="nav nav-second-level collapse" aria-expanded="false">
-					<li><a href="form_basic.html">Pending</a></li>
-					<li><a href="form_advanced.html">Approved</a></li>
-					<li><a href="form_wizard.html">Declined</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Report Generation</span></a>
-			</li>
-			<li>
-				<a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Profile</span></a>
-			</li>
 			<li class="special_link">
-				<a href="<?php echo $this->params->base . '/create'?>"><i class="fa fa-database"></i> <span class="nav-label">Create RCP</span></a>
+				<a href="<?php echo $this->params->base . '/create'?>"><i class="fa fa-file-text"></i> <span class="nav-label">Create RCP</span></a>
+			</li>
+			<li>
+				<a href="<?php echo $this->params->base . '/dashboard'?>"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+			</li>
+			<li>
+				<a href="<?php echo $this->params->base . '/rcps'?>"><i class="fa fa-copy"></i> <span class="nav-label">RCP</span></a>
+			</li>
+			<li>
+				<a href="index.html"><i class="fa fa-clipboard"></i> <span class="nav-label">Report Generation</span></a>
+			</li>
+			<li>
+				<a href="index.html"><i class="fa fa-vcard"></i> <span class="nav-label">Profile</span></a>
 			</li>
 		</ul>
     </div>
