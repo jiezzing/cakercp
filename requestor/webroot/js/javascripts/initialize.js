@@ -23,7 +23,7 @@ function dataTable(selector, buttons) {
 		responsive: true,
 		searching: false,
 		dom: 'Bfrtip',
-        buttons: [buttons]
+		buttons: [buttons]
     });
 }
 

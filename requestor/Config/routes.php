@@ -7,6 +7,8 @@
 	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
 	Router::connect('/dept_approvers', array('controller' => 'rcp', 'action' => 'approvers'));
 	Router::connect('/expense_type', array('controller' => 'rcp', 'action' => 'expenseType'));
+	Router::connect('/send_rcp', array('controller' => 'rcp', 'action' => 'sendRcp'));
+	Router::connect('/rcp_no', array('controller' => 'rcp', 'action' => 'rcpNo'));
 
 	CakePlugin::routes();
 

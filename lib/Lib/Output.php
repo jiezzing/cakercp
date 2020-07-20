@@ -41,16 +41,10 @@
 				'noAltSecondary' => 'No alternate secondary approver',
 				'projectExpense' => 'PROJECT EXPENSE',
 				'departmentExpense' => 'DEPARTMENT EXPENSE',
+				'rcp' => 'Request for Check Payment has been sent.',
+				'rush' => 'It seems that this RCP is rushed. Please have your due date, justifcation and an attached file.'
             );
 
             return $data[$key];
 		}
-
-		public static function loginRedirect() {
-            $data = array(
-                'url' => $this->params->base . '/dashboard'
-            );
-
-            return $data[$key];
-        }
 	}

@@ -6,7 +6,10 @@
 			'Company',
 			'Project',
 			'Department',
-			'Approver'
+			'Approver',
+			'Rcp',
+			'RcpParticular',
+			'RcpRush'
 		);
 
 		public function beforeFilter() {
@@ -62,7 +65,6 @@
 						'UserType.name'
 					)
 				));
-
 				$altApproverId = $this->Approver->find('first', array(
 					'joins' => array(
 						array(
@@ -92,7 +94,6 @@
 						'UserType.name'
 					)
 				));
-
 				$secondaryId = $this->Approver->find('first', array(
 					'joins' => array(
 						array(
@@ -122,7 +123,6 @@
 						'UserType.name'
 					)
 				));
-
 				$altSecondaryId = $this->Approver->find('first', array(
 					'joins' => array(
 						array(
@@ -152,7 +152,6 @@
 						'UserType.name'
 					)
 				));
-
 				$response = array();
 
 				if ($approverId) {
@@ -254,5 +253,126 @@
 			}
 
 			return Output::response($response);
+		}
+
+		public function sendRcp() {
+			$this->autoRender = false;
+
+			if ($this->request->is('ajax')) {
+				$hasEmpty = Validate::rcpEmptyField($this->request->data);
+				$isRushEmpty = Validate::isRushEmpty($this->request->data);
+
+				if ($hasEmpty) {
+					$message = Output::message('emptyField');
+					$response = Output::failed($message);
+				}
+				elseif ($isRushEmpty) {
+					$message = Output::message('rush');
+					$response = Output::failed($message);
+				}
+				else {
+					$this->Rcp->create();
+
+					$data['rcp_no'] = $this->rcpNo($this->request->data['department']);
+					$data['req_id'] = $this->Auth->user('id');
+					$data['app_id'] = $this->request->data['approver'];
+					$data['comp_id'] = $this->request->data['company'];
+					$data['dept_id'] = $this->request->data['department'];
+					$data['proj_id'] = $this->request->data['project'];
+					$data['payee'] = $this->request->data['payee'];
+					$data['issued_on'] = date('Y-m-d');
+					$data['amount'] = $this->request->data['amount'];
+					$data['amount_in_words'] = $this->request->data['amountInWords'];
+					$data['expense_type'] = $this->request->data['expenseType'];
+
+					if ($isRushEmpty) {
+						$data['is_rush'] = 1;
+					}
+					else {
+						$data['is_rush'] = 0;
+					}
+
+					$data['is_vatable'] = 0;
+					$data['is_edited'] = 0;
+					$data['created'] = date('Y-m-d H:i:s');
+					$data['status_id'] = 1;
+
+					$this->Rcp->set($data);
+
+					$result = $this->Rcp->save();
+
+					if ($result) {
+						$message = Output::message('rcp');
+						$response = Output::success($message);
+
+						$isRush = Validate::isRush($this->request->data);
+
+						if ($isRush) {
+							$this->RcpRush->create();
+
+							$data['rcp_id'] = $result['Rcp']['id'];
+							$data['due_date'] = date('Y-m-d', strtotime($this->request->data['dueDate']));
+							$data['justification'] = $this->request->data['justification'];
+							$data['created'] = date('Y-m-d H:i:s');
+							$data['status_id'] = 1;
+
+							$this->RcpRush->set($data);
+
+							$this->RcpRush->save();
+						}
+
+						$qty = explode(",", $this->request->data['qty']);
+						$unit = explode(",", $this->request->data['unit']);
+						$particulars = explode(",", $this->request->data['particulars']);
+						$refCode = explode(",", $this->request->data['refCode']);
+						$amount = explode(",", $this->request->data['amount']);
+
+						foreach ($particulars as $key => $value) {
+							$this->RcpParticular->create();
+
+							$data['rcp_id'] = $result['Rcp']['id'];
+							$data['qty'] = $qty[$key];
+							$data['particulars'] = $value;
+							$data['refCode'] = $refCode[$key];
+							$data['amount'] = $amount[$key];
+							$data['created'] = date('Y-m-d H:i:s');
+							$data['status_id'] = 1;
+
+							$this->RcpParticular->set($data);
+
+							$this->RcpParticular->save();
+						}
+					}
+					else {
+						$message = Output::message('error');
+						$response = Output::failed($message);
+					}
+				}
+
+				$response['rcp_no'] = $this->rcpNo($this->request->data['department']);
+			}
+
+			return Output::response($response);
+		}
+
+		public function rcpNo($id = null) {
+			if ($id) {
+				$departmentCode = $this->Department->find('first', array(
+					'conditions' => array(
+						'Department.id' => $id
+					),
+					'fields' => array(
+						'Department.code'
+					)
+				));
+				$totalRcp = $this->Rcp->find('count', array(
+					'conditions' => array(
+						'Rcp.dept_id' => $id
+					)
+				));
+				$rcpNo = $departmentCode['Department']['code'] . ' ' . substr(date('y'), -2) . '-' . str_pad(($totalRcp + 1), 4, '0', STR_PAD_LEFT);
+
+				return $rcpNo;
+			}
 		}
 	}

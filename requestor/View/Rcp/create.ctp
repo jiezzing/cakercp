@@ -21,7 +21,7 @@
 									<div class="col-md-4" data-select2-id="10">
 										<h5>Department</h5>
 										<select class="form-control select2-hidden-accessible chosen_select" id="department" data-select2-id="6" tabindex="-1" aria-hidden="true" url="<?php echo $this->params->base . "/dept_approvers" ?>">
-											<option data-select2-id="8">Select Department</option>
+											<option value="0">Select Department</option>
 											<?php foreach ($departments as $department) : ?>
 												<option value="<?php echo $department['Department']['id'] ?>" data-select2-id="21"><?php echo $department['Department']['name'] ?></option>
 											<?php endforeach ?>
@@ -31,13 +31,13 @@
 									<div class="col-md-3" data-select2-id="20">
 										<h5>Approver</h5>
 										<select class="form-control select2-hidden-accessible chosen_select" id="approver" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option data-select2-id="8">Select Department First</option>
+											<option value="0">Select Department First</option>
 										</select>
 									</div>
 									<div class="col-md-3" data-select2-id="20">
 										<h5>Project</h5>
 										<select class="form-control select2-hidden-accessible chosen_select" id="project" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option data-select2-id="8">Select Project</option>
+											<option value="0">Select Project</option>
 											<?php foreach ($projects as $project) : ?>
 												<option value="<?php echo $project['Project']['id'] ?>" data-select2-id="21"><?php echo $project['Project']['name'] ?></option>
 											<?php endforeach ?>
@@ -64,7 +64,7 @@
 									<div class="col-md-4" data-select2-id="10">
 										<h5>Company</h5>
 										<select class="form-control select2-hidden-accessible chosen_select" id="company" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option data-select2-id="8">Select Company</option>
+											<option value="0">Select Company</option>
 											<?php foreach ($companies as $company) : ?>
 												<option value="<?php echo $company['Company']['id'] ?>" data-select2-id="21"><?php echo $company['Company']['name'] ?></option>
 											<?php endforeach ?>
@@ -73,19 +73,7 @@
 
 									<div class="col-md-8" data-select2-id="20">
 										<h5>Payee</h5>
-										<input type="email" placeholder="Enter email" id="exampleInputEmail2" class="form-control">
-									</div>
-								</div>
-							</div>
-                		</div>
-					</div>
-					<div class="row">
-                		<div class="col-lg-12">
-							<div class="ibox">
-								<div class="row" data-select2-id="11">
-									<div class="col-md-12" data-select2-id="20">
-										<h5>Amount in Words</h5>
-										<input type="email" placeholder="NO TOTAL AMOUNT DETECTED" id="exampleInputEmail2" disabled class="form-control text-center">
+										<input type="email" placeholder="Payee" id="payee" class="form-control">
 									</div>
 								</div>
 							</div>
@@ -104,26 +92,36 @@
 													<th>Particulars</th>
 													<th>BOM Ref / Acct Code</th>
 													<th>Amount</th>
+													<th width="4%"></th>
 												</tr>
 											</thead>
 											<tbody>
 												<?php for ($i = 0; $i < 5; $i++) : ?>
 													<tr>
-														<td contenteditable="true"></td>
-														<td contenteditable="true"></td>
-														<td contenteditable="true"></td>
-														<td contenteditable="true"></td>
-														<td contenteditable="true"></td>
+														<td class="qty" contenteditable="true"></td>
+														<td class="unit" contenteditable="true"></td>
+														<td class="particulars" contenteditable="true"></td>
+														<td class="ref_code" contenteditable="true"></td>
+														<td class="amount" contenteditable="true"></td>
+														<td class="text-center"><span><i class="text-navy fa fa-check remove"></i></span></td>
 													</tr>
 												<?php endfor ?>
 											</tbody>
 										</table>
 									</div>
 
-									<div class="col-md-12" data-select2-id="20">
+									<div class="col-md-10 mt-1" data-select2-id="20">
 										<div>
-											<span class="float-right text-right">
-											<h1 class="m-b-xs ">₱ 50,992</h1>
+											<span>
+											<input type="text" value="Fifty thousand nine hundred ninety two pesos only" placeholder="NO TOTAL AMOUNT DETECTED" id="amount_in_words" disabled class="form-control text-center mb-2">
+												AMOUNT IN WORDS
+											</span>
+										</div>
+									</div>
+									<div class="col-md-2" data-select2-id="20">
+										<div>
+											<span class="float-right">
+											<h1 class="m-b-xs" id="amount">50,992</h1>
 												TOTAL AMOUNT DUE
 											</span>
 										</div>
@@ -209,7 +207,7 @@
 					<div class="form-group" id="data_1">
 						<label class="font-normal">Date</label>
 						<div class="input-group date">
-							<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+							<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" id="rush_date" class="form-control">
 						</div>
 					</div>
 					<div class="form-group">
@@ -224,26 +222,43 @@
 
 <script>
 	$(document).ready(function() {
-		var buttons = {
-                text: 'Add New Row',
-                action: function (e, dt, node, config) {
-                    alert( 'Button activated' );
-				}
-            }
-
 		// initializations
 		chosenSelect('.chosen_select');
 		jsSwitch('.switcher', '#ED5565');
 		dataTable('#rcp_table', buttons);
 		datePicker('#data_1 .input-group.date');
+		var buttons = {
+                text: 'Add New Row',
+                action: function (e, dt, node, config) {
+					var length = $('#rcp_table').find('td[class=qty]').length;
+					alert(length)
+					var row = `<tr>
+						<td class="qty" contenteditable="true"></td>
+						<td contenteditable="true"></td>
+						<td contenteditable="true"></td>
+						<td contenteditable="true"></td>
+						<td contenteditable="true"></td>
+						<td class="text-center">
+							<a href="#">
+								<span><i class="text-danger fa fa-trash remove"></i></span>
+							</a>
+						</td>
+					</tr>`;
+
+					if (length <= 13) {
+						$('#rcp_table > tbody').append(row);
+					}
+					else {
+						return toastr.error("Rows already exceeds the limit.");
+					}
+				}
+            }
 
 		$('#department').on('change', function(event) {
 			event.preventDefault();
 
 			var id = $('#department').val();
 			var url = $(this).attr('url');
-
-
 
 			$.ajax({
 				type: 'POST',
@@ -254,6 +269,7 @@
 				},
 				dataType: 'json',
 				success: function(response) {
+					$('#approver').children().remove();
 					$.each(response, function(index, value) {
 						$('#approver').append(`<option value="${value.id}">${value.approver}</option>`).trigger("chosen:updated");
 					})
@@ -262,8 +278,6 @@
 				error: function (response, desc, exception) {
 					alert(exception);
 				}
-			}).done(function() {
-				$('#approver').children().remove();
 			})
 		})
 
@@ -288,6 +302,12 @@
 					alert(exception);
 				}
 			})
+		})
+
+		$(document).on('click', '.remove', function(event) {
+			event.preventDefault();
+
+			$(this).parents("tr").remove();
 		})
 	});
 </script>

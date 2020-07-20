@@ -41,6 +41,8 @@
             // Main scripts
         echo $this->Html->script(array(
 			'javascripts/initialize.js',
+			'javascripts/currency.js',
+			'javascripts/rcp.js',
             'jquery-3.1.1.min.js',
             'popper.min.js',
 			'bootstrap.js',
@@ -99,7 +101,9 @@
 					<?php
 						echo $this->element('navbar');
 						echo $this->element('header');
-						echo $this->element('floating_cog');
+						if ($this->params->controller == "rcp") {
+							echo $this->element('floating_cog');
+						}
 						echo $this->fetch('content');
 						echo $this->element('footer');
 					?>
