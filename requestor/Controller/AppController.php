@@ -1,6 +1,7 @@
 <?php
 
 	App::uses('Controller', 'Controller');
+	App::uses('CakeTime', 'Utility');
 
 	class AppController extends Controller {
 		public $components = array(

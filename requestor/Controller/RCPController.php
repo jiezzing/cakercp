@@ -289,6 +289,7 @@
 					$data['is_vatable'] = 0;
 					$data['is_edited'] = 0;
 					$data['created'] = date('Y-m-d H:i:s');
+					$data['status_id'] = 1;
 
 					$this->Rcp->set($data);
 
@@ -322,8 +323,9 @@
 
 							$data['rcp_id'] = $result['Rcp']['id'];
 							$data['qty'] = $qty[$key];
+							$data['unit'] = $unit[$key];
 							$data['particulars'] = $value;
-							$data['refCode'] = $refCode[$key];
+							$data['ref_code'] = $refCode[$key];
 							$data['amount'] = $amount[$key];
 							$data['created'] = date('Y-m-d H:i:s');
 
@@ -363,5 +365,13 @@
 
 				return $rcpNo;
 			}
+		}
+
+		public function details($id = null) {
+			$details = $this->Rcp->details($id, $this->Auth->user('id'));
+			$particulars = $this->Rcp->particulars($id, $this->Auth->user('id'));
+
+			$this->set('detail', $details);
+			$this->set('particulars', $particulars);
 		}
 	}

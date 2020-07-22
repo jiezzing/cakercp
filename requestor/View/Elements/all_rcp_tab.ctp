@@ -36,6 +36,9 @@
 						<td>
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item">
+									<a href="<?php echo $this->params->base . '/details/' . $rcp['Rcp']['id'] ?>" class="text-navy" value="2"><i class="fa fa-pencil"></i><span class="nav-label"> Details</span></a>
+								</li>
+								<li class="breadcrumb-item">
 									<a href="#" class="text-navy" value="2"><i class="fa fa-pencil"></i><span class="nav-label"> Edit</span></a>
 								</li>
 								<li class="breadcrumb-item">

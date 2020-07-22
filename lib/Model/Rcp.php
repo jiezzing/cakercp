@@ -6,8 +6,7 @@
 
         public $usesTable = 'rcp';
 
-		public function all($id = 'all', $status = [1, 2, 3])
-		{
+		public function all($id = 'all', $status = [1, 2, 3]) {
 			$result = $this->find('all', array(
 				'joins' => array(
 					array(
@@ -69,7 +68,121 @@
 					'Rcp.issued_on',
 					'Rcp.created',
 					'Status.name',
-					'Rcp.status_id'
+					'Rcp.status_id',
+					'Rcp.id'
+				)
+			));
+
+			return $result;
+		}
+
+		public function details($id = null, $userId = null) {
+			$result = $this->find('first', array(
+				'joins' => array(
+					array(
+						'alias' => 'User',
+						'table' => 'users',
+						'type' => 'INNER',
+						'conditions' => array(
+							'User.id = Rcp.app_id'
+						)
+					),
+					array(
+						'alias' => 'Company',
+						'table' => 'companies',
+						'type' => 'INNER',
+						'conditions' => array(
+							'Company.id = Rcp.comp_id'
+						)
+					),
+					array(
+						'alias' => 'Department',
+						'table' => 'departments',
+						'type' => 'INNER',
+						'conditions' => array(
+							'Department.id = Rcp.dept_id'
+						)
+					),
+					array(
+						'alias' => 'Project',
+						'table' => 'projects',
+						'type' => 'INNER',
+						'conditions' => array(
+							'Project.id = Rcp.proj_id'
+						)
+					),
+					array(
+						'alias' => 'Status',
+						'table' => 'status',
+						'type' => 'INNER',
+						'conditions' => array(
+							'Status.id = Rcp.status_id'
+						)
+					),
+					array(
+						'alias' => 'RcpParticular',
+						'table' => 'rcp_particulars',
+						'type' => 'INNER',
+						'conditions' => array(
+							'RcpParticular.rcp_id = Rcp.id'
+						)
+					)
+				),
+				'conditions' => array(
+					'Rcp.req_id' => $userId,
+					'Rcp.id' =>  $id
+				),
+				'fields' => array(
+					'Rcp.rcp_no',
+					'Rcp.issued_on',
+					'Rcp.created',
+					'Rcp.amount',
+					'Rcp.payee',
+					'Rcp.expense_type',
+					'Rcp.created',
+					'Rcp.is_rush',
+					'RcpParticular.qty',
+					'RcpParticular.unit',
+					'RcpParticular.particulars',
+					'RcpParticular.ref_code',
+					'RcpParticular.code',
+					'RcpParticular.amount',
+					'Rcp.amount_in_words',
+					'Status.name',
+					'User.firstname',
+					'User.lastname',
+					'Department.name',
+					'Project.name',
+					'Company.name'
+				)
+			));
+
+			return $result;
+		}
+
+		public function particulars($id = null, $userId = null) {
+			$result = $this->find('all', array(
+				'joins' => array(
+					array(
+						'alias' => 'RcpParticular',
+						'table' => 'rcp_particulars',
+						'type' => 'INNER',
+						'conditions' => array(
+							'RcpParticular.rcp_id = Rcp.id',
+						)
+					)
+				),
+				'conditions' => array(
+					'Rcp.id' => $id,
+					'Rcp.req_id' => $userId
+				),
+				'fields' => array(
+					'RcpParticular.qty',
+					'RcpParticular.unit',
+					'RcpParticular.particulars',
+					'RcpParticular.ref_code',
+					'RcpParticular.code',
+					'RcpParticular.amount'
 				)
 			));
 

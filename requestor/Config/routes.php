@@ -9,6 +9,7 @@
 	Router::connect('/send_rcp', array('controller' => 'rcp', 'action' => 'sendRcp'));
 	Router::connect('/rcp_no', array('controller' => 'rcp', 'action' => 'rcpNo'));
 	Router::connect('/rcps', array('controller' => 'rcp', 'action' => 'index'));
+	Router::connect('/details/*', array('controller' => 'rcp', 'action' => 'details'));
 
 	CakePlugin::routes();
 

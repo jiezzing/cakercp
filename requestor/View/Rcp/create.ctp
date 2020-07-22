@@ -226,19 +226,18 @@
                 text: 'Add New Row',
                 action: function (e, dt, node, config) {
 					var length = $('#rcp_table').find('td[class=qty]').length;
-					alert(length)
-					var row = `<tr>
-						<td class="qty" contenteditable="true"></td>
-						<td contenteditable="true"></td>
-						<td contenteditable="true"></td>
-						<td contenteditable="true"></td>
-						<td contenteditable="true"></td>
-						<td class="text-center">
-							<a href="#">
-								<span><i class="text-danger fa fa-trash remove"></i></span>
-							</a>
-						</td>
-					</tr>`;
+					var row = 	`<tr>
+									<td class="qty" contenteditable="true"></td>
+									<td contenteditable="true"></td>
+									<td contenteditable="true"></td>
+									<td contenteditable="true"></td>
+									<td contenteditable="true"></td>
+									<td class="text-center">
+										<a href="#">
+											<span><i class="text-danger fa fa-trash remove"></i></span>
+										</a>
+									</td>
+								</tr>`;
 
 					if (length <= 13) {
 						$('#rcp_table > tbody').append(row);
