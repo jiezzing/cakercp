@@ -20,13 +20,13 @@
 								<strong>Department: </strong> <?php echo $detail['Department']['name'] ?><br>
 								<strong>Company: </strong> <?php echo $detail['Company']['name'] ?><br>
 								<strong>Project: </strong> <?php echo $detail['Project']['name'] ?><br><br>
-								<span><strong>Expense Type:</strong> <?php echo $detail['Rcp']['expense_type'] ?></span><br><br>
+								<span><strong>Expense Type:</strong> <?php echo $detail['Rcp']['expense_type'] ?></span><br>
 								<span><strong>Issued on:</strong> <?php echo CakeTime::nice($detail['Rcp']['created']) ?></span><br>
 							</address>
 						</div>
 						<div class="col-sm-6 text-right mt-5">
 							<h5><?php echo CakeTime::nice($detail['Rcp']['created']) ?></h5><br>
-							<h4 class="text-navy"><?php echo $detail['Rcp']['amount_in_words'] ?></h4>
+							<h4 class="text-navy mt-3"><?php echo $detail['Rcp']['amount_in_words'] ?></h4>
 							<table class="table invoice-total">
 								<tbody>
 								<tr>
@@ -61,10 +61,37 @@
 							</tbody>
 						</table>
 					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<address>
+								<strong>Payee:</strong> <?php echo $detail['Rcp']['payee'] ?><br>
+								<strong>Due Date: </strong> <?php echo $detail['User']['firstname'] . ' ' . $detail['User']['lastname'] ?><br>
+							</address>
+						</div>
+						<div class="col-sm-6 text-right">
+							<?php if ($detail['Rcp']['is_rush']) : ?>
+								<div class="media-body ">
+									<strong>Status:</strong> RUSH<br>
+									<strong>Due Date:</strong> 2020-08-20<br>
+									<strong>Reason / Justification:</strong><br>
+									<div class="well">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+										Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+									</div>
+								</div>
+							<?php else : ?>
+								<div class="media-body ">
+									<strong>Status:</strong> NOT RUSH<br>
+									<strong>Due Date:</strong> ---------------<br>
+									<strong>Reason / Justification: </strong>---------------<br>
+								</div>
+							<?php endif ?>
+						</div>
+					</div>
 				</div>
 				<div class="ibox-footer">
 					<div class="text-right">
-						<a href="#" class="btn btn-primary"><i class="fa fa-file mr-2"></i> Edit Details</a>
+						<a href="<?php echo $this->params->base . '/edit/' . $detail['Rcp']['id'] ?>" class="btn btn-primary"><i class="fa fa-file mr-2"></i> Edit Details</a>
 					</div>
 				</div>
 			</div>

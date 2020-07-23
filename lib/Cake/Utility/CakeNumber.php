@@ -65,6 +65,11 @@ class CakeNumber {
 			'zero' => 0, 'places' => 2, 'thousands' => ',', 'decimals' => '.', 'negative' => '()', 'escape' => true,
 			'fractionExponent' => 0
 		),
+		'PHP' => array(
+			'wholeSymbol' => '₱', 'wholePosition' => 'before', 'fractionSymbol' => false, 'fractionPosition' => 'after',
+			'zero' => 0, 'places' => 2, 'thousands' => ',', 'decimals' => '.', 'negative' => '()', 'escape' => true,
+			'fractionExponent' => 0
+		),
 	);
 
 /**
@@ -83,7 +88,7 @@ class CakeNumber {
  *
  * @var string
  */
-	protected static $_defaultCurrency = 'USD';
+	protected static $_defaultCurrency = 'PHP';
 
 /**
  * If native number_format() should be used. If >= PHP5.4

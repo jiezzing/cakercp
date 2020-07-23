@@ -45,10 +45,10 @@
 									</div>
 									<div class="col-md-2" data-select2-id="20">
 
-									<h5 id="expense_title">PROJECT EXPENSE</h5>
+									<h5 id="expense_title">DEPARTMENT EXPENSE</h5>
 										<div>
 											<span >
-												<input type="checkbox" class="expense_type switcher" checked="" data-switchery="true" style="display: none;" id="expense_type"">
+												<input type="checkbox" class="expense_type switcher" data-switchery="true" style="display: none;" id="expense_type"">
 											</span>
 										</div>
 
@@ -83,6 +83,18 @@
                 		<div class="col-lg-12">
 							<div class="ibox">
 								<div class="row" data-select2-id="11">
+									<div class="col-md-12" data-select2-id="20">
+										<h5>Amount in Words</h5>
+										<input type="text" placeholder="NO TOTAL AMOUNT DETECTED (Auto Generated)" disabled class="form-control text-center">
+									</div>
+								</div>
+							</div>
+                		</div>
+					</div>
+					<div class="row">
+                		<div class="col-lg-12">
+							<div class="ibox">
+								<div class="row" data-select2-id="11">
 									<div class="col-md-12  no-padding" data-select2-id="20">
 										<table class="table table-bordered table-responsive-md mt-3" id="rcp_table">
 											<thead>
@@ -91,6 +103,7 @@
 													<th>Unit</th>
 													<th>Particulars</th>
 													<th>BOM Ref / Acct Code</th>
+													<th width="10%">Code</th>
 													<th>Amount</th>
 													<th width="4%"></th>
 												</tr>
@@ -102,6 +115,7 @@
 														<td class="unit" contenteditable="true"></td>
 														<td class="particulars" contenteditable="true"></td>
 														<td class="ref_code" contenteditable="true"></td>
+														<td class="code" contenteditable="true"></td>
 														<td class="amount" contenteditable="true"></td>
 														<td class="text-center"><span><i class="text-navy fa fa-check remove"></i></span></td>
 													</tr>
@@ -109,16 +123,7 @@
 											</tbody>
 										</table>
 									</div>
-
-									<div class="col-md-10 mt-1" data-select2-id="20">
-										<div>
-											<span>
-											<input type="text" value="Fifty thousand nine hundred ninety two pesos only" placeholder="NO TOTAL AMOUNT DETECTED" id="amount_in_words" disabled class="form-control text-center mb-2">
-												AMOUNT IN WORDS
-											</span>
-										</div>
-									</div>
-									<div class="col-md-2" data-select2-id="20">
+									<div class="col-md-12 float-right" data-select2-id="20">
 										<div>
 											<span class="float-right">
 											<h1 class="m-b-xs" id="amount">50,992</h1>
@@ -138,15 +143,10 @@
 		<div class="col-lg-8">
 			<div class="ibox ">
 				<div class="ibox-title">
-					<h5>Show and fill up the following if this RCP is vatable</h5>
-					<div class="ibox-tools">
-						<a class="collapse-link">
-							<i class="fa fa-chevron-down"></i>
-						</a>
-					</div>
+					<h5>Fill up the following if this RCP is VATABLE</h5>
 				</div>
-				<div class="ibox-content" style="display: none">
-					<div class="col-md-12" data-select2-id="20">
+				<div class="ibox-content">
+					<div class="col-md-12 mt-3" data-select2-id="20">
 						<select class="form-control select2-hidden-accessible chosen_select" data-select2-id="6" tabindex="-1" aria-hidden="true">
 							<option data-select2-id="8"></option>
 							<option value="Bahamas" data-select2-id="21">Bahamas</option>
@@ -197,13 +197,8 @@
 			<div class="ibox ">
 				<div class="ibox-title">
 					<h5>If RUSH, fill the following</h5>
-					<div class="ibox-tools">
-						<a class="collapse-link">
-							<i class="fa fa-chevron-down"></i>
-						</a>
-					</div>
 				</div>
-				<div class="ibox-content" style="display: none">
+				<div class="ibox-content">
 					<div class="form-group" id="data_1">
 						<label class="font-normal">Date</label>
 						<div class="input-group date">
@@ -222,22 +217,43 @@
 
 <script>
 	$(document).ready(function() {
+		var checked = $('#expense_type').prop("checked");
 		var buttons = {
                 text: 'Add New Row',
                 action: function (e, dt, node, config) {
+					var checked = $(this).prop("checked");
 					var length = $('#rcp_table').find('td[class=qty]').length;
-					var row = 	`<tr>
-									<td class="qty" contenteditable="true"></td>
-									<td contenteditable="true"></td>
-									<td contenteditable="true"></td>
-									<td contenteditable="true"></td>
-									<td contenteditable="true"></td>
-									<td class="text-center">
-										<a href="#">
-											<span><i class="text-danger fa fa-trash remove"></i></span>
-										</a>
-									</td>
-								</tr>`;
+					var row = "";
+
+					if (checked) {
+						row = `<tr>
+							<td class="qty" contenteditable="true"></td>
+							<td class="unit" contenteditable="true"></td>
+							<td class="particulars" contenteditable="true"></td>
+							<td class="ref_code" contenteditable="true"></td>
+							<td class="amount" contenteditable="true"></td>
+							<td class="text-center">
+								<a href="#">
+									<span><i class="text-danger fa fa-trash remove"></i></span>
+								</a>
+							</td>
+						</tr>`;
+					}
+					else {
+						row = `<tr>
+							<td class="qty" contenteditable="true"></td>
+							<td class="unit" contenteditable="true"></td>
+							<td class="particulars" contenteditable="true"></td>
+							<td class="ref_code" contenteditable="true"></td>
+							<td class="code" contenteditable="true"></td>
+							<td class="amount" contenteditable="true"></td>
+							<td class="text-center">
+								<a href="#">
+									<span><i class="text-danger fa fa-trash remove"></i></span>
+								</a>
+							</td>
+						</tr>`;
+					}
 
 					if (length <= 13) {
 						$('#rcp_table > tbody').append(row);
@@ -288,9 +304,12 @@
 			var url = $(this).attr("url");
 
 			if (checked) {
+				$("#rcp_table tr td, th").filter(':nth-child(5)').attr('hidden', true);
 				$('#expense_title').text("PROJECT EXPENSE");
 			}
 			else {
+				$('#rcp_table > thead > tr > th:nth-child(5)').removeAttr('hidden');
+				$("#rcp_table td").filter(':nth-child(5)').removeAttr('hidden');
 				$('#expense_title').text("DEPARTMENT EXPENSE");
 			}
 		})

@@ -318,8 +318,16 @@
 						$refCode = explode(",", $this->request->data['refCode']);
 						$amount = explode(",", $this->request->data['amount']);
 
+						if (!empty($this->request->data['code'])) {
+							$code = explode(",", $this->request->data['code']);
+						}
+
 						foreach ($particulars as $key => $value) {
 							$this->RcpParticular->create();
+
+							if (!empty($this->request->data['code'])) {
+								$data['code'] = $code[$key];
+							}
 
 							$data['rcp_id'] = $result['Rcp']['id'];
 							$data['qty'] = $qty[$key];
@@ -373,5 +381,19 @@
 
 			$this->set('detail', $details);
 			$this->set('particulars', $particulars);
+		}
+
+		public function edit($id = null) {
+			$details = $this->Rcp->details($id, $this->Auth->user('id'));
+			$particulars = $this->Rcp->particulars($id, $this->Auth->user('id'));
+			$companies = $this->Company->find('all');
+			$departments = $this->Department->find('all');
+			$projects = $this->Project->find('all');
+
+			$this->set('detail', $details);
+			$this->set('particulars', $particulars);
+			$this->set('companies', $companies);
+			$this->set('departments', $departments);
+			$this->set('projects', $projects);
 		}
 	}

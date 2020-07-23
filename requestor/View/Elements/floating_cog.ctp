@@ -29,10 +29,12 @@
 		$('#send_rcp_btn').on('click', function(event) {
 			event.preventDefault();
 
+			var checked = $('#expense_type').prop("checked");
 			var qtyArr = [];
 			var particularsArr = [];
 			var unitArr = [];
 			var refCodeArr = [];
+			var codeArr = [];
 			var amountArr = [];
 			var hasEmpty = false;
 
@@ -55,14 +57,30 @@
 				var unit = $(this).find("td").eq(1).html();
 				var particulars = $(this).find("td").eq(2).html();
 				var refCode = $(this).find("td").eq(3).html();
-				var amount = $(this).find("td").eq(4).html();
 
-				if (qty && unit && particulars && refCode && amount) {
-					qtyArr.push(qty);
-					unitArr.push(unit);
-					particularsArr.push(particulars);
-					refCodeArr.push(refCode);
-					amountArr.push(amount);
+				if (checked) {
+					var amount = $(this).find("td").eq(4).html();
+
+					if (qty && unit && particulars && refCode && amount) {
+						qtyArr.push(qty);
+						unitArr.push(unit);
+						particularsArr.push(particulars);
+						refCodeArr.push(refCode);
+						amountArr.push(amount);
+					}
+				}
+				else {
+					var code = $(this).find("td").eq(4).html();
+					var amount = $(this).find("td").eq(5).html();
+
+					if (qty && unit && particulars && refCode && code && amount) {
+						qtyArr.push(qty);
+						unitArr.push(unit);
+						particularsArr.push(particulars);
+						refCodeArr.push(refCode);
+						codeArr.push(code);
+						amountArr.push(amount);
+					}
 				}
 			});
 
@@ -78,6 +96,7 @@
 			data.append('unit', unitArr);
 			data.append('particulars', particularsArr);
 			data.append('refCode', refCodeArr);
+			data.append('code', codeArr);
 			data.append('amount', amountArr);
 			data.append('dueDate', dueDate);
 			data.append('justification', justification);

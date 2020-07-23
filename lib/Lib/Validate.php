@@ -20,7 +20,7 @@
 
 		public static function rcpEmptyField($data = array()) {
             foreach ($data as $key => $value) {
-				if (empty($value) && ($key != 'dueDate' && $key != 'justification')) {
+				if (empty($value) && ($key != 'dueDate' && $key != 'justification' && $key != 'code')) {
 					return true;
 				}
 			}

@@ -133,7 +133,10 @@
 					'Rcp.id' =>  $id
 				),
 				'fields' => array(
+					'Rcp.id',
 					'Rcp.rcp_no',
+					'Rcp.comp_id',
+					'Rcp.proj_id',
 					'Rcp.issued_on',
 					'Rcp.created',
 					'Rcp.amount',
