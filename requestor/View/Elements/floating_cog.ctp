@@ -29,6 +29,8 @@
 		$('#send_rcp_btn').on('click', function(event) {
 			event.preventDefault();
 
+			console.log(window.location);
+
 			var checked = $('#expense_type').prop("checked");
 			var qtyArr = [];
 			var particularsArr = [];
@@ -100,6 +102,7 @@
 			data.append('amount', amountArr);
 			data.append('dueDate', dueDate);
 			data.append('justification', justification);
+			data.append('origin', window.location.origin);
 
 			$.ajax({
 				type: 'POST',
@@ -120,6 +123,8 @@
 				error: function (response, desc, exception) {
 					alert(exception);
 				}
+			}).done(function() {
+				alert('Email sent');
 			})
 		})
 	})

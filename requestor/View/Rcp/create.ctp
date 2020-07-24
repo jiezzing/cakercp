@@ -146,7 +146,7 @@
 					<h5>Fill up the following if this RCP is VATABLE</h5>
 				</div>
 				<div class="ibox-content">
-					<div class="col-md-12 mt-3" data-select2-id="20">
+					<div class="col-md-12" data-select2-id="20">
 						<select class="form-control select2-hidden-accessible chosen_select" data-select2-id="6" tabindex="-1" aria-hidden="true">
 							<option data-select2-id="8"></option>
 							<option value="Bahamas" data-select2-id="21">Bahamas</option>

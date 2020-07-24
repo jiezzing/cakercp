@@ -3,6 +3,7 @@
 	App::uses('Controller', 'Controller');
 	App::uses('CakeTime', 'Utility');
 	App::uses('CakeNumber', 'Utility');
+	App::uses('CakeEmail', 'Network/Email');
 
 	class AppController extends Controller {
 		public $components = array(

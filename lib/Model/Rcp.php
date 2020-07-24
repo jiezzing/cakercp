@@ -4,7 +4,7 @@
 
     class Rcp extends AppModel {
 
-        public $usesTable = 'rcp';
+		public $usesTable = 'rcp';
 
 		public function all($id = 'all', $status = [1, 2, 3]) {
 			$result = $this->find('all', array(

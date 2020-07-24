@@ -1,6 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+		var OneSignal = window.OneSignal || [];
+		OneSignal.push(function() {
+			OneSignal.init({
+				appId: "e986f8c5-25e9-4579-a96d-a611536dbbef"
+			});
+		});
+	</script>
+	<script>
+		window.OneSignal =  OneSignal || [];
+
+		OneSignal.push(function() {
+		// Occurs when the user's subscription changes to a new value.
+
+			OneSignal.on('subscriptionChange', function (isSubscribed) {
+			console.log("The user's subscription state is now:", isSubscribed);
+				OneSignal.sendTag("user_id", "321", function(tagsSent) {
+					console.log("Tags has finished sending:", tagsSent);
+				});
+			});
+
+			/* These examples are all valid */
+			var isPushSupported = OneSignal.isPushNotificationsSupported();
+			if (isPushSupported) {
+				OneSignal.isPushNotificationsEnabled(function(isEnabled) {
+					if (isEnabled)
+					console.log("Push notifications are enabled!");
+					else {
+						console.log("Push notifications are not enabled yet.");
+						OneSignal.showNativePrompt();
+					}
+				});
+			} else {
+				OneSignal.showHttpPrompt();
+				alert("Push notifications are not supported");
+			}
+
+		});
+	</script>
     <?php
         header("Cache-Control: no-cache, no-store, must-revalidate");
         header("Pragma: no-cache");

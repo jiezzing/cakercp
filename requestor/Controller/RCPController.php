@@ -9,7 +9,9 @@
 			'Approver',
 			'Rcp',
 			'RcpParticular',
-			'RcpRush'
+			'RcpRush',
+			'User',
+			'Notification'
 		);
 
 		public function beforeFilter() {
@@ -33,6 +35,15 @@
 		}
 
 		public function create() {
+			$response = $this->Notification->sendNotification();
+			$return["allresponses"] = $response;
+			$return = json_encode($return);
+
+			$data = json_decode($response, true);
+
+			$id = $data['id'];
+
+			// debug($data);
 			$companies = $this->Company->find('all');
 			$departments = $this->Department->find('all');
 			$projects = $this->Project->find('all');
@@ -341,6 +352,11 @@
 
 							$this->RcpParticular->save();
 						}
+
+						$this->sendEmail(
+							$result['Rcp']['id'],
+							$this->Auth->user('id')
+						);
 					}
 					else {
 						$message = Output::message('error');
@@ -395,5 +411,36 @@
 			$this->set('companies', $companies);
 			$this->set('departments', $departments);
 			$this->set('projects', $projects);
+		}
+
+		public function sendEmail($id = null, $userId = null) {
+			$detail = $this->Rcp->details($id, $userId);
+
+			$rcpNo = $detail['Rcp']['rcp_no'];
+			$approverName = $detail['User']['firstname'] . ' ' . $detail['User']['lastname'];
+			$department = $detail['Department']['name'];
+			$company = $detail['Company']['name'];
+			$project = $detail['Project']['name'];
+			$payee = $detail['Rcp']['payee'];
+			$issued = CakeTime::nice($detail['Rcp']['created']);
+
+			$email = new CakeEmail();
+			$email->config('smtp');
+
+			$email->template('send_email')
+			->emailFormat('html')
+			->from(array('no-reply@innoland.com' => 'System Administrator'))
+			->to('jiezzing@gmail.com')
+			->subject('Request for Approval')
+			->viewVars(array(
+				'rcp_no' => $rcpNo,
+				'app_name' => $approverName,
+				'department' => $department,
+				'company' => $company,
+				'project' => $project,
+				'payee' => $payee,
+				'date' => $issued
+			))
+			->send();
 		}
 	}
