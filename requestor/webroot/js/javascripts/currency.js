@@ -67,22 +67,25 @@ function currencyToWords(s) {
 	return result;
 }
 
-function currencyRemoveCommas(amount) {
-	var currencyNoCommas = amount.replace(/\,/g,'');
-	return currencyNoCommas = Number(currencyNoCommas);
-}
-
-function currencyWithCommas(total) {
-	var parts = total.toFixed(2).split(".");
-	var currencyWithCommas = parts[0].replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +
-	(parts[1] ? "." + parts[1] : "");
-  return currencyWithCommas;
-}
-
 function allowNumbers(selector){
-$(selector).on("keypress keyup blur",function (event) {
-	if ((event.which < 48 || event.which > 57)) {
-		event.preventDefault();
-	}
-});
+	$(selector).on("keypress keyup blur",function (event) {
+		if ((event.which < 48 || event.which > 57)) {
+			event.preventDefault();
+		}
+	});
+}
+
+function allowNumbersWithDecimal(selector){
+	$(selector).on("keypress keyup blur",function (event) {
+		var patt = new RegExp(/[0-9]*[.]{1}[0-9]{2}/i);
+		var matchedString = $(this).text().match(patt);
+
+		if (matchedString) {
+			event.preventDefault();
+		}
+
+		if ((event.which != 46 || $(this).text().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+			event.preventDefault();
+		}
+	});
 }

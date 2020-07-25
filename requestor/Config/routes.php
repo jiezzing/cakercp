@@ -11,6 +11,7 @@
 	Router::connect('/rcps', array('controller' => 'rcp', 'action' => 'index'));
 	Router::connect('/details/*', array('controller' => 'rcp', 'action' => 'details'));
 	Router::connect('/edit/*', array('controller' => 'rcp', 'action' => 'edit'));
+	Router::connect('/update_player_id', array('controller' => 'users', 'action' => 'updatePlayerId'));
 
 	CakePlugin::routes();
 

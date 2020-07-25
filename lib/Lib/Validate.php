@@ -18,15 +18,20 @@
 			}
         }
 
-		public static function rcpEmptyField($data = array()) {
-            foreach ($data as $key => $value) {
-				if (empty($value) && ($key != 'dueDate' && $key != 'justification' && $key != 'code')) {
-					return true;
-				}
+		public static function rcpHasEmptyFields($data = array()) {
+			if (empty($data['department']) || empty($data['project']) ||
+			empty($data['company']) || empty($data['payee'])) {
+				return true;
 			}
         }
 
-		public static function rushHasBeenFilled($data = array()) {
+		public static function hasNoApprover($data = array()) {
+			if (empty($data['approver'])) {
+				return true;
+			}
+        }
+
+		public static function hasRushEmptyField($data = array()) {
 			if (!empty($data['dueDate']) && empty($data['justification'])) {
 				return true;
 			}
@@ -39,6 +44,12 @@
 
 		public static function isRush($data = array()) {
             if (!empty($data['dueDate']) && !empty($data['justification'])) {
+				return true;
+			}
+        }
+
+		public static function rcpParticularsIsEmpty($data = array()) {
+            if (empty($data['qty'])) {
 				return true;
 			}
         }

@@ -8,7 +8,7 @@
 
 		public function sendNotification() {
 			$content      = array(
-				"en" => 'English Message'
+				"en" => 'Kenji batig nawng'
 			);
 
 			$hashes_array = array();
@@ -21,10 +21,7 @@
 
 			$fields = array(
 				'app_id' => "e986f8c5-25e9-4579-a96d-a611536dbbef",
-				'include_player_id' => array("2b70e1c3-6960-4c62-81af-eefd88332a24"),
-				'included_segments' => array(
-					"Active Users", "Inactive Users"
-				),
+				'include_player_ids' => array("65642398-695c-4150-a12f-90ba18363cf5"),
 				'data' => array(
 					"foo" => "bar"
 				),

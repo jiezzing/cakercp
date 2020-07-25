@@ -29,8 +29,6 @@
 		$('#send_rcp_btn').on('click', function(event) {
 			event.preventDefault();
 
-			console.log(window.location);
-
 			var checked = $('#expense_type').prop("checked");
 			var qtyArr = [];
 			var particularsArr = [];
@@ -54,11 +52,12 @@
 			var dueDate = $('#rush_date').val();
 			var justification = $('#justification').val().trim();
 
-			$('#rcp_table > tbody > tr').each(function() {
+			$('#rcp_table > tbody > tr').each(function(index, value) {
 				var qty = $(this).find("td").eq(0).html();
 				var unit = $(this).find("td").eq(1).html();
 				var particulars = $(this).find("td").eq(2).html();
 				var refCode = $(this).find("td").eq(3).html();
+
 
 				if (checked) {
 					var amount = $(this).find("td").eq(4).html();
@@ -93,7 +92,7 @@
 			data.append('company', company);
 			data.append('payee', payee);
 			data.append('amountInWords', amountInWords);
-			data.append('amount', currencyRemoveCommas(amount));
+			data.append('totalAmount', amount);
 			data.append('qty', qtyArr);
 			data.append('unit', unitArr);
 			data.append('particulars', particularsArr);
@@ -114,6 +113,14 @@
 				processData: false,
 				success: function(response) {
 					if (response.status) {
+						// $('#gender').val(null).trigger("chosen:updated");
+
+						$('#rcp_form')[0].reset();
+						// $("#rcp_form input[type=text]").val("");
+						$("#rcp_form select").val(0).trigger("chosen:updated");
+						// $("#rcp_form input[type=radio]").prop("checked", false);
+						$("#rcp_form input[type=checkbox]").prop("checked", false);
+						$("#expense_title").text("DEPARTMENT EXPENSE");
 						return toastr.success(response.message, response.rcp_no)
 					}
 					else {
@@ -123,8 +130,6 @@
 				error: function (response, desc, exception) {
 					alert(exception);
 				}
-			}).done(function() {
-				alert('Email sent');
 			})
 		})
 	})

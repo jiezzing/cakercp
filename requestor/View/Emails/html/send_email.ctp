@@ -13,13 +13,20 @@
 							Hello, <?php echo $app_name ?>!
 							<br>
 							<br>
-							You have received a Request for Check Payment for APPROVAL with an RCP No. of <strong><?php echo $rcp_no ?></strong> issued on <?php echo $date ?>.
+							You have received a Request for Check Payment for approval with an RCP No. of <strong><?php echo $rcp_no ?></strong> from <?php echo $requestor ?> that issued on <?php echo $date ?>.
+							<br>You can check more information by clicking this <a href="<?php echo $link ?>">link</a>.
 							<br><br>
 							Payee: <?php echo $payee ?><br>
 							Department: <?php echo $department ?><br>
 							Company: <?php echo $company ?><br>
 							Project: <?php echo $project ?><br>
 						</p>
+						<?php if ($justification) : ?>
+							<p>
+								Due Date: <?php echo $due_date ?><br>
+								Justification: <?php echo $justification ?><br>
+							</p>
+						<?php endif ?>
 					</div>
 					<div class="mail-footer">
 						<p>

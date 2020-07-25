@@ -42,7 +42,10 @@
 				'projectExpense' => 'PROJECT EXPENSE',
 				'departmentExpense' => 'DEPARTMENT EXPENSE',
 				'rcp' => 'Request for Check Payment has been successfully sent.',
-				'rush' => 'It seems that this RCP is rushed. Please have your due date, justifcation and an attached file.'
+				'rush' => 'It seems that this RCP is rushed. Please have your due date, justifcation and an attached file.',
+				'approver' => 'Please specify an APPROVER for your RCP.',
+				'particularsEmpty' => 'Qty, unit, particulars, BOM Ref / Acct Code, code and amount fields must not be empty. Make sure to fill at least one row to proceed.',
+				'onesignal' => 'You can now receive real time notifications.'
             );
 
             return $data[$key];

@@ -1,4 +1,5 @@
 <div class="wrapper wrapper-content animated">
+<form id="rcp_form">
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="ibox ">
@@ -12,6 +13,7 @@
 					<small>3. All alterations must be initialed by the authorized requesters / officers.</small><br>
 					<small>4. Avoid having RUSH requests; however, if truly urgent, indicate the date needed (box at the right).</small><br>
 					<small>5. All "RUSH" RCPs should be accompanied by an acceptable explanation.</small><br>
+					<small>6. Qty, unit, particulars, BOM Ref / Acct Code, code and amount fields must not be empty. Make sure to fill at least one row to proceed.</small><br>
 				</div>
 				<div class="ibox-content">
 					<div class="row">
@@ -20,7 +22,7 @@
 								<div class="row" data-select2-id="11">
 									<div class="col-md-4" data-select2-id="10">
 										<h5>Department</h5>
-										<select class="form-control select2-hidden-accessible chosen_select" id="department" data-select2-id="6" tabindex="-1" aria-hidden="true" url="<?php echo $this->params->base . "/dept_approvers" ?>">
+										<select class="form-control select2-hidden-accessible chosen_select" id="department" data-select2-id="6" tabindex="-1" aria-hidden="true" url="<?php echo $this->params->webroot . "dept_approvers" ?>">
 											<option value="0">Select Department</option>
 											<?php foreach ($departments as $department) : ?>
 												<option value="<?php echo $department['Department']['id'] ?>" data-select2-id="21"><?php echo $department['Department']['name'] ?></option>
@@ -85,7 +87,7 @@
 								<div class="row" data-select2-id="11">
 									<div class="col-md-12" data-select2-id="20">
 										<h5>Amount in Words</h5>
-										<input type="text" placeholder="NO TOTAL AMOUNT DETECTED (Auto Generated)" disabled class="form-control text-center">
+										<input type="text" placeholder="NO TOTAL AMOUNT DETECTED (Auto Generated)" disabled class="form-control text-center" value="One hundred thousand pesos only" id="amount_in_words">
 									</div>
 								</div>
 							</div>
@@ -160,7 +162,7 @@
 						</select>
 					</div>
 					<div class="col-md-12" data-select2-id="20">
-						<table class="table table-bordered mt-3" id="rcp_table">
+						<table class="table table-bordered mt-3">
 							<tbody>
 								<tr>
 									<td>P.O.S. Trans #</td>
@@ -213,6 +215,7 @@
 			</div>
 		</div>
 	</div>
+</form>
 </div>
 
 <script>
@@ -221,7 +224,7 @@
 		var buttons = {
                 text: 'Add New Row',
                 action: function (e, dt, node, config) {
-					var checked = $(this).prop("checked");
+					var checked = $('#expense_type').prop("checked");
 					var length = $('#rcp_table').find('td[class=qty]').length;
 					var row = "";
 
@@ -257,6 +260,8 @@
 
 					if (length <= 13) {
 						$('#rcp_table > tbody').append(row);
+						allowNumbers('.qty');
+						allowNumbersWithDecimal('.amount');
 					}
 					else {
 						return toastr.error("Rows already exceeds the limit.");
@@ -269,6 +274,9 @@
 		jsSwitch('.switcher', '#ED5565');
 		rcpTable('#rcp_table', buttons);
 		datePicker('#data_1 .input-group.date');
+
+		allowNumbers('.qty');
+		allowNumbersWithDecimal('.amount');
 
 		$('#department').on('change', function(event) {
 			event.preventDefault();

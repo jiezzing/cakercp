@@ -1,6 +1,6 @@
 <?php
 
-	class RcpController extends AppController {
+	class RCPController extends AppController {
 
 		public $uses = array(
 			'Company',
@@ -35,13 +35,15 @@
 		}
 
 		public function create() {
+			// debug($this->params);
+			// debug($this->Rcp->details(1, 6));
 			$response = $this->Notification->sendNotification();
-			$return["allresponses"] = $response;
-			$return = json_encode($return);
+			// $return["allresponses"] = $response;
+			// $return = json_encode($return);
 
-			$data = json_decode($response, true);
+			// $data = json_decode($response, true);
 
-			$id = $data['id'];
+			// $id = $data['id'];
 
 			// debug($data);
 			$companies = $this->Company->find('all');
@@ -53,309 +55,56 @@
 			$this->set('projects', $projects);
 		}
 
-		public function approvers() {
-			$this->autoRender = false;
-
-			if ($this->request->is('ajax')) {
-				$approverId = $this->Approver->find('first', array(
-					'joins' => array(
-						array(
-							'alias' => 'User',
-							'table' => 'users',
-							'type' => 'INNER',
-							'conditions' => array(
-								'User.id = Approver.app_id'
-							)
-						),
-						array(
-							'alias' => 'UserType',
-							'table' => 'user_types',
-							'type' => 'INNER',
-							'conditions' => array(
-								'UserType.id = User.type_id'
-							)
-						)
-					),
-					'conditions' => array(
-						'Approver.dept_id' => $this->request->data['id']
-					),
-					'fields' => array(
-						'User.firstname',
-						'User.lastname',
-						'User.id',
-						'UserType.name'
-					)
-				));
-				$altApproverId = $this->Approver->find('first', array(
-					'joins' => array(
-						array(
-							'alias' => 'User',
-							'table' => 'users',
-							'type' => 'INNER',
-							'conditions' => array(
-								'User.id = Approver.alt_app_id'
-							)
-						),
-						array(
-							'alias' => 'UserType',
-							'table' => 'user_types',
-							'type' => 'INNER',
-							'conditions' => array(
-								'UserType.id = User.type_id'
-							)
-						)
-					),
-					'conditions' => array(
-						'Approver.dept_id' => $this->request->data['id']
-					),
-					'fields' => array(
-						'User.firstname',
-						'User.lastname',
-						'User.id',
-						'UserType.name'
-					)
-				));
-				$secondaryId = $this->Approver->find('first', array(
-					'joins' => array(
-						array(
-							'alias' => 'User',
-							'table' => 'users',
-							'type' => 'INNER',
-							'conditions' => array(
-								'User.id = Approver.sec_id'
-							)
-						),
-						array(
-							'alias' => 'UserType',
-							'table' => 'user_types',
-							'type' => 'INNER',
-							'conditions' => array(
-								'UserType.id = User.type_id'
-							)
-						)
-					),
-					'conditions' => array(
-						'Approver.dept_id' => $this->request->data['id']
-					),
-					'fields' => array(
-						'User.firstname',
-						'User.lastname',
-						'User.id',
-						'UserType.name'
-					)
-				));
-				$altSecondaryId = $this->Approver->find('first', array(
-					'joins' => array(
-						array(
-							'alias' => 'User',
-							'table' => 'users',
-							'type' => 'INNER',
-							'conditions' => array(
-								'User.id = Approver.alt_sec_id'
-							)
-						),
-						array(
-							'alias' => 'UserType',
-							'table' => 'user_types',
-							'type' => 'INNER',
-							'conditions' => array(
-								'UserType.id = User.type_id'
-							)
-						)
-					),
-					'conditions' => array(
-						'Approver.dept_id' => $this->request->data['id']
-					),
-					'fields' => array(
-						'User.firstname',
-						'User.lastname',
-						'User.id',
-						'UserType.name'
-					)
-				));
-				$response = array();
-
-				if ($approverId) {
-					$name = $approverId['User']['lastname'] . ", " . $approverId['User']['firstname'];
-					$type = $approverId['UserType']['name'];
-
-					$approver = array(
-						'approver' =>  $name . " - " . $type,
-						'id' => $approverId['User']['id']
-					);
-
-					$response['primary_app'] = $approver;
-				}
-				else {
-					$approver = array(
-						'approver' =>  Output::message('noApprover'),
-						'id' => 0
-					);
-
-					$response['primary_app'] = $approver;
-				}
-
-				if ($altApproverId) {
-					$name = $altApproverId['User']['lastname'] . ", " . $altApproverId['User']['firstname'];
-					$type = $altApproverId['UserType']['name'];
-
-					$approver = array(
-						'approver' =>  $name . " - " . $type,
-						'id' => $altApproverId['User']['id']
-					);
-
-					$response['alt_primary_app'] = $approver;
-				}
-				else {
-					$approver = array(
-						'approver' =>  Output::message('noAltApprover'),
-						'id' => 0
-					);
-
-					$response['alt_primary_app'] = $approver;
-				}
-
-				if ($secondaryId) {
-					$name = $secondaryId['User']['lastname'] . ", " . $secondaryId['User']['firstname'];
-					$type = $secondaryId['UserType']['name'];
-
-					$approver = array(
-						'approver' =>  $name . " - " . $type,
-						'id' => $secondaryId['User']['id']
-					);
-
-					$response['secondary_app'] = $approver;
-				}
-				else {
-					$approver = array(
-						'approver' =>  Output::message('noSecondary'),
-						'id' => 0
-					);
-
-					$response['secondary_app'] = $approver;
-				}
-
-				if ($altSecondaryId) {
-					$name = $altSecondaryId['User']['lastname'] . ", " . $altSecondaryId['User']['firstname'];
-					$type = $altSecondaryId['UserType']['name'];
-
-					$approver = array(
-						'approver' =>  $name . " - " . $type,
-						'id' => $altSecondaryId['User']['id']
-					);
-
-					$response['alt_secondary_app'] = $approver;
-				}
-				else {
-					$approver = array(
-						'approver' =>  Output::message('noAltSecondary'),
-						'id' => 0
-					);
-
-					$response['alt_secondary_app'] = $approver;
-				}
-			}
-
-			return Output::response($response);
-		}
-
 		public function sendRcp() {
 			$this->autoRender = false;
 
 			if ($this->request->is('ajax')) {
-				$hasEmpty = Validate::rcpEmptyField($this->request->data);
-				$isRushEmpty = Validate::rushHasBeenFilled($this->request->data);
+				$rcpHasEmptyFields = Validate::rcpHasEmptyFields($this->request->data);
+				$hasNoApprover = Validate::hasNoApprover($this->request->data);
+				$hasRushEmptyField = Validate::hasRushEmptyField($this->request->data);
 				$isRush = Validate::isRush($this->request->data);
+				$rcpParticularsIsEmpty = Validate::rcpParticularsIsEmpty($this->request->data);
 
-				if ($hasEmpty) {
+				if ($rcpHasEmptyFields) {
 					$message = Output::message('emptyField');
 					$response = Output::failed($message);
 				}
-				elseif ($isRushEmpty) {
+				elseif ($rcpParticularsIsEmpty) {
+					$message = Output::message('particularsEmpty');
+					$response = Output::failed($message);
+				}
+				elseif ($hasNoApprover) {
+					$message = Output::message('approver');
+					$response = Output::failed($message);
+				}
+				elseif ($hasRushEmptyField) {
 					$message = Output::message('rush');
 					$response = Output::failed($message);
 				}
 				else {
-					$this->Rcp->create();
-
-					$data['rcp_no'] = $this->rcpNo($this->request->data['department']);
-					$data['req_id'] = $this->Auth->user('id');
-					$data['app_id'] = $this->request->data['approver'];
-					$data['comp_id'] = $this->request->data['company'];
-					$data['dept_id'] = $this->request->data['department'];
-					$data['proj_id'] = $this->request->data['project'];
-					$data['payee'] = $this->request->data['payee'];
-					$data['issued_on'] = date('Y-m-d');
-					$data['amount'] = $this->request->data['amount'];
-					$data['amount_in_words'] = $this->request->data['amountInWords'];
-					$data['expense_type'] = $this->request->data['expenseType'];
-
-					if ($isRush) {
-						$data['is_rush'] = 1;
-					}
-					else {
-						$data['is_rush'] = 0;
-					}
-
-					$data['is_vatable'] = 0;
-					$data['is_edited'] = 0;
-					$data['created'] = date('Y-m-d H:i:s');
-					$data['status_id'] = 1;
-
-					$this->Rcp->set($data);
-
-					$result = $this->Rcp->save();
+					$result = $this->createRcp($this->request->data, $isRush);
 
 					if ($result) {
+						$rcpId = $result['Rcp']['id'];
+
 						$message = Output::message('rcp');
 						$response = Output::success($message);
 
+						$this->createRcpParticulars($rcpId, $this->request->data);
+
+						$subject = "Request for Approval";
+
 						if ($isRush) {
-							$this->RcpRush->create();
-
-							$data['rcp_id'] = $result['Rcp']['id'];
-							$data['due_date'] = date('Y-m-d', strtotime($this->request->data['dueDate']));
-							$data['justification'] = $this->request->data['justification'];
-							$data['created'] = date('Y-m-d H:i:s');
-
-							$this->RcpRush->set($data);
-
-							$this->RcpRush->save();
+							$this->createRushRcp($rcpId, $this->request->data);
+							$subject = "RUSH Request for Approval";
 						}
 
-						$qty = explode(",", $this->request->data['qty']);
-						$unit = explode(",", $this->request->data['unit']);
-						$particulars = explode(",", $this->request->data['particulars']);
-						$refCode = explode(",", $this->request->data['refCode']);
-						$amount = explode(",", $this->request->data['amount']);
-
-						if (!empty($this->request->data['code'])) {
-							$code = explode(",", $this->request->data['code']);
-						}
-
-						foreach ($particulars as $key => $value) {
-							$this->RcpParticular->create();
-
-							if (!empty($this->request->data['code'])) {
-								$data['code'] = $code[$key];
-							}
-
-							$data['rcp_id'] = $result['Rcp']['id'];
-							$data['qty'] = $qty[$key];
-							$data['unit'] = $unit[$key];
-							$data['particulars'] = $value;
-							$data['ref_code'] = $refCode[$key];
-							$data['amount'] = $amount[$key];
-							$data['created'] = date('Y-m-d H:i:s');
-
-							$this->RcpParticular->set($data);
-
-							$this->RcpParticular->save();
-						}
+						$link = $this->request->data['origin'] . '' . $this->params->webroot . 'details/' . $rcpId;
 
 						$this->sendEmail(
-							$result['Rcp']['id'],
-							$this->Auth->user('id')
+							$rcpId,
+							$subject,
+							$link
 						);
 					}
 					else {
@@ -368,27 +117,6 @@
 			}
 
 			return Output::response($response);
-		}
-
-		public function rcpNo($id = null) {
-			if ($id) {
-				$departmentCode = $this->Department->find('first', array(
-					'conditions' => array(
-						'Department.id' => $id
-					),
-					'fields' => array(
-						'Department.code'
-					)
-				));
-				$totalRcp = $this->Rcp->find('count', array(
-					'conditions' => array(
-						'Rcp.dept_id' => $id
-					)
-				));
-				$rcpNo = $departmentCode['Department']['code'] . ' ' . substr(date('y'), -2) . '-' . str_pad(($totalRcp + 1), 4, '0', STR_PAD_LEFT);
-
-				return $rcpNo;
-			}
 		}
 
 		public function details($id = null) {
@@ -413,8 +141,88 @@
 			$this->set('projects', $projects);
 		}
 
-		public function sendEmail($id = null, $userId = null) {
-			$detail = $this->Rcp->details($id, $userId);
+		public function createRcp($data = array(), $isRush = false) {
+			$rcp = array();
+
+			$this->Rcp->create();
+
+			$rcp['rcp_no'] = $this->rcpNo($data['department']);
+			$rcp['req_id'] = $this->Auth->user('id');
+			$rcp['app_id'] = $data['approver'];
+			$rcp['comp_id'] = $data['company'];
+			$rcp['dept_id'] = $data['department'];
+			$rcp['proj_id'] = $data['project'];
+			$rcp['payee'] = $data['payee'];
+			$rcp['issued_on'] = date('Y-m-d');
+			$rcp['amount'] = preg_replace('/[^\d.]/', '', $data['totalAmount']);
+			$rcp['amount_in_words'] = $data['amountInWords'];
+			$rcp['expense_type'] = $data['expenseType'];
+
+			$isRush ? $rcp['is_rush'] = 1 : $rcp['is_rush'] = 0;
+
+			$rcp['is_vatable'] = 0;
+			$rcp['is_edited'] = 0;
+			$rcp['created'] = date('Y-m-d H:i:s');
+			$rcp['status_id'] = 1;
+
+			$this->Rcp->set($rcp);
+
+			$result = $this->Rcp->save();
+
+			return $result;
+		}
+
+		public function createRcpParticulars($id = null, $data = array()) {
+			$rcp = array();
+
+			if (!empty($data['code'])) {
+				$code = explode(",", $this->request->data['code']);
+			}
+
+			$qty = explode(",", $data['qty']);
+			$unit = explode(",", $data['unit']);
+			$particulars = explode(",", $data['particulars']);
+			$refCode = explode(",", $data['refCode']);
+			$amount = explode(",", $data['amount']);
+
+			foreach ($particulars as $key => $value) {
+				$this->RcpParticular->create();
+
+				if (!empty($data['code'])) {
+					$rcp['code'] = $code[$key];
+				}
+
+				$rcp['rcp_id'] = $id;
+				$rcp['qty'] = $qty[$key];
+				$rcp['unit'] = $unit[$key];
+				$rcp['particulars'] = $value;
+				$rcp['ref_code'] = $refCode[$key];
+				$rcp['amount'] = $amount[$key];
+				$rcp['created'] = date('Y-m-d H:i:s');
+
+				$this->RcpParticular->set($rcp);
+
+				$this->RcpParticular->save();
+			}
+		}
+
+		public function createRushRcp($id = null, $data = array()) {
+			$rcp = array();
+
+			$this->RcpRush->create();
+
+			$rcp['rcp_id'] = $id;
+			$rcp['due_date'] = date('Y-m-d', strtotime($data['dueDate']));
+			$rcp['justification'] = $data['justification'];
+			$rcp['created'] = date('Y-m-d H:i:s');
+
+			$this->RcpRush->set($rcp);
+
+			$this->RcpRush->save();
+		}
+
+		public function sendEmail($id = null, $subject = null, $link = null) {
+			$detail = $this->Rcp->details($id, $this->Auth->user('id'));
 
 			$rcpNo = $detail['Rcp']['rcp_no'];
 			$approverName = $detail['User']['firstname'] . ' ' . $detail['User']['lastname'];
@@ -423,6 +231,32 @@
 			$project = $detail['Project']['name'];
 			$payee = $detail['Rcp']['payee'];
 			$issued = CakeTime::nice($detail['Rcp']['created']);
+			$emailAddress = $detail['UserAccount']['email'];
+
+			$rushDetails = $this->Rcp->rush($id, $this->Auth->user('id'));
+
+			if ($rushDetails) {
+				$dueDate = $rushDetails['RcpRush']['due_date'];
+				$justification = $rushDetails['RcpRush']['justification'];
+				$supportingFile = $rushDetails['RcpRush']['supporting_file'];
+			}
+			else {
+				$dueDate = null;
+				$justification = null;
+				$supportingFile = null;
+			}
+
+			$requestDetail = $this->User->find('first', array(
+				'conditions' => array(
+					'User.id' => $this->Auth->user('id')
+				),
+				'fields' => array(
+					'User.firstname',
+					'User.lastname'
+				)
+			));
+
+			$requestor = $requestDetail['User']['firstname'] . ' ' . $requestDetail['User']['lastname'];
 
 			$email = new CakeEmail();
 			$email->config('smtp');
@@ -430,8 +264,8 @@
 			$email->template('send_email')
 			->emailFormat('html')
 			->from(array('no-reply@innoland.com' => 'System Administrator'))
-			->to('jiezzing@gmail.com')
-			->subject('Request for Approval')
+			->to($emailAddress)
+			->subject($subject)
 			->viewVars(array(
 				'rcp_no' => $rcpNo,
 				'app_name' => $approverName,
@@ -439,8 +273,263 @@
 				'company' => $company,
 				'project' => $project,
 				'payee' => $payee,
-				'date' => $issued
+				'date' => $issued,
+				'requestor' => $requestor,
+				'link' => $link,
+				'due_date' => $dueDate,
+				'justification' => $justification
 			))
 			->send();
+		}
+
+		public function approvers() {
+			$this->autoRender = false;
+
+			if ($this->request->is('ajax')) {
+				$response = array();
+				$primaryApprover = $this->primaryApprover($this->request->data);
+				$altPrimaryApprover = $this->altPrimaryApprover($this->request->data);
+				$secondaryApprover = $this->secondaryApprover($this->request->data);
+				$altSecondaryApprover = $this->altSecondaryApprover($this->request->data);
+
+				if ($primaryApprover) {
+					$name = $primaryApprover['User']['lastname'] . ", " . $primaryApprover['User']['firstname'];
+					$type = $primaryApprover['UserType']['name'];
+
+					$approver = array(
+						'approver' =>  $name . " - " . $type,
+						'id' => $primaryApprover['User']['id']
+					);
+
+					$response['primary_app'] = $approver;
+				}
+				else {
+					$approver = array(
+						'approver' =>  Output::message('noApprover'),
+						'id' => 0
+					);
+
+					$response['primary_app'] = $approver;
+				}
+
+				if ($altPrimaryApprover) {
+					$name = $altPrimaryApprover['User']['lastname'] . ", " . $altPrimaryApprover['User']['firstname'];
+					$type = $altPrimaryApprover['UserType']['name'];
+
+					$approver = array(
+						'approver' =>  $name . " - " . $type,
+						'id' => $altPrimaryApprover['User']['id']
+					);
+
+					$response['alt_primary_app'] = $approver;
+				}
+				else {
+					$approver = array(
+						'approver' =>  Output::message('noAltApprover'),
+						'id' => 0
+					);
+
+					$response['alt_primary_app'] = $approver;
+				}
+
+				if ($secondaryApprover) {
+					$name = $secondaryApprover['User']['lastname'] . ", " . $secondaryApprover['User']['firstname'];
+					$type = $secondaryApprover['UserType']['name'];
+
+					$approver = array(
+						'approver' =>  $name . " - " . $type,
+						'id' => $secondaryApprover['User']['id']
+					);
+
+					$response['secondary_app'] = $approver;
+				}
+				else {
+					$approver = array(
+						'approver' =>  Output::message('noSecondary'),
+						'id' => 0
+					);
+
+					$response['secondary_app'] = $approver;
+				}
+
+				if ($altSecondaryApprover) {
+					$name = $altSecondaryApprover['User']['lastname'] . ", " . $altSecondaryApprover['User']['firstname'];
+					$type = $altSecondaryApprover['UserType']['name'];
+
+					$approver = array(
+						'approver' =>  $name . " - " . $type,
+						'id' => $altSecondaryApprover['User']['id']
+					);
+
+					$response['alt_secondary_app'] = $approver;
+				}
+				else {
+					$approver = array(
+						'approver' =>  Output::message('noAltSecondary'),
+						'id' => 0
+					);
+
+					$response['alt_secondary_app'] = $approver;
+				}
+			}
+
+			return Output::response($response);
+		}
+
+		public function primaryApprover($data = array()) {
+			$result = $this->Approver->find('first', array(
+				'joins' => array(
+					array(
+						'alias' => 'User',
+						'table' => 'users',
+						'type' => 'INNER',
+						'conditions' => array(
+							'User.id = Approver.app_id'
+						)
+					),
+					array(
+						'alias' => 'UserType',
+						'table' => 'user_types',
+						'type' => 'INNER',
+						'conditions' => array(
+							'UserType.id = User.type_id'
+						)
+					)
+				),
+				'conditions' => array(
+					'Approver.dept_id' => $data['id']
+				),
+				'fields' => array(
+					'User.firstname',
+					'User.lastname',
+					'User.id',
+					'UserType.name'
+				)
+			));
+
+			return $result;
+		}
+
+		public function altPrimaryApprover($data = array()) {
+			$result = $this->Approver->find('first', array(
+				'joins' => array(
+					array(
+						'alias' => 'User',
+						'table' => 'users',
+						'type' => 'INNER',
+						'conditions' => array(
+							'User.id = Approver.alt_app_id'
+						)
+					),
+					array(
+						'alias' => 'UserType',
+						'table' => 'user_types',
+						'type' => 'INNER',
+						'conditions' => array(
+							'UserType.id = User.type_id'
+						)
+					)
+				),
+				'conditions' => array(
+					'Approver.dept_id' => $data['id']
+				),
+				'fields' => array(
+					'User.firstname',
+					'User.lastname',
+					'User.id',
+					'UserType.name'
+				)
+			));
+
+			return $result;
+		}
+
+		public function secondaryApprover($data = array()) {
+			$result = $this->Approver->find('first', array(
+				'joins' => array(
+					array(
+						'alias' => 'User',
+						'table' => 'users',
+						'type' => 'INNER',
+						'conditions' => array(
+							'User.id = Approver.sec_id'
+						)
+					),
+					array(
+						'alias' => 'UserType',
+						'table' => 'user_types',
+						'type' => 'INNER',
+						'conditions' => array(
+							'UserType.id = User.type_id'
+						)
+					)
+				),
+				'conditions' => array(
+					'Approver.dept_id' => $data['id']
+				),
+				'fields' => array(
+					'User.firstname',
+					'User.lastname',
+					'User.id',
+					'UserType.name'
+				)
+			));
+
+			return $result;
+		}
+
+		public function altSecondaryApprover($data = array()) {
+			$result = $this->Approver->find('first', array(
+				'joins' => array(
+					array(
+						'alias' => 'User',
+						'table' => 'users',
+						'type' => 'INNER',
+						'conditions' => array(
+							'User.id = Approver.alt_sec_id'
+						)
+					),
+					array(
+						'alias' => 'UserType',
+						'table' => 'user_types',
+						'type' => 'INNER',
+						'conditions' => array(
+							'UserType.id = User.type_id'
+						)
+					)
+				),
+				'conditions' => array(
+					'Approver.dept_id' => $this->request->data['id']
+				),
+				'fields' => array(
+					'User.firstname',
+					'User.lastname',
+					'User.id',
+					'UserType.name'
+				)
+			));
+
+			return $result;
+		}
+
+		public function rcpNo($id = null) {
+			if ($id) {
+				$departmentCode = $this->Department->find('first', array(
+					'conditions' => array(
+						'Department.id' => $id
+					),
+					'fields' => array(
+						'Department.code'
+					)
+				));
+				$totalRcp = $this->Rcp->find('count', array(
+					'conditions' => array(
+						'Rcp.dept_id' => $id
+					)
+				));
+				$rcpNo = $departmentCode['Department']['code'] . ' ' . substr(date('y'), -2) . '-' . str_pad(($totalRcp + 1), 4, '0', STR_PAD_LEFT);
+
+				return $rcpNo;
+			}
 		}
 	}

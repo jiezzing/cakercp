@@ -52,6 +52,30 @@
 			return Output::response($response);
 		}
 
+		public function updatePlayerId() {
+			$this->autoRender = false;
+
+			if ($this->request->is('ajax')) {
+				$result = $this->UserAccount->updateAll(array(
+						'UserAccount.player_id' => "'{$this->request->data['playerId']}'"
+					), array(
+						'UserAccount.user_id' => $this->request->data['id']
+					)
+				);
+
+				if ($result) {
+					$message = Output::message('onesignal');
+					$response = Output::success($message);;
+				}
+				else {
+					$message = Output::message('failed');
+					$response = Output::failed($message);
+				}
+			}
+
+			return Output::response($response);
+		}
+
 		public function logout() {
 			$this->Auth->logout();
 

@@ -88,6 +88,14 @@
 						)
 					),
 					array(
+						'alias' => 'UserAccount',
+						'table' => 'user_accounts',
+						'type' => 'INNER',
+						'conditions' => array(
+							'UserAccount.user_id = User.id'
+						)
+					),
+					array(
 						'alias' => 'Company',
 						'table' => 'companies',
 						'type' => 'INNER',
@@ -118,14 +126,6 @@
 						'conditions' => array(
 							'Status.id = Rcp.status_id'
 						)
-					),
-					array(
-						'alias' => 'RcpParticular',
-						'table' => 'rcp_particulars',
-						'type' => 'INNER',
-						'conditions' => array(
-							'RcpParticular.rcp_id = Rcp.id'
-						)
 					)
 				),
 				'conditions' => array(
@@ -144,16 +144,11 @@
 					'Rcp.expense_type',
 					'Rcp.created',
 					'Rcp.is_rush',
-					'RcpParticular.qty',
-					'RcpParticular.unit',
-					'RcpParticular.particulars',
-					'RcpParticular.ref_code',
-					'RcpParticular.code',
-					'RcpParticular.amount',
 					'Rcp.amount_in_words',
 					'Status.name',
 					'User.firstname',
 					'User.lastname',
+					'UserAccount.email',
 					'Department.name',
 					'Project.name',
 					'Company.name'
@@ -186,6 +181,32 @@
 					'RcpParticular.ref_code',
 					'RcpParticular.code',
 					'RcpParticular.amount'
+				)
+			));
+
+			return $result;
+		}
+
+		public function rush($id = null, $userId = null) {
+			$result = $this->find('first', array(
+				'joins' => array(
+					array(
+						'alias' => 'RcpRush',
+						'table' => 'rcp_rushes',
+						'type' => 'INNER',
+						'conditions' => array(
+							'RcpRush.rcp_id = Rcp.id'
+						)
+					)
+				),
+				'conditions' => array(
+					'Rcp.id' => $id,
+					'Rcp.req_id' => $userId
+				),
+				'fields' => array(
+					'RcpRush.due_date',
+					'RcpRush.justification',
+					'RcpRush.supporting_file'
 				)
 			));
 
