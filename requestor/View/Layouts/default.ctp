@@ -11,6 +11,7 @@
 		});
 	</script>
 	<script>
+		var userId = <?php echo AuthComponent::user('id') ?>;
 		window.OneSignal =  OneSignal || [];
 
 		OneSignal.push(function() {
@@ -18,7 +19,7 @@
 
 			OneSignal.on('subscriptionChange', function (isSubscribed) {
 			console.log("The user's subscription state is now:", isSubscribed);
-				OneSignal.sendTag("user_id", "321", function(tagsSent) {
+				OneSignal.sendTag("user_id", userId, function(tagsSent) {
 					console.log("Tags has finished sending:", tagsSent);
 				});
 			});

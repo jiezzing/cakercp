@@ -21,9 +21,9 @@
 
 			$fields = array(
 				'app_id' => "e986f8c5-25e9-4579-a96d-a611536dbbef",
-				'include_player_id' => array("9cbf30e3-d253-4d5f-b159-6c8f0c1271f7"),
+				'include_player_id' => array("2b70e1c3-6960-4c62-81af-eefd88332a24"),
 				'included_segments' => array(
-					'All'
+					"Active Users", "Inactive Users"
 				),
 				'data' => array(
 					"foo" => "bar"

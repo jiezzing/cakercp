@@ -38294,3 +38294,129 @@ Request URL: /rcp/approver/img/ic_launcher-playstore.ico
 Stack Trace:
 #0 C:\xampp\htdocs\rcp\approver\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2020-07-25 10:50:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/js/plugins/dataTables/datatables.bootstrap4.min.js
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/js/plugins/dataTables/datatables.bootstrap4.min.js
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/img/profile_small.jpg
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/img/a7.jpg
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/img/profile.jpg
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/img/a4.jpg
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/img/ic_launcher-playstore.ico
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:52 Error: [MissingControllerException] Controller class Login.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Login.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/login.html
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/js/plugins/dataTables/datatables.bootstrap4.min.js
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/img/profile_small.jpg
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/img/a7.jpg
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/img/a4.jpg
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/js/plugins/dataTables/datatables.bootstrap4.min.js
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-07-25 10:50:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cakercp/approver/img/profile.jpg
+Stack Trace:
+#0 /opt/lampp/htdocs/cakercp/approver/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
