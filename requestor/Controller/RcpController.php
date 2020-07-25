@@ -1,6 +1,6 @@
 <?php
 
-	class RCPController extends AppController {
+	class RcpController extends AppController {
 
 		public $uses = array(
 			'Company',

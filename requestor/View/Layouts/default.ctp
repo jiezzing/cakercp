@@ -38,7 +38,6 @@
 				OneSignal.showHttpPrompt();
 				alert("Push notifications are not supported");
 			}
-
 		});
 	</script>
     <?php
