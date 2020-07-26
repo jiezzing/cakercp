@@ -6,26 +6,31 @@
 
         public $usesTable = 'notifications';
 
-		public function sendNotification() {
+		public function sendNotification($data = array()) {
 			$content      = array(
-				"en" => 'Kenji batig nawng'
+				"en" => $data['content']
+			);
+
+			$heading      = array(
+				"en" => $data['heading']
 			);
 
 			$hashes_array = array();
 			array_push($hashes_array, array(
 				"id" => "close-button",
-				"text" => "Go Back",
-				"icon" => "http://i.imgur.com/N8SN8ZS.png",
-				"url" => "https://yoursite.com"
+				"text" => $data['button_text'],
+				"icon" => "https://innoland.com.ph/wp-content/uploads/2019/10/Innoland.png",
+				"url" => $data['url']
 			));
 
 			$fields = array(
 				'app_id' => "e986f8c5-25e9-4579-a96d-a611536dbbef",
-				'include_player_ids' => array("65642398-695c-4150-a12f-90ba18363cf5"),
+				'include_player_ids' => array($data['player_id']),
 				'data' => array(
 					"foo" => "bar"
 				),
 				'contents' => $content,
+				'headings' => $heading,
 				'web_buttons' => $hashes_array
 			);
 

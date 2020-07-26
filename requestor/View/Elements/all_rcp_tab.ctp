@@ -8,7 +8,6 @@
 					<th>Project</th>
 					<th>Company</th>
 					<th>Approver</th>
-					<th>Issued</th>
 					<th>Created</th>
 					<th>Status</th>
 					<th>Actions</th>
@@ -22,7 +21,6 @@
 						<td><?php echo $rcp['Project']['name'] ?></td>
 						<td><?php echo $rcp['Company']['name'] ?></td>
 						<td><?php echo $rcp['User']['firstname'] ?></td>
-						<td><?php echo $rcp['Rcp']['issued_on'] ?></td>
 						<td><?php echo $rcp['Rcp']['created'] ?></td>
 						<td>
 							<?php if ($rcp['Rcp']['status_id'] == 1) : ?>
@@ -36,13 +34,10 @@
 						<td>
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item">
-									<a href="<?php echo $this->params->base . '/details/' . $rcp['Rcp']['id'] ?>" class="text-navy" value="2"><i class="fa fa-pencil"></i><span class="nav-label"> Details</span></a>
+									<a href="<?php echo $this->params->webroot . 'details/' . $rcp['Rcp']['id'] ?>" class="text-navy" value="2"><i class="fa fa-file"></i><span class="nav-label"> Details</span></a>
 								</li>
 								<li class="breadcrumb-item">
-									<a href="#" class="text-navy" value="2"><i class="fa fa-pencil"></i><span class="nav-label"> Edit</span></a>
-								</li>
-								<li class="breadcrumb-item">
-									<a href="#" class="text-danger" value="2"><i class="fa fa-trash"></i><span class="nav-label"> Delete</span></a>
+									<a href="<?php echo $this->params->webroot . 'edit/' . $rcp['Rcp']['id'] ?>" class="text-danger" value="2"><i class="fa fa-pencil"></i><span class="nav-label"> Edit</span></a>
 								</li>
 							</ol>
 						</td>

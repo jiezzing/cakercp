@@ -149,6 +149,7 @@
 					'User.firstname',
 					'User.lastname',
 					'UserAccount.email',
+					'UserAccount.player_id',
 					'Department.name',
 					'Project.name',
 					'Company.name'

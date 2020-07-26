@@ -11,6 +11,7 @@
 			'RcpParticular',
 			'RcpRush',
 			'User',
+			'UserAccount',
 			'Notification'
 		);
 
@@ -35,17 +36,6 @@
 		}
 
 		public function create() {
-			// debug($this->params);
-			// debug($this->Rcp->details(1, 6));
-			$response = $this->Notification->sendNotification();
-			// $return["allresponses"] = $response;
-			// $return = json_encode($return);
-
-			// $data = json_decode($response, true);
-
-			// $id = $data['id'];
-
-			// debug($data);
 			$companies = $this->Company->find('all');
 			$departments = $this->Department->find('all');
 			$projects = $this->Project->find('all');
@@ -106,6 +96,27 @@
 							$subject,
 							$link
 						);
+
+						$playerId = $this->UserAccount->find('first', array(
+							'conditions' => array(
+								'UserAccount.user_id' => $this->request->data['approver']
+							),
+							'fields' => array(
+								'UserAccount.player_id'
+							)
+						));
+
+						if ($playerId) {
+							$pushData = array();
+
+							$pushData['content'] = "You have received a new Request for Check Payment.";
+							$pushData['heading'] = $this->rcpNo($this->request->data['department']);
+							$pushData['button_text'] = "See details";
+							$pushData['url'] = $link;
+							$pushData['player_id'] = $playerId['UserAccount']['player_id'];
+
+							$pushNotification = $this->Notification->sendNotification($pushData);
+						}
 					}
 					else {
 						$message = Output::message('error');
@@ -122,9 +133,11 @@
 		public function details($id = null) {
 			$details = $this->Rcp->details($id, $this->Auth->user('id'));
 			$particulars = $this->Rcp->particulars($id, $this->Auth->user('id'));
+			$rush = $this->Rcp->rush($id, $this->Auth->user('id'));
 
 			$this->set('detail', $details);
 			$this->set('particulars', $particulars);
+			$this->set('rush', $rush);
 		}
 
 		public function edit($id = null) {

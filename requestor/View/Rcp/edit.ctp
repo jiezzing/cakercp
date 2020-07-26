@@ -3,7 +3,8 @@
 		<div class="col-lg-12">
 			<div class="ibox ">
 				<div class="ibox-title">
-					<h5>Request for Check Payment - Edit</h5>
+					<h1 class="text-navy"><?php echo $detail['Rcp']['rcp_no'] ?></h1>
+					<small><?php echo $detail['Department']['name'] ?> DEPARTMENT</small>
 				</div>
 				<div class="ibox-content ibox-heading">
 					<h4>NOTE</h4>
@@ -12,16 +13,8 @@
 					<small>3. All alterations must be initialed by the authorized requesters / officers.</small><br>
 					<small>4. Avoid having RUSH requests; however, if truly urgent, indicate the date needed (box at the right).</small><br>
 					<small>5. All "RUSH" RCPs should be accompanied by an acceptable explanation.</small><br>
-				</div>
-				<div class="ibox-content">
-					<div class="row">
-						<div class="col-sm-12">
-							<h1 class="text-navy"><?php echo $detail['Rcp']['rcp_no'] ?></h1>
-							<address>
-								<?php echo $detail['Department']['name'] ?> DEPARTMENT<br>
-							</address>
-						</div>
-					</div>
+					<small>6. Qty, unit, particulars, BOM Ref / Acct Code, code and amount fields must not be empty. Make sure to fill at least one row to proceed.</small><br>
+					<small>7. At least one row field must not be empty to generate the total amount in words.</small><br>
 				</div>
 				<div class="ibox-content">
 					<div class="row">
@@ -61,22 +54,17 @@
 										</select>
 									</div>
 									<div class="col-md-2" data-select2-id="20">
-									<?php
-										if ($detail['Rcp']['expense_type'] == 'PROJECT EXPENSE') {
-											$expenseType = 'PROJECT EXPENSE';
-											$checked = 'checked';
-										}
-										else {
-											$expenseType = 'DEPARTMENT EXPENSE';
-											$checked = '';
-										}
-									?>
-									<h5 id="expense_title"><?php echo $expenseType ?></h5>
+									<h5 id="expense_title"><?php echo $detail['Rcp']['expense_type'] ?></h5>
 										<div>
 											<span >
-												<input type="checkbox" class="expense_type switcher" <?php echo $checked ?> data-switchery="true" style="display: none;" id="expense_type"">
+												<?php if ($detail['Rcp']['expense_type'] == "DEPARTMENT EXPENSE") : ?>
+													<input type="checkbox" class="expense_type switcher" data-switchery="true" style="display: none;" id="expense_type">
+												<?php else : ?>
+													<input type="checkbox" checked class="expense_type switcher" data-switchery="true" style="display: none;" id="expense_type">
+												<?php endif ?>
 											</span>
 										</div>
+
 									</div>
 								</div>
 							</div>
@@ -86,21 +74,13 @@
                 		<div class="col-lg-12">
 							<div class="ibox">
 								<div class="row" data-select2-id="11">
-									<div class="col-md-12" data-select2-id="20">
+									<div class="col-md-4" data-select2-id="20">
 										<h5>Payee</h5>
 										<input type="email" value="<?php echo $detail['Rcp']['payee'] ?>" placeholder="Payee" id="payee" class="form-control">
 									</div>
-								</div>
-							</div>
-                		</div>
-					</div>
-					<div class="row">
-                		<div class="col-lg-12">
-							<div class="ibox">
-								<div class="row" data-select2-id="11">
-									<div class="col-md-12" data-select2-id="20">
+									<div class="col-md-8" data-select2-id="20">
 										<h5>Amount in Words</h5>
-										<input type="text" value="<?php echo $detail['Rcp']['amount_in_words'] ?>" disabled class="form-control text-center">
+										<input type="text" placeholder="NO TOTAL AMOUNT DETECTED (Auto Generated)" value="<?php echo $detail['Rcp']['amount_in_words'] ?>" disabled class="form-control text-center" id="amount_in_words">
 									</div>
 								</div>
 							</div>
@@ -111,37 +91,37 @@
 							<div class="ibox">
 								<div class="row" data-select2-id="11">
 									<div class="col-md-12  no-padding" data-select2-id="20">
-										<table class="table table-bordered table-responsive-md mt-3" id="rcp_table">
+										<table class="table table-bordered table-responsive-md" id="rcp_table">
 											<thead>
 												<tr class="text-center">
 													<th>QTY</th>
 													<th>Unit</th>
 													<th>Particulars</th>
 													<th>BOM Ref / Acct Code</th>
-													<th style="display: none">Code</th>
+													<th width="10%">Code</th>
 													<th>Amount</th>
 													<th width="4%"></th>
 												</tr>
 											</thead>
 											<tbody>
-												<?php foreach ($particulars as $particular) : ?>
-													<tr>
-														<td class="qty" contenteditable="true"><?php echo $particular['RcpParticular']['qty'] ?></td>
-														<td class="unit" contenteditable="true"><?php echo $particular['RcpParticular']['unit'] ?></td>
-														<td class="particulars" contenteditable="true"><?php echo $particular['RcpParticular']['particulars'] ?></td>
-														<td class="ref_code" contenteditable="true"><?php echo $particular['RcpParticular']['ref_code'] ?></td>
-														<td class="code" contenteditable="true" style="display: none"><?php echo $particular['RcpParticular']['ref_code'] ?></td>
-														<td class="amount" contenteditable="true"><?php echo $particular['RcpParticular']['amount'] ?></td>
-														<td class="text-center"><span><i class="text-navy fa fa-check remove"></i></span></td>
-													</tr>
-												<?php endforeach ?>
+											<?php foreach ($particulars as $particular) : ?>
+												<tr>
+													<td class="qty" contenteditable="true"><?php echo $particular['RcpParticular']['qty'] ?></td>
+													<td class="unit" contenteditable="true"><?php echo $particular['RcpParticular']['unit'] ?></td>
+													<td class="particulars" contenteditable="true"><?php echo $particular['RcpParticular']['particulars'] ?></td>
+													<td class="ref_code" contenteditable="true"><?php echo $particular['RcpParticular']['ref_code'] ?></td>
+													<td class="code" contenteditable="true"><?php echo $particular['RcpParticular']['code'] ?></td>
+													<td class="amount" contenteditable="true"><?php echo $particular['RcpParticular']['amount'] ?></td>
+													<td class="text-center"><span><i class="text-navy fa fa-check"></i></span></td>
+												</tr>
+											<?php endforeach ?>
 											</tbody>
 										</table>
 									</div>
 									<div class="col-md-12 float-right" data-select2-id="20">
 										<div>
 											<span class="float-right">
-											<h1 class="m-b-xs" id="amount"><?php echo CakeNumber::currency($detail['Rcp']['amount']) ?></h1>
+											<h1 class="m-b-xs" id="amount"><?php echo number_format($detail['Rcp']['amount'], 2) ?></h1>
 												TOTAL AMOUNT DUE
 											</span>
 										</div>
@@ -159,13 +139,8 @@
 			<div class="ibox ">
 				<div class="ibox-title">
 					<h5>Show and fill up the following if this RCP is vatable</h5>
-					<div class="ibox-tools">
-						<a class="collapse-link">
-							<i class="fa fa-chevron-down"></i>
-						</a>
-					</div>
 				</div>
-				<div class="ibox-content" style="display: none">
+				<div class="ibox-content">
 					<div class="col-md-12" data-select2-id="20">
 						<select class="form-control select2-hidden-accessible chosen_select" data-select2-id="6" tabindex="-1" aria-hidden="true">
 							<option data-select2-id="8"></option>
@@ -180,7 +155,7 @@
 						</select>
 					</div>
 					<div class="col-md-12" data-select2-id="20">
-						<table class="table table-bordered mt-3" id="rcp_table">
+						<table class="table table-bordered mt-3">
 							<tbody>
 								<tr>
 									<td>P.O.S. Trans #</td>
@@ -217,13 +192,8 @@
 			<div class="ibox ">
 				<div class="ibox-title">
 					<h5>If RUSH, fill the following</h5>
-					<div class="ibox-tools">
-						<a class="collapse-link">
-							<i class="fa fa-chevron-down"></i>
-						</a>
-					</div>
 				</div>
-				<div class="ibox-content" style="display: none">
+				<div class="ibox-content">
 					<div class="form-group" id="data_1">
 						<label class="font-normal">Date</label>
 						<div class="input-group date">
@@ -282,6 +252,15 @@
 
 					if (length <= 13) {
 						$('#rcp_table > tbody').append(row);
+						allowNumbers('.qty');
+						allowNumbersWithDecimal('.amount');
+
+						keypressToCalculate('.qty', checked);
+						keypressToCalculate('.unit', checked);
+						keypressToCalculate('.particulars', checked);
+						keypressToCalculate('.ref_code', checked);
+						keypressToCalculate('.code', checked);
+						keypressToCalculate('.amount', checked);
 					}
 					else {
 						return toastr.error("Rows already exceeds the limit.");
@@ -289,11 +268,20 @@
 				}
             }
 
-		// initializations
 		chosenSelect('.chosen_select');
 		jsSwitch('.switcher', '#ED5565');
 		rcpTable('#rcp_table', buttons);
 		datePicker('#data_1 .input-group.date');
+
+		allowNumbers('.qty');
+		allowNumbersWithDecimal('.amount');
+
+		keypressToCalculate('.qty', false);
+		keypressToCalculate('.unit', false);
+		keypressToCalculate('.particulars', false);
+		keypressToCalculate('.ref_code', false);
+		keypressToCalculate('.code', false);
+		keypressToCalculate('.amount', false);
 
 		$('#department').on('change', function(event) {
 			event.preventDefault();
@@ -329,12 +317,30 @@
 			var url = $(this).attr("url");
 
 			if (checked) {
-				$("#rcp_table tr td, th").filter(':nth-child(5)').hide();
+				keypressToCalculate('.qty', true);
+				keypressToCalculate('.unit', true);
+				keypressToCalculate('.particulars', true);
+				keypressToCalculate('.ref_code', true);
+				keypressToCalculate('.code', true);
+				keypressToCalculate('.amount', true);
+
+				$("#rcp_table tr td, th").filter(':nth-child(5)').attr('hidden', true);
+				$("#rcp_table tr td").filter(':nth-child(5)').html('');
 				$('#expense_title').text("PROJECT EXPENSE");
 			}
 			else {
-				$('#rcp_table > thead > tr > th:nth-child(5)').show();
-				$("#rcp_table td").filter(':nth-child(5)').show();
+				$('#amount').text("0.00");
+				$('#amount_in_words').val("");
+
+				keypressToCalculate('.qty', false);
+				keypressToCalculate('.unit', false);
+				keypressToCalculate('.particulars', false);
+				keypressToCalculate('.ref_code', false);
+				keypressToCalculate('.code', false);
+				keypressToCalculate('.amount', false);
+
+				$('#rcp_table > thead > tr > th:nth-child(5)').removeAttr('hidden');
+				$("#rcp_table td").filter(':nth-child(5)').removeAttr('hidden');
 				$('#expense_title').text("DEPARTMENT EXPENSE");
 			}
 		})
@@ -344,5 +350,30 @@
 
 			$(this).parents("tr").remove();
 		})
+
+		if (checked) {
+			keypressToCalculate('.qty', true);
+			keypressToCalculate('.unit', true);
+			keypressToCalculate('.particulars', true);
+			keypressToCalculate('.ref_code', true);
+			keypressToCalculate('.code', true);
+			keypressToCalculate('.amount', true);
+
+			$("#rcp_table tr td, th").filter(':nth-child(5)').attr('hidden', true);
+			$("#rcp_table tr td").filter(':nth-child(5)').html('');
+			$('#expense_title').text("PROJECT EXPENSE");
+		}
+		else {
+			keypressToCalculate('.qty', false);
+			keypressToCalculate('.unit', false);
+			keypressToCalculate('.particulars', false);
+			keypressToCalculate('.ref_code', false);
+			keypressToCalculate('.code', false);
+			keypressToCalculate('.amount', false);
+
+			$('#rcp_table > thead > tr > th:nth-child(5)').removeAttr('hidden');
+			$("#rcp_table td").filter(':nth-child(5)').removeAttr('hidden');
+			$('#expense_title').text("DEPARTMENT EXPENSE");
+		}
 	});
 </script>

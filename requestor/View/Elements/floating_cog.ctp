@@ -29,6 +29,8 @@
 		$('#send_rcp_btn').on('click', function(event) {
 			event.preventDefault();
 
+			calculateTotalAmount("#rcp_table > tbody > tr");
+
 			var checked = $('#expense_type').prop("checked");
 			var qtyArr = [];
 			var particularsArr = [];
@@ -52,17 +54,16 @@
 			var dueDate = $('#rush_date').val();
 			var justification = $('#justification').val().trim();
 
-			$('#rcp_table > tbody > tr').each(function(index, value) {
+			$('#rcp_table > tbody > tr').each(function() {
 				var qty = $(this).find("td").eq(0).html();
 				var unit = $(this).find("td").eq(1).html();
 				var particulars = $(this).find("td").eq(2).html();
 				var refCode = $(this).find("td").eq(3).html();
-
+				var code = $(this).find("td").eq(4).html();
+				var amount = $(this).find("td").eq(5).html();
 
 				if (checked) {
-					var amount = $(this).find("td").eq(4).html();
-
-					if (qty && unit && particulars && refCode && amount) {
+					if (qty && unit && particulars && refCode && !code && amount) {
 						qtyArr.push(qty);
 						unitArr.push(unit);
 						particularsArr.push(particulars);
@@ -71,9 +72,6 @@
 					}
 				}
 				else {
-					var code = $(this).find("td").eq(4).html();
-					var amount = $(this).find("td").eq(5).html();
-
 					if (qty && unit && particulars && refCode && code && amount) {
 						qtyArr.push(qty);
 						unitArr.push(unit);

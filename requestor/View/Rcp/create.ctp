@@ -1,5 +1,4 @@
 <div class="wrapper wrapper-content animated">
-<form id="rcp_form">
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="ibox ">
@@ -14,10 +13,11 @@
 					<small>4. Avoid having RUSH requests; however, if truly urgent, indicate the date needed (box at the right).</small><br>
 					<small>5. All "RUSH" RCPs should be accompanied by an acceptable explanation.</small><br>
 					<small>6. Qty, unit, particulars, BOM Ref / Acct Code, code and amount fields must not be empty. Make sure to fill at least one row to proceed.</small><br>
+					<small>7. At least one row field must not be empty to generate the total amount in words.</small><br>
 				</div>
 				<div class="ibox-content">
 					<div class="row">
-                		<div class="col-lg-12">
+						<div class="col-lg-12">
 							<div class="ibox">
 								<div class="row" data-select2-id="11">
 									<div class="col-md-4" data-select2-id="10">
@@ -57,10 +57,10 @@
 									</div>
 								</div>
 							</div>
-                		</div>
+						</div>
 					</div>
 					<div class="row">
-                		<div class="col-lg-12">
+						<div class="col-lg-12">
 							<div class="ibox">
 								<div class="row" data-select2-id="11">
 									<div class="col-md-4" data-select2-id="10">
@@ -79,22 +79,22 @@
 									</div>
 								</div>
 							</div>
-                		</div>
+						</div>
 					</div>
 					<div class="row">
-                		<div class="col-lg-12">
+						<div class="col-lg-12">
 							<div class="ibox">
 								<div class="row" data-select2-id="11">
 									<div class="col-md-12" data-select2-id="20">
 										<h5>Amount in Words</h5>
-										<input type="text" placeholder="NO TOTAL AMOUNT DETECTED (Auto Generated)" disabled class="form-control text-center" value="One hundred thousand pesos only" id="amount_in_words">
+										<input type="text" placeholder="NO TOTAL AMOUNT DETECTED (Auto Generated)" disabled class="form-control text-center" id="amount_in_words">
 									</div>
 								</div>
 							</div>
-                		</div>
+						</div>
 					</div>
 					<div class="row">
-                		<div class="col-lg-12">
+						<div class="col-lg-12">
 							<div class="ibox">
 								<div class="row" data-select2-id="11">
 									<div class="col-md-12  no-padding" data-select2-id="20">
@@ -119,23 +119,23 @@
 														<td class="ref_code" contenteditable="true"></td>
 														<td class="code" contenteditable="true"></td>
 														<td class="amount" contenteditable="true"></td>
-														<td class="text-center"><span><i class="text-navy fa fa-check remove"></i></span></td>
+														<td class="text-center"><span><i class="text-navy fa fa-check"></i></span></td>
 													</tr>
 												<?php endfor ?>
 											</tbody>
 										</table>
 									</div>
-									<div class="col-md-12 float-right" data-select2-id="20">
+									<div class="col-md-12 text-right" data-select2-id="20">
 										<div>
-											<span class="float-right">
-											<h1 class="m-b-xs" id="amount">50,992</h1>
+											<span class="text-right">
+											<h1 class="m-b-xs" id="amount">0.00</h1>
 												TOTAL AMOUNT DUE
 											</span>
 										</div>
 									</div>
 								</div>
 							</div>
-                		</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -215,7 +215,6 @@
 			</div>
 		</div>
 	</div>
-</form>
 </div>
 
 <script>
@@ -262,6 +261,13 @@
 						$('#rcp_table > tbody').append(row);
 						allowNumbers('.qty');
 						allowNumbersWithDecimal('.amount');
+
+						keypressToCalculate('.qty', checked);
+						keypressToCalculate('.unit', checked);
+						keypressToCalculate('.particulars', checked);
+						keypressToCalculate('.ref_code', checked);
+						keypressToCalculate('.code', checked);
+						keypressToCalculate('.amount', checked);
 					}
 					else {
 						return toastr.error("Rows already exceeds the limit.");
@@ -269,7 +275,6 @@
 				}
             }
 
-		// initializations
 		chosenSelect('.chosen_select');
 		jsSwitch('.switcher', '#ED5565');
 		rcpTable('#rcp_table', buttons);
@@ -277,6 +282,13 @@
 
 		allowNumbers('.qty');
 		allowNumbersWithDecimal('.amount');
+
+		keypressToCalculate('.qty', false);
+		keypressToCalculate('.unit', false);
+		keypressToCalculate('.particulars', false);
+		keypressToCalculate('.ref_code', false);
+		keypressToCalculate('.code', false);
+		keypressToCalculate('.amount', false);
 
 		$('#department').on('change', function(event) {
 			event.preventDefault();
@@ -312,10 +324,28 @@
 			var url = $(this).attr("url");
 
 			if (checked) {
+				keypressToCalculate('.qty', true);
+				keypressToCalculate('.unit', true);
+				keypressToCalculate('.particulars', true);
+				keypressToCalculate('.ref_code', true);
+				keypressToCalculate('.code', true);
+				keypressToCalculate('.amount', true);
+
 				$("#rcp_table tr td, th").filter(':nth-child(5)').attr('hidden', true);
+				$("#rcp_table tr td").filter(':nth-child(5)').html('');
 				$('#expense_title').text("PROJECT EXPENSE");
 			}
 			else {
+				$('#amount').text("0.00");
+				$('#amount_in_words').val("");
+
+				keypressToCalculate('.qty', false);
+				keypressToCalculate('.unit', false);
+				keypressToCalculate('.particulars', false);
+				keypressToCalculate('.ref_code', false);
+				keypressToCalculate('.code', false);
+				keypressToCalculate('.amount', false);
+
 				$('#rcp_table > thead > tr > th:nth-child(5)').removeAttr('hidden');
 				$("#rcp_table td").filter(':nth-child(5)').removeAttr('hidden');
 				$('#expense_title').text("DEPARTMENT EXPENSE");
