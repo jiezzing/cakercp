@@ -4,6 +4,6 @@
 
     class Department extends AppModel {
 
-        public $usesTable = 'departments';
+		public $usesTable = 'departments';
 
     }

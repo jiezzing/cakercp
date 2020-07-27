@@ -18,15 +18,15 @@
 			}
         }
 
-		public static function rcpHasEmptyFields($data = array()) {
+		public static function createRcpHasEmptyFields($data = array()) {
 			if (empty($data['department']) || empty($data['project']) ||
 			empty($data['company']) || empty($data['payee'])) {
 				return true;
 			}
         }
 
-		public static function hasNoApprover($data = array()) {
-			if (empty($data['approver'])) {
+		public static function updateRcpHasEmptyFields($data = array()) {
+			if (empty($data['project']) || empty($data['company']) || empty($data['payee'])) {
 				return true;
 			}
         }

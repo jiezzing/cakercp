@@ -3,7 +3,7 @@
 		<div class="col-lg-12">
 			<div class="ibox ">
 				<div class="ibox-title">
-					<h5>Request for Check Payment Fill-up Form</h5>
+					<h5>Request for Check Payment Form</h5>
 				</div>
 				<div class="ibox-content ibox-heading">
 					<h4>NOTE</h4>
@@ -20,9 +20,9 @@
 						<div class="col-lg-12">
 							<div class="ibox">
 								<div class="row" data-select2-id="11">
-									<div class="col-md-4" data-select2-id="10">
+									<div class="col-md-3" data-select2-id="10">
 										<h5>Department</h5>
-										<select class="form-control select2-hidden-accessible chosen_select" id="department" data-select2-id="6" tabindex="-1" aria-hidden="true" url="<?php echo $this->params->webroot . "dept_approvers" ?>">
+										<select class="form-control select2-hidden-accessible chosen_select" id="department" data-select2-id="6" tabindex="-1" aria-hidden="true" url="<?php echo $this->params->webroot . "approvers" ?>">
 											<option value="0">Select Department</option>
 											<?php foreach ($departments as $department) : ?>
 												<option value="<?php echo $department['Department']['id'] ?>" data-select2-id="21"><?php echo $department['Department']['name'] ?></option>
@@ -30,10 +30,13 @@
 										</select>
 									</div>
 
-									<div class="col-md-3" data-select2-id="20">
-										<h5>Approver</h5>
-										<select class="form-control select2-hidden-accessible chosen_select" id="approver" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option value="0">Select Department First</option>
+									<div class="col-md-4" data-select2-id="10">
+										<h5>Company</h5>
+										<select class="form-control select2-hidden-accessible chosen_select" id="company" data-select2-id="6" tabindex="-1" aria-hidden="true">
+											<option value="0">Select Company</option>
+											<?php foreach ($companies as $company) : ?>
+												<option value="<?php echo $company['Company']['id'] ?>" data-select2-id="21"><?php echo $company['Company']['name'] ?></option>
+											<?php endforeach ?>
 										</select>
 									</div>
 									<div class="col-md-3" data-select2-id="20">
@@ -63,29 +66,11 @@
 						<div class="col-lg-12">
 							<div class="ibox">
 								<div class="row" data-select2-id="11">
-									<div class="col-md-4" data-select2-id="10">
-										<h5>Company</h5>
-										<select class="form-control select2-hidden-accessible chosen_select" id="company" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option value="0">Select Company</option>
-											<?php foreach ($companies as $company) : ?>
-												<option value="<?php echo $company['Company']['id'] ?>" data-select2-id="21"><?php echo $company['Company']['name'] ?></option>
-											<?php endforeach ?>
-										</select>
-									</div>
-
-									<div class="col-md-8" data-select2-id="20">
+									<div class="col-md-4" data-select2-id="20">
 										<h5>Payee</h5>
 										<input type="email" placeholder="Payee" id="payee" class="form-control">
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="ibox">
-								<div class="row" data-select2-id="11">
-									<div class="col-md-12" data-select2-id="20">
+									<div class="col-md-8" data-select2-id="20">
 										<h5>Amount in Words</h5>
 										<input type="text" placeholder="NO TOTAL AMOUNT DETECTED (Auto Generated)" disabled class="form-control text-center" id="amount_in_words">
 									</div>
@@ -137,79 +122,84 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-8">
-			<div class="ibox ">
-				<div class="ibox-title">
-					<h5>Fill up the following if this RCP is VATABLE</h5>
-				</div>
-				<div class="ibox-content">
-					<div class="col-md-12" data-select2-id="20">
-						<select class="form-control select2-hidden-accessible chosen_select" data-select2-id="6" tabindex="-1" aria-hidden="true">
-							<option data-select2-id="8"></option>
-							<option value="Bahamas" data-select2-id="21">Bahamas</option>
-							<option value="Bahrain" data-select2-id="22">Bahrain</option>
-							<option value="Bangladesh" data-select2-id="23">Bangladesh</option>
-							<option value="Barbados" data-select2-id="24">Barbados</option>
-							<option value="Belarus" data-select2-id="25">Belarus</option>
-							<option value="Belgium" data-select2-id="26">Belgium</option>
-							<option value="Belize" data-select2-id="27">Belize</option>
-							<option value="Benin" data-select2-id="28">Benin</option>
-						</select>
-					</div>
-					<div class="col-md-12" data-select2-id="20">
-						<table class="table table-bordered mt-3">
-							<tbody>
-								<tr>
-									<td>P.O.S. Trans #</td>
-									<td>---</td>
-									<td>Less: VAT</td>
-								</tr>
-								<tr>
-									<td>VATable Sales</td>
-									<td>---</td>
-									<td>Net: VAT</td>
-								</tr>
-								<tr>
-									<td>VAT-Exempt</td>
-									<td>---</td>
-									<td>Less: SC/PWD Discount</td>
-								</tr>
-								<tr>
-									<td>Zero Rated</td>
-									<td>---</td>
-									<td>Amount Due</td>
-								</tr>
-								<tr>
-									<td>VAT Amount</td>
-									<td>---</td>
-									<td>Add: VAT</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-4">
-			<div class="ibox ">
-				<div class="ibox-title">
-					<h5>If RUSH, fill the following</h5>
-				</div>
-				<div class="ibox-content">
-					<div class="form-group" id="data_1">
-						<label class="font-normal">Date</label>
-						<div class="input-group date">
-							<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" id="rush_date" class="form-control">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="ibox ">
+								<div class="ibox-title">
+									<h5>Fill up the following if this RCP is VATABLE</h5>
+								</div>
+								<div class="ibox-content">
+									<div class="col-md-12" data-select2-id="20">
+										<select class="form-control select2-hidden-accessible chosen_select" data-select2-id="6" tabindex="-1" aria-hidden="true">
+											<option data-select2-id="8"></option>
+											<option value="Bahamas" data-select2-id="21">Bahamas</option>
+											<option value="Bahrain" data-select2-id="22">Bahrain</option>
+											<option value="Bangladesh" data-select2-id="23">Bangladesh</option>
+											<option value="Barbados" data-select2-id="24">Barbados</option>
+											<option value="Belarus" data-select2-id="25">Belarus</option>
+											<option value="Belgium" data-select2-id="26">Belgium</option>
+											<option value="Belize" data-select2-id="27">Belize</option>
+											<option value="Benin" data-select2-id="28">Benin</option>
+										</select>
+									</div>
+									<div class="col-md-12" data-select2-id="20">
+										<table class="table table-bordered mt-3">
+											<tbody>
+												<tr>
+													<td>P.O.S. Trans #</td>
+													<td>---</td>
+													<td>Less: VAT</td>
+												</tr>
+												<tr>
+													<td>VATable Sales</td>
+													<td>---</td>
+													<td>Net: VAT</td>
+												</tr>
+												<tr>
+													<td>VAT-Exempt</td>
+													<td>---</td>
+													<td>Less: SC/PWD Discount</td>
+												</tr>
+												<tr>
+													<td>Zero Rated</td>
+													<td>---</td>
+													<td>Amount Due</td>
+												</tr>
+												<tr>
+													<td>VAT Amount</td>
+													<td>---</td>
+													<td>Add: VAT</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="ibox ">
+								<div class="ibox-title">
+									<h5>If RUSH, fill the following</h5>
+								</div>
+								<div class="ibox-content">
+									<div class="form-group" id="data_1">
+										<label class="font-normal">Date</label>
+										<div class="input-group date">
+											<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" id="rush_date" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="font-normal">Reason / Justification</label>
+										<textarea class="form-control" placeholder="Your text here. . ." rows="5" id="justification"></textarea>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="form-group">
-						<label class="font-normal">Reason / Justification</label>
-						<textarea class="form-control" placeholder="Your text here. . ." rows="5" id="justification"></textarea>
+				</div>
+				<div class="ibox-footer">
+					<div class="text-right">
+						<a href="#" class="btn btn-primary" id="send_rcp_btn" url="<?php echo $this->params->webroot . "send_rcp" ?>"><i class="fa fa-send mr-2"></i> SEND REQUEST FOR CHECK PAYMENT</a>
 					</div>
 				</div>
 			</div>
@@ -290,33 +280,6 @@
 		keypressToCalculate('.code', false);
 		keypressToCalculate('.amount', false);
 
-		$('#department').on('change', function(event) {
-			event.preventDefault();
-
-			var id = $('#department').val();
-			var url = $(this).attr('url');
-
-			$.ajax({
-				type: 'POST',
-				url: url,
-				cache: false,
-				data: {
-					id: id
-				},
-				dataType: 'json',
-				success: function(response) {
-					$('#approver').children().remove();
-					$.each(response, function(index, value) {
-						$('#approver').append(`<option value="${value.id}">${value.approver}</option>`).trigger("chosen:updated");
-					})
-
-				},
-				error: function (response, desc, exception) {
-					alert(exception);
-				}
-			})
-		})
-
 		$('#expense_type').on('change', function(event) {
 			event.preventDefault();
 
@@ -356,6 +319,101 @@
 			event.preventDefault();
 
 			$(this).parents("tr").remove();
+		})
+
+		$('#send_rcp_btn').on('click', function(event) {
+			event.preventDefault();
+
+			var checked = $('#expense_type').prop("checked");
+			var qtyArr = [];
+			var particularsArr = [];
+			var unitArr = [];
+			var refCodeArr = [];
+			var codeArr = [];
+			var amountArr = [];
+			var hasEmpty = false;
+
+			var data = new FormData();
+			var url = $(this).attr('url');
+			var department = $('#department').val();
+			var approver = $('#approver').val();
+			var project = $('#project').val();
+			var expenseType = $('#expense_title').text();
+			var company = $('#company').val();
+			var payee = $('#payee').val().trim();
+			var amount = $('#amount').text();
+			var amountInWords = $('#amount_in_words').val();
+			var dueDate = $('#rush_date').val();
+			var justification = $('#justification').val().trim();
+
+			$('#rcp_table > tbody > tr').each(function() {
+				var qty = $(this).find("td").eq(0).html();
+				var unit = $(this).find("td").eq(1).html();
+				var particulars = $(this).find("td").eq(2).html();
+				var refCode = $(this).find("td").eq(3).html();
+				var code = $(this).find("td").eq(4).html();
+				var amount = $(this).find("td").eq(5).html();
+
+				if (checked) {
+					if (qty && unit && particulars && refCode && !code && amount) {
+						qtyArr.push(qty);
+						unitArr.push(unit);
+						particularsArr.push(particulars);
+						refCodeArr.push(refCode);
+						amountArr.push(amount);
+					}
+				}
+				else {
+					if (qty && unit && particulars && refCode && code && amount) {
+						qtyArr.push(qty);
+						unitArr.push(unit);
+						particularsArr.push(particulars);
+						refCodeArr.push(refCode);
+						codeArr.push(code);
+						amountArr.push(amount);
+					}
+				}
+			});
+
+			data.append('department', department);
+			data.append('project', project);
+			data.append('expenseType', expenseType);
+			data.append('company', company);
+			data.append('payee', payee);
+			data.append('amountInWords', amountInWords);
+			data.append('totalAmount', amount);
+			data.append('qty', qtyArr);
+			data.append('unit', unitArr);
+			data.append('particulars', particularsArr);
+			data.append('refCode', refCodeArr);
+			data.append('code', codeArr);
+			data.append('amount', amountArr);
+			data.append('dueDate', dueDate);
+			data.append('justification', justification);
+			data.append('origin', window.location.origin);
+
+			$.ajax({
+				type: 'POST',
+				url: url,
+				cache: false,
+				data: data,
+				dataType: 'json',
+				contentType: false,
+				processData: false,
+				success: function(response) {
+					if (response.status) {
+						$("#rcp_form select").val(0).trigger("chosen:updated");
+
+						return toastr.success(response.message, response.rcp_no)
+					}
+					else {
+						return toastr.error(response.message, response.type)
+					}
+				},
+				error: function (response, desc, exception) {
+					alert(exception);
+				}
+			})
 		})
 	});
 </script>

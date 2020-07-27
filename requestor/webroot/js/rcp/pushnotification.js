@@ -4,8 +4,27 @@ function pushNotification(userId = null, url = null) {
 	OneSignal.push(function() {
 		OneSignal.init({
 			appId: "e986f8c5-25e9-4579-a96d-a611536dbbef",
-			subdomainName: "newrcp.os.tc"
+			subdomainName: "your_label", /* The label for your site that you added in Site Setup mylabel.os.tc */
+			promptOptions: {
+			  /* Change bold title, limited to 30 characters */
+			  siteName: 'OneSignal Documentation',
+			  /* Subtitle, limited to 90 characters */
+			  actionMessage: "We'd like to show you notifications for the latest news and updates.",
+			  /* Example notification title */
+			  exampleNotificationTitle: 'Example notification',
+			  /* Example notification message */
+			  exampleNotificationMessage: 'This is an example notification',
+			  /* Text below example notification, limited to 50 characters */
+			  exampleNotificationCaption: 'You can unsubscribe anytime',
+			  /* Accept button text, limited to 15 characters */
+			  acceptButtonText: "ALLOW",
+			  /* Cancel button text, limited to 15 characters */
+			  cancelButtonText: "NO THANKS",
+			  autoAcceptTitle: 'Click Allow'
+		  }
 		});
+
+
 
 		OneSignal.on('customPromptClick', function(promptClickResult) {
 			if (promptClickResult.result == "denied") {
@@ -59,7 +78,7 @@ function pushNotification(userId = null, url = null) {
 				}
 
 				else {
-					OneSignal.showNativePrompt();
+					OneSignal.registerForPushNotifications();
 					console.log("Push notifications are not enabled yet.");
 				}
 			});

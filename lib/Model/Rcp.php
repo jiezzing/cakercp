@@ -135,6 +135,7 @@
 				'fields' => array(
 					'Rcp.id',
 					'Rcp.rcp_no',
+					'Rcp.dept_id',
 					'Rcp.comp_id',
 					'Rcp.proj_id',
 					'Rcp.issued_on',

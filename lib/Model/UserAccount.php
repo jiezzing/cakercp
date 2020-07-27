@@ -29,4 +29,17 @@
 
 			return $result;
 		}
+
+		public function playerId($id = null) {
+			$result = $this->find('first', array(
+				'conditions' => array(
+					'UserAccount.user_id' => $id
+				),
+				'fields' => array(
+					'UserAccount.player_id'
+				)
+			));
+
+			return $result;
+		}
     }

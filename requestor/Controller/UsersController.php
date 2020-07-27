@@ -76,6 +76,12 @@
 			return Output::response($response);
 		}
 
+		public function profile($id = null) {
+			$profile = $this->User->profile($this->Auth->user('id'));
+
+			$this->set('profile', $profile);
+		}
+
 		public function logout() {
 			$this->Auth->logout();
 

@@ -45,7 +45,8 @@
 				'rush' => 'It seems that this RCP is rushed. Please have your due date, justifcation and an attached file.',
 				'approver' => 'Please specify an APPROVER for your RCP.',
 				'particularsEmpty' => 'Qty, unit, particulars, BOM Ref / Acct Code, code and amount fields must not be empty. Make sure to fill at least one row to proceed.',
-				'onesignal' => 'You can now receive real time notifications.'
+				'onesignal' => 'You can now receive real time notifications.',
+				'updated' => 'Your RCP has been successfully updated. Please reload the page to see the changes.'
             );
 
             return $data[$key];

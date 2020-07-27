@@ -131,7 +131,7 @@ function calculateTotalAmount(selector, isChecked) {
 }
 
 function keypressToCalculate(selector, isChecked = false){
-	$(selector).on("keypress keyup",function (event) {
+	$(selector).on("keypress keyup paste",function (event) {
 		var totalAmount = calculateTotalAmount('#rcp_table > tbody > tr', isChecked);
 		var amountInwords = currencyToWords(totalAmount).substr(0, 1).toUpperCase() + "" + currencyToWords(totalAmount).substr(1).toLowerCase();
 

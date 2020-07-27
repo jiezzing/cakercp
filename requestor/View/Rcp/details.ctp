@@ -102,13 +102,15 @@
 									</div>
 									<div class="col-md-4" data-select2-id="20">
 										<address>
-											<strong>Payee:</strong> <?php echo $detail['Rcp']['payee'] ?><br>
-											<strong>Due Date: </strong> <?php echo $detail['User']['firstname'] . ' ' . $detail['User']['lastname'] ?><br>
+											<div class="p-2">
+												<strong>Payee:</strong> <?php echo $detail['Rcp']['payee'] ?><br>
+												<strong>Due Date: </strong> <?php echo $detail['User']['firstname'] . ' ' . $detail['User']['lastname'] ?><br>
+											</div>
 										</address>
 									</div>
 									<div class="col-md-4" data-select2-id="20">
 										<?php if ($detail['Rcp']['is_rush']) : ?>
-											<div class="media-body ">
+											<div class="p-2">
 												<strong>Status:</strong><span class="label label-danger ml-2">RUSH</span> <br>
 												<strong>Due Date:</strong> <?php echo $rush['RcpRush']['due_date'] ?><br>
 												<strong>Reason / Justification:</strong><br>
@@ -117,7 +119,7 @@
 												</div>
 											</div>
 										<?php else : ?>
-											<div class="media-body ">
+											<div class="p-2">
 												<strong>Status:</strong><span class="label label-warning ml-2">NOT RUSH</span><br>
 												<strong>Due Date:</strong> ---<br>
 												<strong>Reason / Justification: </strong>---<br>
