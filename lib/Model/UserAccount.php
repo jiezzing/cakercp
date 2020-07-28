@@ -23,7 +23,8 @@
 						'UserAccount.password' => $password
 					),
 					'fields' => array(
-						'User.id'
+						'User.id',
+						'User.type_id'
 					)
 			));
 

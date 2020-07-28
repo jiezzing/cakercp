@@ -18,40 +18,6 @@
             }
 		}
 
-		public function login() {
-			$this->autoRender = false;
-
-			if ($this->request->is('ajax')) {
-				$hasEmptyField = Validate::loginEmptyField($this->request->data);
-
-				if ($hasEmptyField) {
-					$message = Output::message('credential');
-					$response = Output::failed($message);
-				}
-				else {
-
-					$result = $this->UserAccount->loginByUsernameAndPassword(
-						$this->request->data['username'],
-						AuthComponent::password($this->request->data['password'])
-					);
-
-					if ($result) {
-						$this->Auth->login($result['User']);
-
-
-						$url = $this->params->base . '/dashboard';
-						$response = Output::success(null, null, $url);
-					}
-					else {
-						$message = Output::message('invalidCredential');
-						$response = Output::failed($message);
-					}
-				}
-			}
-
-			return Output::response($response);
-		}
-
 		public function updatePlayerId() {
 			$this->autoRender = false;
 
@@ -83,8 +49,15 @@
 		}
 
 		public function logout() {
-			$this->Auth->logout();
+			$this->autoRender = false;
 
-			return $this->redirect($this->Auth->logoutRedirect);
+			if ($this->request->is('ajax')) {
+				$this->Auth->logout();
+
+				$url = '/rcp/login';
+				$response = Output::success(null, null, $url);
+			}
+
+			return Output::response($response);
 		}
 	}

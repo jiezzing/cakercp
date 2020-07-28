@@ -24,7 +24,7 @@
 					)
 				),
 				'loginAction' => array(
-					'controller' => 'login',
+					'controller' => 'dashboard',
 					'action' => 'index'
 				)
 			)
@@ -42,6 +42,7 @@
 			// autoload library
 			App::uses('Output', 'Lib');
 			App::uses('Validate', 'Lib');
+			App::uses('Redirect', 'Lib');
 
 			$currentYear = date('Y');
 

@@ -161,3 +161,31 @@
 		</body>
 	<?php endif ?>
 </html>
+<script>
+	$(document).ready(function() {
+		$('#logout_btn').on('click', function(event) {
+			event.preventDefault();
+
+			var url = $(this).attr('url');
+
+			$.ajax({
+				type: 'POST',
+				url: url,
+				cache: false,
+				data: null,
+				dataType: 'json',
+				success: function(response) {
+					if (response.status) {
+						return window.location.href = response.url;
+					}
+					else {
+						return toastr.error(response.message, response.type);
+					}
+				},
+				error: function (response, desc, exception) {
+					alert(exception);
+				}
+			})
+		})
+	})
+</script>

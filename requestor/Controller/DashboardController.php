@@ -4,7 +4,7 @@
 
 		public function index() {
 			if(!$this->Auth->loggedIn()) {
-                return $this->redirect($this->Auth->logoutRedirect);
-            }
+                return $this->redirect(Redirect::login());
+			}
 		}
 	}

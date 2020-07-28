@@ -105,7 +105,7 @@
 
 
 		<li>
-			<a href="<?php echo $this->params->base . '/logout' ?>">
+			<a href="#" url="<?php echo $this->params->webroot . 'logout' ?>" id="logout_btn">
 				<i class="fa fa-sign-out"></i> Logout
 			</a>
 		</li>
