@@ -14,16 +14,17 @@
 		public function index() {
 			if($this->Auth->loggedIn()) {
 				if ($this->Auth->user('type_id') == 1) {
-					$url = $this->params->webroot . 'admin/dashboard';
+					$url = '/admin/dashboard';
 				}
 				else if ($this->Auth->user('type_id') == 2) {
-					$url = $this->params->webroot . 'requestor/dashboard';
+					$url = '/requestor/dashboard';
 				}
 				else {
-					$url = $this->params->webroot . 'approver/dashboard';
+					$url = '/approver/dashboard';
 				}
-                return $this->redirect("/requestor/dashboard");
-            }
+                return $this->redirect($url);
+			}
+
 			$currentYear = date('Y');
 
 			$this->set('currentYear', $currentYear);

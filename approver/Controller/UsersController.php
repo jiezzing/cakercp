@@ -2,27 +2,60 @@
 
 	class UsersController extends AppController {
 		public $uses = array(
-			'Company',
-			'Department',
-			'Project',
-			'UserType'
+			'User',
+			'UserAccount'
 		);
 
 		public function beforeFilter() {
-            parent::beforeFilter();
+			parent::beforeFilter();
         }
 
-		public function create() {
-			$companies = $this->Company->all();
-			$departments = $this->Department->all();
-			$projects = $this->Project->all();
-			$userTypes = $this->UserType->all();
-
-			$this->set('companies', $companies);
-			$this->set('departments', $departments);
-			$this->set('projects', $projects);
-			$this->set('userTypes', $userTypes);
+		public function index() {
+			if(!$this->Auth->loggedIn()) {
+                return $this->redirect(Redirect::login());
+            }
 		}
 
+		public function updatePlayerId() {
+			$this->autoRender = false;
 
+			if ($this->request->is('ajax')) {
+				$result = $this->UserAccount->updateAll(array(
+						'UserAccount.player_id' => "'{$this->request->data['playerId']}'"
+					), array(
+						'UserAccount.user_id' => $this->request->data['id']
+					)
+				);
+
+				if ($result) {
+					$message = Output::message('onesignal');
+					$response = Output::success($message);;
+				}
+				else {
+					$message = Output::message('failed');
+					$response = Output::failed($message);
+				}
+			}
+
+			return Output::response($response);
+		}
+
+		public function profile($id = null) {
+			$profile = $this->User->profile($this->Auth->user('id'));
+
+			$this->set('profile', $profile);
+		}
+
+		public function logout() {
+			$this->autoRender = false;
+
+			if ($this->request->is('ajax')) {
+				$this->Auth->logout();
+
+				$url = '/rcp/login';
+				$response = Output::success(null, null, $url);
+			}
+
+			return Output::response($response);
+		}
 	}

@@ -21,19 +21,16 @@
 				</div>
 			</li>
 			<li>
-				<a href="<?php echo $this->params->base . '/dashboard'?>"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
+				<a href="<?php echo $this->params->webroot . 'dashboard'?>"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-users"></i> <span class="nav-label">Users </span><span class="fa arrow"></span></a>
-				<ul class="nav nav-second-level collapse" aria-expanded="false">
-					<li><a href="<?php echo $this->params->base . '/create' ?>">Add User</a></li>
-					<li><a href="form_basic.html">Administrator</a></li>
-					<li><a href="form_advanced.html">Requestor</a></li>
-					<li><a href="form_wizard.html">Primary</a></li>
-					<li><a href="form_wizard.html">Alternate Primary</a></li>
-					<li><a href="form_wizard.html">Secondary</a></li>
-					<li><a href="form_wizard.html">Alternate Secondary</a></li>
-				</ul>
+				<a href="<?php echo $this->params->webroot . 'rcps'?>"><i class="fa fa-copy"></i> <span class="nav-label">RCP</span></a>
+			</li>
+			<li>
+				<a href="index.html"><i class="fa fa-clipboard"></i> <span class="nav-label">Report Generation</span></a>
+			</li>
+			<li>
+				<a href="<?php echo $this->params->webroot . 'profile/' . AuthComponent::user('id')?>"><i class="fa fa-vcard"></i> <span class="nav-label">Profile</span></a>
 			</li>
 		</ul>
     </div>

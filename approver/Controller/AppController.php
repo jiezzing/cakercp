@@ -8,11 +8,7 @@
 			'Session',
 			'Auth' => array(
 				'loginRedirect' => array(
-					'controller' => 'home',
-					'action' => 'index'
-				),
-				'logoutRedirect' => array(
-					'controller' => 'login',
+					'controller' => 'dashboard',
 					'action' => 'index'
 				),
 				'authenticate' => array(
@@ -32,11 +28,13 @@
 
 			// configure path
 			App::build(array(
-				'Model' => array(CAKE_CORE_INCLUDE_PATH . '/Model/'),
-				'Lib' => array(CAKE_CORE_INCLUDE_PATH . '/Lib/')
+			'Model' => array(CAKE_CORE_INCLUDE_PATH . '/Model/'),
+			'Lib' => array(CAKE_CORE_INCLUDE_PATH . '/Lib/')
 			));
 
 			// autoload library
 			App::uses('Output', 'Lib');
+			App::uses('Validate', 'Lib');
+			App::uses('Redirect', 'Lib');
 		}
 	}

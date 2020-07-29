@@ -1,8 +1,15 @@
 <?php
-	Router::connect('/', array('controller' => 'login', 'action' => 'index'));
 
+	// dashboard
 	Router::connect('/dashboard', array('controller' => 'dashboard', 'action' => 'index'));
-	Router::connect('/create', array('controller' => 'users', 'action' => 'create'));
+
+	// rcp
+	Router::connect('/rcps', array('controller' => 'rcp', 'action' => 'index'));
+	Router::connect('/details/*', array('controller' => 'rcp', 'action' => 'details'));
+
+	// users
+	Router::connect('/profile/*', array('controller' => 'users', 'action' => 'profile'));
+	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
 
 	CakePlugin::routes();
 

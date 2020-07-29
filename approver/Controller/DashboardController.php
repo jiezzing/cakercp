@@ -1,10 +1,10 @@
 <?php
 
-	App::uses('Controller', 'Controller');
-
-	class DashboardController extends Controller {
+	class DashboardController extends AppController {
 
 		public function index() {
-
+			if (!$this->Auth->loggedIn()) {
+                return $this->redirect(Redirect::login());
+			}
 		}
 	}

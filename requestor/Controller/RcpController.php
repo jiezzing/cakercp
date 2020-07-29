@@ -26,10 +26,27 @@
                 return $this->redirect($this->Auth->loginRedirect);
 			}
 
-			$rcps = $this->Rcp->all($this->Auth->user('id'));
-			$pending = $this->Rcp->all($this->Auth->user('id'), 1);
-			$approved = $this->Rcp->all($this->Auth->user('id'), 2);
-			$declined = $this->Rcp->all($this->Auth->user('id'), 3);
+			$allRcpCondition = array(
+				'Rcp.req_id' => $this->Auth->user('id'),
+				'Rcp.status_id' =>  [1, 2, 3]
+			);
+			$pendingCondition = array(
+				'Rcp.req_id' => $this->Auth->user('id'),
+				'Rcp.status_id' =>  1
+			);
+			$approvedCondition = array(
+				'Rcp.req_id' => $this->Auth->user('id'),
+				'Rcp.status_id' =>  2
+			);
+			$declinedCondition = array(
+				'Rcp.req_id' => $this->Auth->user('id'),
+				'Rcp.status_id' => 3
+			);
+
+			$rcps = $this->Rcp->allRcp($allRcpCondition);
+			$pending = $this->Rcp->allRcp($pendingCondition);
+			$approved = $this->Rcp->allRcp($approvedCondition);
+			$declined = $this->Rcp->allRcp($declinedCondition);
 
 			$this->set('rcps', $rcps);
 			$this->set('pending', $pending);
@@ -205,9 +222,9 @@
 
 		// shows the rcp details
 		public function details($id = null) {
-			$details = $this->Rcp->details($id, $this->Auth->user('id'));
-			$particulars = $this->Rcp->particulars($id, $this->Auth->user('id'));
-			$rush = $this->Rcp->rush($id, $this->Auth->user('id'));
+			$details = $this->Rcp->rcpDetails($id);
+			$particulars = $this->Rcp->rcpParticulars($id);
+			$rush = $this->Rcp->rcpRush($id);
 
 			$this->set('detail', $details);
 			$this->set('particulars', $particulars);

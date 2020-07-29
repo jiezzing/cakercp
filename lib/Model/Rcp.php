@@ -6,7 +6,8 @@
 
 		public $usesTable = 'rcp';
 
-		public function all($id = 'all', $status = [1, 2, 3]) {
+		// all requestor rcp
+		public function allRcp($conditions = array()) {
 			$result = $this->find('all', array(
 				'joins' => array(
 					array(
@@ -50,10 +51,7 @@
 						)
 					)
 				),
-				'conditions' => array(
-					'Rcp.req_id' => $id,
-					'Rcp.status_id' =>  $status
-				),
+				'conditions' => $conditions,
 				'fields' => array(
 					'User.firstname',
 					'User.lastname',
@@ -76,7 +74,8 @@
 			return $result;
 		}
 
-		public function details($id = null, $userId = null) {
+		// requestor rcp details
+		public function rcpDetails($id = null) {
 			$result = $this->find('first', array(
 				'joins' => array(
 					array(
@@ -129,7 +128,6 @@
 					)
 				),
 				'conditions' => array(
-					'Rcp.req_id' => $userId,
 					'Rcp.id' =>  $id
 				),
 				'fields' => array(
@@ -160,7 +158,8 @@
 			return $result;
 		}
 
-		public function particulars($id = null, $userId = null) {
+		// request rcp particulars
+		public function rcpParticulars($id = null) {
 			$result = $this->find('all', array(
 				'joins' => array(
 					array(
@@ -173,8 +172,7 @@
 					)
 				),
 				'conditions' => array(
-					'Rcp.id' => $id,
-					'Rcp.req_id' => $userId
+					'Rcp.id' => $id
 				),
 				'fields' => array(
 					'RcpParticular.qty',
@@ -189,7 +187,8 @@
 			return $result;
 		}
 
-		public function rush($id = null, $userId = null) {
+		// requestor rcp rush
+		public function rcpRush($id = null) {
 			$result = $this->find('first', array(
 				'joins' => array(
 					array(
@@ -202,8 +201,7 @@
 					)
 				),
 				'conditions' => array(
-					'Rcp.id' => $id,
-					'Rcp.req_id' => $userId
+					'Rcp.id' => $id
 				),
 				'fields' => array(
 					'RcpRush.due_date',
