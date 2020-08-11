@@ -63,4 +63,105 @@
 			$this->set('particulars', $particulars);
 			$this->set('rush', $rush);
 		}
+
+		// return rcp with feedback
+		public function returnRcp() {
+			$this->autoRender = false;
+
+			if ($this->request->is('ajax')) {
+				$this->sendEmail(
+					$this->request->data['id'],
+					$this->request->data['feedback']
+				);
+
+				$message = Output::message('feedback');
+				$response = Output::success($message);
+			}
+
+			return Output::response($response);
+		}
+
+		// approve rcp
+		public function approve() {
+			$this->autoRender = false;
+
+			if ($this->request->is('ajax')) {
+				$this->sendEmail(
+					$this->request->data['id'],
+					$this->request->data['feedback']
+				);
+
+				$message = Output::message('feedback');
+				$response = Output::success($message);
+			}
+
+			return Output::response($response);
+		}
+
+		// send an email to the requestor
+		public function sendEmail($id = null, $feedback = null) {
+			$result = $this->Rcp->find('first', array(
+				'joins' => array(
+					array(
+						'alias' => 'UserAccount',
+						'table' => 'user_accounts',
+						'type' => 'INNER',
+						'conditions' => array(
+							'UserAccount.user_id = Rcp.req_id'
+						)
+					),
+					array(
+						'alias' => 'User',
+						'table' => 'users',
+						'type' => 'INNER',
+						'conditions' => array(
+							'User.id = Rcp.req_id'
+						)
+					)
+				),
+				'conditions' => array(
+					'Rcp.id' => $id
+				),
+				'fields' => array(
+					'Rcp.rcp_no',
+					'UserAccount.email',
+					'User.firstname',
+					'User.lastname'
+				)
+			));
+
+
+			$requestor = $result['User']['firstname'] . ' ' . $result['User']['lastname'];
+
+			$email = new CakeEmail();
+			$email->config('smtp');
+
+			$email->template('feedback_email')
+			->emailFormat('html')
+			->from(array('no-reply@innoland.com' => 'System Administrator'))
+			->to($result['UserAccount']['email'])
+			->subject("Request for Check Payment Feedback")
+			->viewVars(array(
+				'rcp_no' => $result['Rcp']['rcp_no'],
+				'requestor' => $requestor,
+				'feedback' => $feedback
+			))
+			->send();
+		}
+
+		// stores data of is the approver of the rcp
+		public function approver($id = null, $appId = null) {
+			$data = array();
+
+			$this->RcpApprover->create();
+
+			$data['rcp_id'] = $id;
+			$data['app_id'] = $appId;
+			$data['created'] = date('Y-m-d H:i:s');
+			$data['status_id'] = 1;
+
+			$this->RcpApprover->set($data);
+
+			$this->RcpApprover->save();
+		}
 	}

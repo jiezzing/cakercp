@@ -141,7 +141,8 @@
 				</div>
 				<div class="ibox-footer">
 					<div class="text-right">
-						<a href="<?php echo $this->params->webroot . 'edit/' . $detail['Rcp']['id'] ?>" class="btn btn-primary"><i class="fa fa-file mr-2"></i> Edit Details</a>
+						<a href="<?php echo $this->params->webroot . 'feedback' ?>" class="btn btn-danger" id="return"><i class="fa fa-undo mr-2"></i> Return</a>
+						<a href="<?php echo $this->params->webroot . 'approve' ?>" class="btn btn-primary" id="approve"><i class="fa fa-check-circle mr-2"></i> Approve</a>
 					</div>
 				</div>
 			</div>
@@ -151,10 +152,93 @@
 
 <script>
 	$(document).ready(function() {
-		// initializations
-		chosenSelect('.chosen_select');
 		jsSwitch('.switcher', '#ED5565');
 		rcpTable('#rcp_table', []);
-		datePicker('#data_1 .input-group.date');
-	});
+
+		var rcpId = <?php echo $this->params->pass[0]?>;
+
+		$('#return').on('click', function(event) {
+			event.preventDefault();
+
+			var url = $(this).attr('href');
+
+			swal({
+				title: "",
+				text: "Reason or Justification:",
+				type: "input",
+				showCancelButton: true,
+				closeOnConfirm: false,
+				showLoaderOnConfirm: true,
+			}, function (value) {
+				if (value === "") {
+					return swal.showInputError("Field required.");
+				}
+				else {
+					$.ajax({
+						type: 'POST',
+						url: url,
+						cache: false,
+						data: {
+							id: rcpId,
+							feedback: value
+						},
+						dataType: 'json',
+						success: function(response) {
+							if (response.status) {
+								return toastr.success(response.message, response.type);
+							}
+							else {
+								return toastr.error(response.message, response.type);
+							}
+						},
+						error: function (response, desc, exception) {
+							alert(exception);
+						}
+					})
+				}
+			})
+		})
+
+		$('#approve').on('click', function(event) {
+			event.preventDefault();
+
+			var url = $(this).attr('href');
+
+			swal({
+				title: "",
+				text: "Reason or Justification:",
+				type: "input",
+				showCancelButton: true,
+				closeOnConfirm: false,
+				showLoaderOnConfirm: true,
+			}, function (value) {
+				if (value === "") {
+					return swal.showInputError("Field required.");
+				}
+				else {
+					$.ajax({
+						type: 'POST',
+						url: url,
+						cache: false,
+						data: {
+							id: rcpId,
+							feedback: value
+						},
+						dataType: 'json',
+						success: function(response) {
+							if (response.status) {
+								return toastr.success(response.message, response.type);
+							}
+							else {
+								return toastr.error(response.message, response.type);
+							}
+						},
+						error: function (response, desc, exception) {
+							alert(exception);
+						}
+					})
+				}
+			})
+		})
+	})
 </script>

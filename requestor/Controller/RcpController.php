@@ -94,7 +94,7 @@
 					if ($result) {
 						$approver = $this->Approver->currentApprover($this->request->data['department']);
 						$rcpId = $result['Rcp']['id'];
-						$link = $this->request->data['origin'] . '' . $this->params->webroot . 'details/' . $rcpId;
+						$link = $this->request->data['origin'] . '/approver/details/' . $rcpId;
 						$subject = "Request for Approval";
 
 						$this->createRcpParticulars($rcpId, $this->request->data);
@@ -335,7 +335,7 @@
 
 		// send an email to the approver
 		public function sendEmail($id = null, $subject = null, $link = null) {
-			$detail = $this->Rcp->details($id, $this->Auth->user('id'));
+			$detail = $this->Rcp->rcpDetails($id, $this->Auth->user('id'));
 
 			$rcpNo = $detail['Rcp']['rcp_no'];
 			$approverName = $detail['User']['firstname'] . ' ' . $detail['User']['lastname'];
@@ -346,7 +346,7 @@
 			$issued = CakeTime::nice($detail['Rcp']['created']);
 			$emailAddress = $detail['UserAccount']['email'];
 
-			$rushDetails = $this->Rcp->rush($id, $this->Auth->user('id'));
+			$rushDetails = $this->Rcp->rcpRush($id, $this->Auth->user('id'));
 
 			if ($rushDetails) {
 				$dueDate = $rushDetails['RcpRush']['due_date'];

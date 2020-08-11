@@ -46,7 +46,8 @@
 				'approver' => 'Please specify an APPROVER for your RCP.',
 				'particularsEmpty' => 'Qty, unit, particulars, BOM Ref / Acct Code, code and amount fields must not be empty. Make sure to fill at least one row to proceed.',
 				'onesignal' => 'You can now receive real time notifications.',
-				'updated' => 'Your RCP has been successfully updated. Please reload the page to see the changes.'
+				'updated' => 'Your RCP has been successfully updated. Please reload the page to see the changes.',
+				'feedback' => 'Feedback of RCP has been successfully sent.'
             );
 
             return $data[$key];

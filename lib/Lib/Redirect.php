@@ -3,6 +3,6 @@
 	class Redirect {
 
         public static function login() {
-            return "../../../rcp/login";
+            return "/login";
 		}
 	}

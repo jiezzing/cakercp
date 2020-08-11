@@ -22,6 +22,7 @@
 				else {
 					$url = '/approver/dashboard';
 				}
+
                 return $this->redirect($url);
 			}
 
