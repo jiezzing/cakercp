@@ -43,7 +43,17 @@
 		}
 
 		public function profile($id = null) {
-			$profile = $this->User->profile($this->Auth->user('id'));
+			$fields = array(
+				'User.firstname',
+				'User.lastname',
+				'User.middle_initial',
+				'Company.name',
+				'Department.name',
+				'Project.name',
+				'UserAccount.username',
+				'UserAccount.email',
+			);
+			$profile = $this->User->profile($this->Auth->user('id'), $fields);
 
 			$this->set('profile', $profile);
 		}

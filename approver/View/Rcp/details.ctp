@@ -97,6 +97,20 @@
 													<td><?php echo CakeNumber::currency($particular['RcpParticular']['amount']) ?></td>
 												</tr>
 											<?php endforeach ?>
+											<?php if (count($particulars) < 5) : ?>
+												<?php for ($i = count($particulars); $i < 5; $i++) : ?>
+													<tr class="text-center">
+														<td>---</td>
+														<td>---</td>
+														<td>---</td>
+														<td>---</td>
+														<?php if ($detail['Rcp']['expense_type'] == "DEPARTMENT EXPENSE") : ?>
+															<td>---</td>
+														<?php endif ?>
+														<td>---</td>
+													</tr>
+												<?php endfor ?>
+											<?php endif ?>
 											</tbody>
 										</table>
 									</div>
@@ -141,7 +155,8 @@
 				</div>
 				<div class="ibox-footer">
 					<div class="text-right">
-						<a href="<?php echo $this->params->webroot . 'feedback' ?>" class="btn btn-danger" id="return"><i class="fa fa-undo mr-2"></i> Return</a>
+						<a href="<?php echo $this->params->webroot . 'feedback' ?>" class="btn btn-warning" id="return"><i class="fa fa-undo mr-2"></i> Return</a>
+						<a href="<?php echo $this->params->webroot . 'decline' ?>" class="btn btn-danger" id="decline"><i class="fa fa-close mr-2"></i> Decline</a>
 						<a href="<?php echo $this->params->webroot . 'approve' ?>" class="btn btn-primary" id="approve"><i class="fa fa-check-circle mr-2"></i> Approve</a>
 					</div>
 				</div>
@@ -167,7 +182,51 @@
 				text: "Reason or Justification:",
 				type: "input",
 				showCancelButton: true,
-				closeOnConfirm: false,
+				closeOnConfirm: true,
+				showLoaderOnConfirm: true,
+			}, function (value) {
+				if (value === "") {
+					return swal.showInputError("Field required.");
+				}
+				else {
+					$.ajax({
+						type: 'POST',
+						url: url,
+						cache: false,
+						data: {
+							id: rcpId,
+							feedback: value
+						},
+						dataType: 'json',
+						success: function(response) {
+							if (response.status) {
+								return toastr.success(response.message, response.type);
+							}
+							else {
+								return toastr.error(response.message, response.type);
+							}
+						},
+						error: function (response, desc, exception) {
+							alert(exception);
+						}
+					})
+				}
+			})
+		})
+
+		$('#decline').on('click', function(event) {
+			event.preventDefault();
+
+			var url = $(this).attr('href');
+
+			var url = $(this).attr('href');
+
+			swal({
+				title: "",
+				text: "Reason or Justification:",
+				type: "input",
+				showCancelButton: true,
+				closeOnConfirm: true,
 				showLoaderOnConfirm: true,
 			}, function (value) {
 				if (value === "") {
@@ -205,11 +264,10 @@
 			var url = $(this).attr('href');
 
 			swal({
-				title: "",
-				text: "Reason or Justification:",
-				type: "input",
+				title: "Confirmation",
+				text: "This action can't be undone. Forward this RCP to the next approver?",
 				showCancelButton: true,
-				closeOnConfirm: false,
+				closeOnConfirm: true,
 				showLoaderOnConfirm: true,
 			}, function (value) {
 				if (value === "") {

@@ -42573,3 +42573,2968 @@ Request URL: /toastr.js.map
 Stack Trace:
 #0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2020-08-12 03:47:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 05:46:33 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 05:49:45 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 05:50:29 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 05:51:26 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 05:51:52 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:08:55 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:09:35 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:10:29 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:14:02 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:14:09 Error: [MissingControllerException] Controller class RcpController could not be found.
+Exception Attributes: array (
+  'class' => 'RcpController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/login
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:14:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:14:09 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:14:13 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:14:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:14:18 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:14:21 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:26:41 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:27:16 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:27:30 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:29:06 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:29:10 Error: [MissingControllerException] Controller class RcpController could not be found.
+Exception Attributes: array (
+  'class' => 'RcpController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/login
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:29:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+se))
+#1 {main}
+2020-08-12 06:29:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:29:14 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:29:19 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:32:20 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:32:24 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:34:50 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:35:02 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:35:03 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:36:46 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:37:08 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:37:34 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:38:06 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:38:11 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:39:34 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:40:59 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:41:00 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:41:08 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:41:10 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:41:11 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:46:22 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:46:27 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:46:29 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 06:52:09 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 07:14:19 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 07:14:33 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 07:14:41 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 07:15:55 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:04:28 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:07:46 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:08:13 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:08:20 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:09:21 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:09:58 Error: [MissingControllerException] Controller class RcpController could not be found.
+Exception Attributes: array (
+  'class' => 'RcpController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/login
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:09:59 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:09:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:09:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:10:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:10:04 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:10:09 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:10:11 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:10:13 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:20:58 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:21:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:21:04 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:21:07 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:21:08 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:28:01 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:54:30 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:54:34 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:55:22 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:55:23 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:55:40 Error: [MissingControllerException] Controller class RcpController could not be found.
+Exception Attributes: array (
+  'class' => 'RcpController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/login
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:55:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:55:40 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:55:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:55:44 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:55:48 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:55:49 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:55:51 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:57:41 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:59:39 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 09:59:51 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:01:23 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:01:33 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:02:46 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:07:52 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:11:46 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:12:09 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:12:17 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:13:03 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:13:58 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:15:59 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:16:13 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:16:15 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:19:55 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:20:00 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:20:29 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:21:50 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:21:52 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:03 Error: [MissingControllerException] Controller class RcpController could not be found.
+Exception Attributes: array (
+  'class' => 'RcpController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/login
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:04 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:33 Error: [MissingControllerException] Controller class RcpController could not be found.
+Exception Attributes: array (
+  'class' => 'RcpController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/login
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:34 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:35 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:39 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:42 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:43 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:46 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:22:48 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:23:21 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:23:45 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:23:46 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:24:59 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:26:06 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:26:28 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:27:14 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:27:40 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:28:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:28:01 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:28:04 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:28:06 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:28:09 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:36:28 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:36:58 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:37:18 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:37:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:37:20 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:37:23 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:37:25 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:37:27 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:44:59 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:45:50 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:47:35 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:47:47 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:58:01 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 10:59:06 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:00:24 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:00:33 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:04:17 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:07:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:07:04 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:07:10 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:07:12 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:07:16 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:09:10 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:20:55 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:21:01 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:21:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:21:07 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:21:21 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:21:23 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:21:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:21:49 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:21:53 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:21:54 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:21:59 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:23:01 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-12 11:49:55 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 05:57:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:23:11 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:23:41 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:27:04 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:27:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:27:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:27:10 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:27:11 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:38:38 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:38:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:38:40 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:38:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:38:44 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:38:45 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:38:47 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:40:03 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:40:04 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:40:08 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:48:32 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:48:33 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:48:36 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:48:37 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:57:25 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:57:39 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:57:48 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:59:28 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 07:59:42 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:00:15 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:03:37 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:03:38 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:20:30 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:20:32 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:21:15 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:27:02 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:31:38 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:31:46 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:32:30 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:32:32 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:32:33 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:32:39 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:37:43 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:38:42 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 08:39:20 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:06:35 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:06:58 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:07:05 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:07:22 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:07:23 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:07:24 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:08:15 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:08:22 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:08:24 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:14:14 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:14:36 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:14:47 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:14:55 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:15:03 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:15:13 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:15:16 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:15:22 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:15:43 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:15:45 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:15:58 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:19:23 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:19:30 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:19:53 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:20:19 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:20:40 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:20:57 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:21:04 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:21:58 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:22:11 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:22:19 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:22:25 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:23:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+se))
+#1 {main}
+2020-08-13 09:23:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:23:26 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:23:57 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:25:12 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:25:21 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:25:40 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:26:06 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:26:13 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:26:18 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:26:57 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:27:00 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:27:10 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:27:21 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 09:28:00 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:12:13 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:12:19 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:12:22 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:12:23 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:12:29 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:12:32 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:12:38 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:12:45 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:12:56 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:13:12 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:13:13 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:13:15 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:13:16 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:13:25 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:13:34 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:13:42 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:13:57 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:13:57 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:14:19 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:14:28 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:14:30 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:15:32 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:24:46 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:25:10 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:25:13 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:26:09 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:26:45 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:26:52 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:26:55 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:29:01 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:29:04 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:29:48 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:29:50 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:29:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:29:53 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:29:58 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:30:00 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:30:03 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:30:11 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:30:17 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:30:20 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:43:22 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:45:24 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:46:38 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:47:51 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:47:53 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:49:43 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:49:44 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 12:53:40 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:23:22 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:23:41 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:23:44 Error: [MissingControllerException] Controller class LOGINController could not be found.
+Exception Attributes: array (
+  'class' => 'LOGINController',
+  'plugin' => NULL,
+)
+Request URL: /LOGIN
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:23:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:23:45 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:23:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:23:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:23:47 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:23:50 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:23:52 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:24:22 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:24:23 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:24:25 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:24:26 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:24:51 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:25:06 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:26:50 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:27:03 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:31:53 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:31:56 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:31:56 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:46:45 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:47:40 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 13:50:17 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 14:08:57 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-13 15:14:23 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

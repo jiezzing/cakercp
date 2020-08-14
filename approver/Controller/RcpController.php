@@ -16,8 +16,19 @@
 			'RcpApprover'
 		);
 
+		public $joinCondition = null;
+
 		public function beforeFilter() {
-            parent::beforeFilter();
+			parent::beforeFilter();
+
+			$this->joinCondtion = array(
+				'alias' => 'User',
+				'table' => 'users',
+				'type' => 'INNER',
+				'conditions' => array(
+					'User.id = Rcp.req_id'
+				)
+			);
 		}
 
 		// rcp index / dashboard
@@ -26,38 +37,24 @@
                 return $this->redirect(Redirect::login());
 			}
 
-			$allRcpCondition = array(
+			$condition = array(
 				'Rcp.app_id' => $this->Auth->user('id'),
-				'Rcp.status_id' =>  [1, 2, 3]
+				'Rcp.status_id' =>  [1, 6]
 			);
-			$pendingCondition = array(
-				'Rcp.app_id' => $this->Auth->user('id'),
-				'Rcp.status_id' =>  1
-			);
-			$approvedCondition = array(
-				'Rcp.app_id' => $this->Auth->user('id'),
-				'Rcp.status_id' =>  2
-			);
-			$declinedCondition = array(
-				'Rcp.app_id' => $this->Auth->user('id'),
-				'Rcp.status_id' => 3
-			);
-
-			$rcps = $this->Rcp->allRcp($allRcpCondition);
-			$pending = $this->Rcp->allRcp($pendingCondition);
-			$approved = $this->Rcp->allRcp($approvedCondition);
-			$declined = $this->Rcp->allRcp($declinedCondition);
+			$rcps = $this->Rcp->details($condition, 'all', $this->joinCondtion);
 
 			$this->set('rcps', $rcps);
-			$this->set('pending', $pending);
-			$this->set('approved', $approved);
-			$this->set('declined', $declined);
 		}
 
 		public function details($id = null) {
-			$details = $this->Rcp->rcpDetails($id);
+			$condition = array(
+				'Rcp.app_id' => $this->Auth->user('id'),
+				'Rcp.id' =>  $id
+			);
+
+			$details = $this->Rcp->details($condition, 'first', $this->joinCondtion);
 			$particulars = $this->Rcp->rcpParticulars($id);
-			$rush = $this->Rcp->rcpRush($id);
+			$rush = $this->Rcp->rush($id);
 
 			$this->set('detail', $details);
 			$this->set('particulars', $particulars);
@@ -65,14 +62,18 @@
 		}
 
 		// return rcp with feedback
-		public function returnRcp() {
+		public function feedback() {
 			$this->autoRender = false;
 
 			if ($this->request->is('ajax')) {
-				$this->sendEmail(
-					$this->request->data['id'],
-					$this->request->data['feedback']
-				);
+				$email = array();
+
+				$email['id'] = $this->request->data['id'];
+				$email['feedback'] = $this->request->data['feedback'];
+				$email['subject'] = 'Request for Check Payment Feedback';
+				$email['color'] = 'orange';
+
+				$this->notifyRequestorViaEmail($email);
 
 				$message = Output::message('feedback');
 				$response = Output::success($message);
@@ -86,65 +87,163 @@
 			$this->autoRender = false;
 
 			if ($this->request->is('ajax')) {
-				$this->sendEmail(
-					$this->request->data['id'],
-					$this->request->data['feedback']
+				$email = array();
+
+				$department = $this->Rcp->find('first', array(
+					'conditions' => array('Rcp.id' => $this->request->data['id']),
+					'fields' => array('Rcp.dept_id')
+				));
+				$approver = $this->Approver->currentApprover($department['Rcp']['dept_id']);
+
+				if ($this->Auth->user('type_id') == 3) {
+					$type = "alt_app_id";
+					$progress = "1/4";
+				}
+				elseif ($this->Auth->user('type_id') == 4) {
+					$type = "sec_id";
+					$progress = "2/4";
+				}
+				elseif ($this->Auth->user('type_id') == 5) {
+					$type = "alt_sec_id";
+					$progress = "3/4";
+				}
+				else {
+					$progress = "Complete!";
+				}
+
+				$email['id'] = $this->request->data['id'];
+				$email['feedback'] = $this->request->data['feedback'];
+				$email['subject'] = "Request for Check Payment Approval";
+				$email['color'] = 'green';
+				$email['progress'] = $progress;
+
+				if ($this->Auth->user('type_id') != 6) {
+					$email['app_id'] = $approver['Approver'][$type];
+					$conditions = array(
+						'Rcp.status_id' => 6,
+						'Rcp.app_id' => $approver['Approver'][$type]
+					);
+
+					$this->RcpApprover->newApprover($this->request->data['id'], $approver['Approver'][$type]);
+					$this->notifyNextApproverViaEmail($email);
+				}
+				else {
+					$conditions = array('Rcp.status_id' => 2);
+				}
+
+				$result = $this->Rcp->updateAll($conditions, array(
+					'Rcp.id' => $this->request->data['id'])
 				);
 
-				$message = Output::message('feedback');
-				$response = Output::success($message);
+				if ($result) {
+
+					$this->RcpApprover->updateAll(
+						array('RcpApprover.status_id' => 2),
+						array(
+							'RcpApprover.rcp_id' => $this->request->data['id'],
+							'RcpApprover.app_id' => $this->Auth->user('id')
+						)
+					);
+
+					$this->notifyRequestorViaEmail($email);
+
+					$message = Output::message('approve');
+					$response = Output::success($message);
+				}
+				else {
+					$message = Output::message('failed');
+					$response = Output::error($message);
+				}
+			}
+
+			return Output::response($response);
+		}
+
+		// decline rcp
+		public function decline() {
+			$this->autoRender = false;
+
+			if ($this->request->is('ajax')) {
+				$result = $this->Rcp->updateAll(array(
+						'Rcp.status_id' => 3
+					),
+					array(
+						'Rcp.id' => $this->request->data['id']
+					)
+				);
+
+				if ($result) {
+					$email = array();
+
+					$email['id'] = $this->request->data['id'];
+					$email['feedback'] = $this->request->data['feedback'];
+					$email['subject'] = "Declined Request for Check Payment";
+					$email['color'] = 'red';
+
+					$this->notifyRequestorViaEmail($email);
+
+					$message = Output::message('decline');
+					$response = Output::success($message);
+				}
+				else {
+					$message = Output::message('failed');
+					$response = Output::error($message);
+				}
 			}
 
 			return Output::response($response);
 		}
 
 		// send an email to the requestor
-		public function sendEmail($id = null, $feedback = null) {
-			$result = $this->Rcp->find('first', array(
-				'joins' => array(
-					array(
-						'alias' => 'UserAccount',
-						'table' => 'user_accounts',
-						'type' => 'INNER',
-						'conditions' => array(
-							'UserAccount.user_id = Rcp.req_id'
-						)
-					),
-					array(
-						'alias' => 'User',
-						'table' => 'users',
-						'type' => 'INNER',
-						'conditions' => array(
-							'User.id = Rcp.req_id'
-						)
-					)
-				),
-				'conditions' => array(
-					'Rcp.id' => $id
-				),
-				'fields' => array(
-					'Rcp.rcp_no',
-					'UserAccount.email',
-					'User.firstname',
-					'User.lastname'
-				)
-			));
+		public function notifyRequestorViaEmail($data = array()) {
+			$result = $this->Rcp->rcpDetails($data['id']);
+			$requestor = $this->User->profile($result['Rcp']['req_id']);
 
-
-			$requestor = $result['User']['firstname'] . ' ' . $result['User']['lastname'];
+			$requestorName = $result['User']['firstname'] . ' ' . $result['User']['lastname'];
 
 			$email = new CakeEmail();
 			$email->config('smtp');
 
-			$email->template('feedback_email')
+			$email->template('email')
 			->emailFormat('html')
 			->from(array('no-reply@innoland.com' => 'System Administrator'))
-			->to($result['UserAccount']['email'])
-			->subject("Request for Check Payment Feedback")
+			->to($requestor['UserAccount']['email'])
+			->subject($data['subject'])
 			->viewVars(array(
 				'rcp_no' => $result['Rcp']['rcp_no'],
-				'requestor' => $requestor,
-				'feedback' => $feedback
+				'requestor' => $requestorName,
+				'feedback' => $data['feedback'],
+				'color' => $data['color'],
+				'title' => $data['subject'],
+				'progress' => $data['progress']
+			))
+			->send();
+		}
+
+		// send email to next approver
+		public function notifyNextApproverViaEmail($data = array()) {
+			$approver = $this->User->profile($data['app_id']);
+			$details = $this->Rcp->rcpDetails($data['id']);
+			$requestor = $this->User->profile($details['Rcp']['req_id']);
+			$rushDetails = $this->Rcp->rush($data['id']);
+
+			$requestorName = $requestor['User']['firstname'] . ' ' . $requestor['User']['lastname'];
+			$recepientName = $approver['User']['firstname'] . ' ' . $approver['User']['lastname'];
+
+			$email = new CakeEmail();
+			$email->config('smtp');
+
+			$email->template('approval')
+			->emailFormat('html')
+			->from(array('no-reply@innoland.com' => 'System Administrator'))
+			->to($approver['UserAccount']['email'])
+			->subject($data['subject'])
+			->viewVars(array(
+				'recepient' => $recepientName,
+				'requestor' => $requestorName,
+				'details' => $details,
+				'rush' => $rushDetails,
+				'progress' => $data['progress']
 			))
 			->send();
 		}

@@ -97,6 +97,20 @@
 													<td><?php echo CakeNumber::currency($particular['RcpParticular']['amount']) ?></td>
 												</tr>
 											<?php endforeach ?>
+											<?php if (count($particulars) < 5) : ?>
+												<?php for ($i = count($particulars); $i < 5; $i++) : ?>
+													<tr class="text-center">
+														<td>---</td>
+														<td>---</td>
+														<td>---</td>
+														<td>---</td>
+														<?php if ($detail['Rcp']['expense_type'] == "DEPARTMENT EXPENSE") : ?>
+															<td>---</td>
+														<?php endif ?>
+														<td>---</td>
+													</tr>
+												<?php endfor ?>
+											<?php endif ?>
 											</tbody>
 										</table>
 									</div>

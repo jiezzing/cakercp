@@ -31,6 +31,7 @@
 			App::uses('Output', 'Lib');
 			App::uses('Validate', 'Lib');
 			App::uses('Redirect', 'Lib');
+			App::uses('Email', 'Lib');
 
 			$currentYear = date('Y');
 

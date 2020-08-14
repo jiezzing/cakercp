@@ -6,8 +6,9 @@
 	// rcp
 	Router::connect('/rcps', array('controller' => 'rcp', 'action' => 'index'));
 	Router::connect('/details/*', array('controller' => 'rcp', 'action' => 'details'));
-	Router::connect('/feedback', array('controller' => 'rcp', 'action' => 'returnRcp'));
+	Router::connect('/feedback', array('controller' => 'rcp', 'action' => 'feedback'));
 	Router::connect('/approve', array('controller' => 'rcp', 'action' => 'approve'));
+	Router::connect('/decline', array('controller' => 'rcp', 'action' => 'decline'));
 
 
 	// users

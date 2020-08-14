@@ -52,8 +52,7 @@
 			if ($this->request->is('ajax')) {
 				$this->Auth->logout();
 
-				$url = '/rcp/login';
-				$response = Output::success(null, null, $url);
+				$response = Output::success(null, null, Redirect::login());
 			}
 
 			return Output::response($response);

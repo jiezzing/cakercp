@@ -6,7 +6,7 @@
 
         public $usesTable = 'users';
 
-		public function profile($id = null) {
+		public function profile($id = null, $fields = array()) {
 			$result = $this->find('first', array(
 				'joins' => array(
 					array(
@@ -45,16 +45,7 @@
 				'conditions' => array(
 					'User.id' => $id
 				),
-				'fields' => array(
-					'User.firstname',
-					'User.lastname',
-					'User.middle_initial',
-					'Company.name',
-					'Department.name',
-					'Project.name',
-					'UserAccount.username',
-					'UserAccount.email',
-				)
+				'fields' => $fields
 			));
 
 			return $result;

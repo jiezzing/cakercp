@@ -62,81 +62,7 @@
 		</div>
 	</div>
 
-	<div class="row"><div class="col-lg-6">
-			<div class="ibox ">
-				<div class="ibox-title">
-					<h5>RCP Timeline</h5>
-					<span class="label label-primary">Meeting today</span>
-				</div>
-
-				<div class="ibox-content inspinia-timeline">
-
-					<div class="timeline-item">
-						<div class="row">
-							<div class="col-3 date">
-								<i class="fa fa-briefcase"></i>
-								6:00 am
-								<br>
-								<small class="text-navy">2 hour ago</small>
-							</div>
-							<div class="col-7 content no-top-border">
-								<p class="m-b-xs"><strong>Meeting</strong></p>
-
-								<p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products.</p>
-
-							</div>
-						</div>
-					</div>
-					<div class="timeline-item">
-						<div class="row">
-							<div class="col-3 date">
-								<i class="fa fa-file-text"></i>
-								7:00 am
-								<br>
-								<small class="text-navy">3 hour ago</small>
-							</div>
-							<div class="col-7 content">
-								<p class="m-b-xs"><strong>Send documents to Mike</strong></p>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-							</div>
-						</div>
-					</div>
-					<div class="timeline-item">
-						<div class="row">
-							<div class="col-3 date">
-								<i class="fa fa-coffee"></i>
-								8:00 am
-								<br>
-							</div>
-							<div class="col-7 content">
-								<p class="m-b-xs"><strong>Coffee Break</strong></p>
-								<p>
-									Go to shop and find some products.
-									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="timeline-item">
-						<div class="row">
-							<div class="col-3 date">
-								<i class="fa fa-phone"></i>
-								11:00 am
-								<br>
-								<small class="text-navy">21 hour ago</small>
-							</div>
-							<div class="col-7 content">
-								<p class="m-b-xs"><strong>Phone with Jeronimo</strong></p>
-								<p>
-									Lorem Ipsum has been the industry's standard dummy text ever since.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
+	<div class="row">
 		<div class="col-lg-6">
 			<div class="ibox ">
 				<div class="ibox-title">
@@ -174,26 +100,26 @@
 				<small><i class="fa fa-stack-exchange"></i> New economic data from the previous quarter.</small>
 			</div>
 			<div class="ibox-content no-padding">
-					<ul class="list-group">
-						<li class="list-group-item">
-							<p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-							<small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-						</li>
-						<li class="list-group-item">
-							<p><a class="text-info" href="#">@Stock Man</a> Check this stock chart. This price is crazy! </p>
-							<small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
-						</li>
-						<li class="list-group-item">
-							<p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a galley </p>
-							<small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
-						</li>
-						<li class="list-group-item ">
-							<p><a class="text-info" href="#">@Jonathan Febrick</a> The standard chunk of Lorem Ipsum</p>
-							<small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
-						</li>
-					</ul>
-				</div>
+				<ul class="list-group">
+					<li class="list-group-item">
+						<p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+						<small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
+					</li>
+					<li class="list-group-item">
+						<p><a class="text-info" href="#">@Stock Man</a> Check this stock chart. This price is crazy! </p>
+						<small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
+					</li>
+					<li class="list-group-item">
+						<p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a galley </p>
+						<small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
+					</li>
+					<li class="list-group-item ">
+						<p><a class="text-info" href="#">@Jonathan Febrick</a> The standard chunk of Lorem Ipsum</p>
+						<small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
+					</li>
+				</ul>
 			</div>
+		</div>
 		</div>
 	</div>
 </div>

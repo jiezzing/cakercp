@@ -2,6 +2,7 @@
 
 	App::uses('Controller', 'Controller');
 	App::uses('CakeEmail', 'Network/Email');
+	App::uses('CakeTime', 'Utility');
 
 	class AppController extends Controller {
 		public $components = array(
@@ -37,5 +38,6 @@
 			App::uses('Output', 'Lib');
 			App::uses('Validate', 'Lib');
 			App::uses('Redirect', 'Lib');
+			App::uses('Email', 'Lib');
 		}
 	}
