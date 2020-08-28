@@ -45538,3 +45538,290 @@ Request URL: /toastr.js.map
 Stack Trace:
 #0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2020-08-27 09:34:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:34:51 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1932 Table 'rcp.user_accounts' doesn't exist in engine
+Request URL: /login_user
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(502): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\Database\Mysql.php(348): DboSource->_execute('SHOW FULL COLUM...')
+#2 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(1397): Mysql->describe(Object(UserAccount))
+#3 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(1438): Model->schema()
+#4 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2944): Model->getColumnType('UserAccount.use...')
+#5 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2890): DboSource->_parseKey('UserAccount.use...', 'requestor', Object(UserAccount))
+#6 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2771): DboSource->conditionKeysToString(Array, true, Object(UserAccount))
+#7 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2053): DboSource->conditions(Array, true, true, Object(UserAccount))
+#8 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(1771): DboSource->buildStatement(Array, Object(UserAccount))
+#9 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(1224): DboSource->buildAssociationQuery(Object(UserAccount), Array)
+#10 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(3053): DboSource->read(Object(UserAccount), Array)
+#11 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(3025): Model->_readDataSource('first', Array)
+#12 C:\xampp\htdocs\rcp\lib\Model\UserAccount.php(13): Model->find('first', Array)
+#13 C:\xampp\htdocs\rcp\app\Controller\UsersController.php(48): UserAccount->loginByUsernameAndPassword('requestor', '87b852f4a17ef41...')
+#14 [internal function]: UsersController->login()
+#15 C:\xampp\htdocs\rcp\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#16 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#17 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#18 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2020-08-27 09:35:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+se))
+#1 {main}
+2020-08-27 09:35:04 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1932 Table 'rcp.user_accounts' doesn't exist in engine
+Request URL: /login_user
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(502): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\Database\Mysql.php(348): DboSource->_execute('SHOW FULL COLUM...')
+#2 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(1397): Mysql->describe(Object(UserAccount))
+#3 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(1438): Model->schema()
+#4 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2944): Model->getColumnType('UserAccount.use...')
+#5 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2890): DboSource->_parseKey('UserAccount.use...', 'requestor', Object(UserAccount))
+#6 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2771): DboSource->conditionKeysToString(Array, true, Object(UserAccount))
+#7 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2053): DboSource->conditions(Array, true, true, Object(UserAccount))
+#8 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(1771): DboSource->buildStatement(Array, Object(UserAccount))
+#9 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(1224): DboSource->buildAssociationQuery(Object(UserAccount), Array)
+#10 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(3053): DboSource->read(Object(UserAccount), Array)
+#11 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(3025): Model->_readDataSource('first', Array)
+#12 C:\xampp\htdocs\rcp\lib\Model\UserAccount.php(13): Model->find('first', Array)
+#13 C:\xampp\htdocs\rcp\app\Controller\UsersController.php(48): UserAccount->loginByUsernameAndPassword('requestor', '87b852f4a17ef41...')
+#14 [internal function]: UsersController->login()
+#15 C:\xampp\htdocs\rcp\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#16 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#17 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#18 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2020-08-27 09:35:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:35:17 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:35:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:35:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:35:27 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:35:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:35:31 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1932 Table 'rcp.user_accounts' doesn't exist in engine
+Request URL: /login_user
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(502): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\Database\Mysql.php(348): DboSource->_execute('SHOW FULL COLUM...')
+#2 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(1397): Mysql->describe(Object(UserAccount))
+#3 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(1438): Model->schema()
+#4 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2944): Model->getColumnType('UserAccount.use...')
+#5 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2890): DboSource->_parseKey('UserAccount.use...', 'requestor', Object(UserAccount))
+#6 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2771): DboSource->conditionKeysToString(Array, true, Object(UserAccount))
+#7 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(2053): DboSource->conditions(Array, true, true, Object(UserAccount))
+#8 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(1771): DboSource->buildStatement(Array, Object(UserAccount))
+#9 C:\xampp\htdocs\rcp\lib\Cake\Model\Datasource\DboSource.php(1224): DboSource->buildAssociationQuery(Object(UserAccount), Array)
+#10 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(3053): DboSource->read(Object(UserAccount), Array)
+#11 C:\xampp\htdocs\rcp\lib\Cake\Model\Model.php(3025): Model->_readDataSource('first', Array)
+#12 C:\xampp\htdocs\rcp\lib\Model\UserAccount.php(13): Model->find('first', Array)
+#13 C:\xampp\htdocs\rcp\app\Controller\UsersController.php(48): UserAccount->loginByUsernameAndPassword('requestor', '87b852f4a17ef41...')
+#14 [internal function]: UsersController->login()
+#15 C:\xampp\htdocs\rcp\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#16 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#17 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#18 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2020-08-27 09:40:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:40:11 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:40:11 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:40:23 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:49:51 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:49:59 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:50:00 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:50:02 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:54:17 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:54:32 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:54:34 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:55:52 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:56:40 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:56:58 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:57:01 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:57:05 Error: [MissingControllerException] Controller class Toastr.js.mapController could not be found.
+Exception Attributes: array (
+  'class' => 'Toastr.js.mapController',
+  'plugin' => NULL,
+)
+Request URL: /toastr.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

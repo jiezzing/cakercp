@@ -53982,3 +53982,263 @@ Request URL: /admin/css/plugins/chosen/bootstrap-chosen.css.map
 Stack Trace:
 #0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2020-08-27 09:40:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:40:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/plugins/dataTables/pdfmake.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:40:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/plugins/summernote/summernote-bs4.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:40:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/a7.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:40:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/profile.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:40:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/a4.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:40:23 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /admin/css/plugins/chosen/bootstrap-chosen.css.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:40:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:41:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/a7.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:41:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/profile_small.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:41:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/profile.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:41:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/a4.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:42:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/profile_small.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:42:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/a7.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:42:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/profile.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:42:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/a4.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:44:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/profile_small.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:44:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/a7.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:44:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/a4.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:44:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/profile.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:44:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/a7.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:44:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/profile_small.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:44:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/a4.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:44:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/profile.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-08-27 09:44:49 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /admin/users/img/a7.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2020-08-27 09:44:49 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /admin/users/img/profile_small.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2020-08-27 09:44:49 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /admin/users/img/a4.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2020-08-27 09:44:49 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /admin/users/img/profile.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\rcp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\rcp\admin\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
