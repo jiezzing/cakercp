@@ -11,7 +11,6 @@
 			'RcpParticular',
 			'RcpRush',
 			'User',
-			'UserAccount',
 			'Notification',
 			'RcpApprover'
 		);
@@ -165,20 +164,6 @@
 							$this->sendEmail($email);
 							$this->RcpApprover->newApprover($result['Rcp']['id'], $approver['Approver']['app_id']);
 
-							$playerId = $this->UserAccount->playerId($approver['Approver']['app_id']);
-
-							if ($playerId) {
-								$pushData = array();
-
-								$pushData['content'] = "You have received RCP No: " . $rcpNo;
-								$pushData['heading'] = "RCP Notification";
-								$pushData['button_text'] = "See details";
-								$pushData['url'] = $this->request->data['origin'] . '/approver/details/' . $result['Rcp']['id'];
-								$pushData['player_id'] = $playerId['UserAccount']['player_id'];
-
-								$pushNotification = $this->Notification->sendNotification($pushData);
-							}
-
 							$message = Output::message('rcp');
 							$response = Output::success($message);
 						}
@@ -283,7 +268,7 @@
 			$fields = array(
 				'User.firstname',
 				'User.lastname',
-				'UserAccount.email',
+				'User.email'
 			);
 			$approver = $this->User->profile($data['app_id'], $fields);
 			$requestor = $this->User->profile($this->Auth->user('id'), $fields);
@@ -291,11 +276,15 @@
 				'Rcp.req_id' => $this->Auth->user('id'),
 				'Rcp.id' => $data['rcp_id']
 			);
-			$rcpDetails = $this->Rcp->details($condition, 'first', $this->joinCondtion);
+			$rcpDetails = $this->Rcp->details(
+				$condition,
+				'first',
+				$this->joinCondtion
+			);
 			$rush = $this->Rcp->rush($data['rcp_id']);
 
 			$email['template'] = 'approval';
-			$email['recepient'] = $approver['UserAccount']['email'];
+			$email['recepient'] = $approver['User']['email'];
 			$email['subject'] = "Request for Check Payment Approval";
 			$email['viewVars'] = array(
 				'approver' => $approver,
@@ -305,22 +294,6 @@
 			);
 
 			Email::send($email);
-		}
-
-		// stores data of is the approver of the rcp
-		public function approver($id = null, $appId = null) {
-			$data = array();
-
-			$this->RcpApprover->create();
-
-			$data['rcp_id'] = $id;
-			$data['app_id'] = $appId;
-			$data['created'] = date('Y-m-d H:i:s');
-			$data['status_id'] = 1;
-
-			$this->RcpApprover->set($data);
-
-			$this->RcpApprover->save();
 		}
 
 		// generates the RCP code

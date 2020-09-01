@@ -1,9 +1,7 @@
 <div class="middle-box text-center loginscreen animated">
 	<div>
 		<div>
-
 			<h1 class="logo-name">RCP</h1>
-
 		</div>
 		<h3>Request for Check Payment</h3>
 			<div class="form-group">

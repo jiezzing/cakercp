@@ -3,14 +3,14 @@
 	class Validate {
 
         public static function registerEmptyField($data = array()) {
-            foreach ($data as $value) {
-				if (empty($value) && ($key != 'email' && $key != 'middleInitial')) {
+            foreach ($data as $key => $value) {
+				if (empty($value) && ($key != 'middleInitial')) {
 					return true;
 				}
 			}
 		}
 
-		public static function loginEmptyField($data = array()) {
+		public static function login($data = array()) {
             foreach ($data as $value) {
 				if (empty($value)) {
 					return true;

@@ -26,7 +26,7 @@ function organizationTable(selector, text) {
         buttons: [{
 			text: text,
 			action: function (e, dt, node, config) {
-				alert( 'Button activated' );
+				window.location.href = location.href + "/create";
 			}
 		}]
     });

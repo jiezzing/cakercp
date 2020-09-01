@@ -9,13 +9,7 @@
 		public $components = array(
 			'RequestHandler',
 			'Session',
-			'Auth' => array(
-				'authenticate' => array(
-					'Form' => array(
-						'userModel' => 'UserAccount'
-					)
-				)
-			)
+			'Auth'
 		);
 
 		public function beforeFilter() {

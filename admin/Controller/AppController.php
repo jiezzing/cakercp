@@ -6,25 +6,7 @@
 		public $components = array(
 			'RequestHandler',
 			'Session',
-			'Auth' => array(
-				'loginRedirect' => array(
-					'controller' => 'dashboard',
-					'action' => 'index'
-				),
-				'logoutRedirect' => array(
-					'controller' => 'login',
-					'action' => 'index'
-				),
-				'authenticate' => array(
-					'Form' => array(
-						'userModel' => 'UserAccount'
-					)
-				),
-				'loginAction' => array(
-					'controller' => 'login',
-					'action' => 'index'
-				)
-			)
+			'Auth'
 		);
 
 		public function beforeFilter() {

@@ -5,11 +5,6 @@
 				<div class="ibox-title">
 					<h5>Add New User <small>Fill-up Form</small></h5>
 				</div>
-				<div class="ibox-content ibox-heading">
-					<h4>NOTE</h4>
-					<small>1. Default password is the registered username.</small><br>
-					<small>2. Passwords can be changed by the user during first login.</small><br>
-				</div>
 				<div class="ibox-content">
 					<div class="form-group  row"><label class="col-sm-2 col-form-label">Personal Information</label>
 						<div class="col-sm-4">
@@ -22,7 +17,7 @@
 						</div>
 						<div class="col-sm-2">
 							<h5>Middle Initial</h5>
-							<input type="text" placeholder="Middle Initial (optional)" class="form-control" id="middle_initial">
+							<input type="text" placeholder="MI" class="form-control" id="middle_initial">
 						</div>
 					</div>
 					<div class="hr-line-dashed"></div>
@@ -30,7 +25,7 @@
 						<div class="col-sm-5">
 							<h5>Department</h5>
 							<select class="form-control select2-hidden-accessible chosen_select" id="department" data-select2-id="6" tabindex="-1" aria-hidden="true">
-								<option value="0">Select Department</option>
+								<option value="0">Select</option>
 								<?php foreach ($departments as $department) : ?>
 									<option value="<?php echo $department['Department']['id'] ?>"><?php echo $department['Department']['name'] ?></option>
 								<?php endforeach ?>
@@ -39,7 +34,7 @@
 						<div class="col-sm-5">
 							<h5>Project</h5>
 							<select class="form-control select2-hidden-accessible chosen_select" id="project" data-select2-id="6" tabindex="-1" aria-hidden="true">
-								<option value="0">Select Project</option>
+								<option value="0">Select</option>
 								<?php foreach ($projects as $project) : ?>
 									<option value="<?php echo $project['Project']['id'] ?>"><?php echo $project['Project']['name'] ?></option>
 								<?php endforeach ?>
@@ -50,7 +45,7 @@
 						<div class="col-sm-10">
 							<h5>Company</h5>
 							<select class="form-control select2-hidden-accessible chosen_select" id="company" data-select2-id="6" tabindex="-1" aria-hidden="true">
-								<option value="0">Select Company</option>
+								<option value="0">Select</option>
 								<?php foreach ($companies as $company) : ?>
 									<option value="<?php echo $company['Company']['id'] ?>"><?php echo $company['Company']['name'] ?></option>
 								<?php endforeach ?>
@@ -68,9 +63,9 @@
 							<input type="text" placeholder="Email Address (optional)" class="form-control" id="email_address">
 						</div>
 						<div class="col-sm-2">
-							<h5>Type</h5>
+							<h5>User Type</h5>
 							<select class="form-control select2-hidden-accessible chosen_select" id="user_type" data-select2-id="6" tabindex="-1" aria-hidden="true">
-								<option value="0">Select Type</option>
+								<option value="0">Select</option>
 								<?php foreach ($userTypes as $userType) : ?>
 									<option value="<?php echo $userType['UserType']['id'] ?>"><?php echo $userType['UserType']['name'] ?></option>
 								<?php endforeach ?>

@@ -324,6 +324,8 @@
 		$('#send_rcp_btn').on('click', function(event) {
 			event.preventDefault();
 
+			$.LoadingOverlay("show");
+
 			var checked = $('#expense_type').prop("checked");
 			var qtyArr = [];
 			var particularsArr = [];
@@ -392,7 +394,7 @@
 			data.append('justification', justification);
 			data.append('origin', window.location.origin);
 
-			$.ajax({
+			var request = $.ajax({
 				type: 'POST',
 				url: url,
 				cache: false,
@@ -403,6 +405,7 @@
 				success: function(response) {
 					if (response.status) {
 						$("#rcp_form select").val(0).trigger("chosen:updated");
+						$.LoadingOverlay("hide");
 
 						return toastr.success(response.message, response.rcp_no)
 					}

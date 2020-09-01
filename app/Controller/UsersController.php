@@ -2,7 +2,8 @@
 
 	class UsersController extends AppController {
 		public $uses = array(
-			'UserAccount'
+			'User',
+			'Rcp'
 		);
 
 		public function beforeFilter() {
@@ -13,15 +14,7 @@
 
 		public function index() {
 			if($this->Auth->loggedIn()) {
-				if ($this->Auth->user('type_id') == 1) {
-					$url = '/admin/dashboard';
-				}
-				else if ($this->Auth->user('type_id') == 2) {
-					$url = '/requestor/dashboard';
-				}
-				else {
-					$url = '/approver/dashboard';
-				}
+				$url = Redirect::dashboard($this->Auth->user('type_id'));
 
                 return $this->redirect($url);
 			}
@@ -35,32 +28,18 @@
 			$this->autoRender = false;
 
 			if ($this->request->is('ajax')) {
-				$hasEmptyField = Validate::loginEmptyField($this->request->data);
+				$hasEmptyField = Validate::login($this->request->data);
 
 				if ($hasEmptyField) {
 					$message = Output::message('credential');
 					$response = Output::failed($message);
 				}
 				else {
-
-					$result = $this->UserAccount->loginByUsernameAndPassword(
-						$this->request->data['username'],
-						AuthComponent::password($this->request->data['password'])
-					);
+					$result = $this->User->login($this->request->data);
 
 					if ($result) {
 						$this->Auth->login($result['User']);
-
-						if ($result['User']['type_id'] == 1) {
-							$url = $this->params->webroot . 'admin/dashboard';
-						}
-						else if ($result['User']['type_id'] == 2) {
-							$url = $this->params->webroot . 'requestor/dashboard';
-						}
-						else {
-							$url = $this->params->webroot . 'approver/dashboard';
-						}
-
+						$url = $this->params->base . Redirect::dashboard($result['User']['type_id']);
 						$response = Output::success(null, null, $url);
 					}
 					else {

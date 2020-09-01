@@ -39,5 +39,6 @@
 			// autoload library
 			App::uses('Output', 'Lib');
 			App::uses('Validate', 'Lib');
+			App::uses('Redirect', 'Lib');
 		}
 	}

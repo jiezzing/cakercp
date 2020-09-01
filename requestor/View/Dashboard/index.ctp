@@ -1,4 +1,4 @@
-<div class="wrapper wrapper-content sidebar-content">
+<div class="wrapper wrapper-content">
 	<div class="row">
 		<div class="col-lg-3">
 			<div class="ibox ">

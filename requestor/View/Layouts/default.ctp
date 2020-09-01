@@ -117,7 +117,8 @@
             'plugins/datapicker/bootstrap-datepicker.js',
             'plugins/sweetalert/sweetalert.min.js',
             'plugins/chosen/chosen.jquery.js',
-			'plugins/switchery/switchery.js'
+			'plugins/switchery/switchery.js',
+			'plugins/loading-overlay/dist/loadingoverlay.min.js',
 		));
 
 		echo $this->fetch('meta');
@@ -138,13 +139,7 @@
 				<div id="page-wrapper" class="gray-bg dashbard-1" style="min-height: 937px;">
 					<?php
 						echo $this->element('navbar');
-						if ($this->params->controller == 'dashboard') {
-							echo $this->element('sidebar_panel');
-						}
 						echo $this->element('header');
-						if ($this->params->controller == "rcp") {
-							echo $this->element('floating_cog');
-						}
 						echo $this->fetch('content');
 						echo $this->element('footer');
 					?>
