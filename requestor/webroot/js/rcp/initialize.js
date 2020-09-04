@@ -34,13 +34,14 @@ function iChecks(selector) {
 	});
 }
 
-function dataTable(selector) {
+function dataTable(selector, orderBy = []) {
 	$(selector).DataTable({
 		pageLength: 25,
 		bPaginate: true,
 		info: true,
 		ordering: true,
 		responsive: true,
+		order: [orderBy],
 		searching: true,
 		dom: '<"html5buttons"B>lTfgitp',
 		buttons: []

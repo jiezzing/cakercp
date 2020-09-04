@@ -114,39 +114,87 @@
 											</tbody>
 										</table>
 									</div>
-									<div class="col-md-4" data-select2-id="20">
-										<address>
-											<div class="p-2">
-												<strong>Payee:</strong> <?php echo $detail['Rcp']['payee'] ?><br>
-												<strong>Due Date: </strong> <?php echo $detail['User']['firstname'] . ' ' . $detail['User']['lastname'] ?><br>
-											</div>
-										</address>
-									</div>
-									<div class="col-md-4" data-select2-id="20">
-										<?php if ($detail['Rcp']['is_rush']) : ?>
-											<div class="p-2">
-												<strong>Status:</strong><span class="label label-danger ml-2">RUSH</span> <br>
-												<strong>Due Date:</strong> <?php echo $rush['RcpRush']['due_date'] ?><br>
-												<strong>Reason / Justification:</strong><br>
-												<div class="well">
-													<?php echo $rush['RcpRush']['justification'] ?>
-												</div>
-											</div>
-										<?php else : ?>
-											<div class="p-2">
-												<strong>Status:</strong><span class="label label-warning ml-2">NOT RUSH</span><br>
-												<strong>Due Date:</strong> ---<br>
-												<strong>Reason / Justification: </strong>---<br>
-											</div>
-										<?php endif ?>
-									</div>
-									<div class="col-md-4 text-right" data-select2-id="20">
+									<div class="col-md-12 text-right" data-select2-id="20">
 										<div>
 											<span class="text-right">
 											<h1 class="m-b-xs" id="amount"><?php echo CakeNumber::currency($detail['Rcp']['amount']) ?></h1>
 												TOTAL AMOUNT DUE
 											</span>
 										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="ibox ">
+								<div class="ibox-title">
+									<h5>Fill up the following if this RCP is VATABLE</h5>
+								</div>
+								<div class="ibox-content">
+									<div class="col-md-12" data-select2-id="20">
+										<select class="form-control select2-hidden-accessible chosen_select" data-select2-id="6" tabindex="-1" aria-hidden="true">
+											<option data-select2-id="8"></option>
+											<option value="Bahamas" data-select2-id="21">Bahamas</option>
+											<option value="Bahrain" data-select2-id="22">Bahrain</option>
+											<option value="Bangladesh" data-select2-id="23">Bangladesh</option>
+											<option value="Barbados" data-select2-id="24">Barbados</option>
+											<option value="Belarus" data-select2-id="25">Belarus</option>
+											<option value="Belgium" data-select2-id="26">Belgium</option>
+											<option value="Belize" data-select2-id="27">Belize</option>
+											<option value="Benin" data-select2-id="28">Benin</option>
+										</select>
+									</div>
+									<div class="col-md-12" data-select2-id="20">
+										<table class="table table-bordered mt-3">
+											<tbody>
+												<tr>
+													<td>P.O.S. Trans #</td>
+													<td class="text-center">---</td>
+													<td>Less: VAT</td>
+												</tr>
+												<tr>
+													<td>VATable Sales</td>
+													<td class="text-center">---</td>
+													<td>Net: VAT</td>
+												</tr>
+												<tr>
+													<td>VAT-Exempt</td>
+													<td class="text-center">---</td>
+													<td>Less: SC/PWD Discount</td>
+												</tr>
+												<tr>
+													<td>Zero Rated</td>
+													<td class="text-center">---</td>
+													<td>Amount Due</td>
+												</tr>
+												<tr>
+													<td>VAT Amount</td>
+													<td class="text-center">---</td>
+													<td>Add: VAT</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="ibox ">
+								<div class="ibox-title">
+									<h5>If RUSH, fill the following</h5>
+								</div>
+								<div class="ibox-content">
+									<div class="form-group" id="data_1">
+										<label class="font-normal">Date</label>
+										<div class="input-group date">
+											<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" id="rush_date" class="form-control" disabled value="<?php echo $rush['due_date'] ?>">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="font-normal">Reason / Justification</label>
+										<textarea class="form-control" placeholder="Your text here. . ." rows="5" id="justification" disabled><?php echo $rush['justification'] ?></textarea>
 									</div>
 								</div>
 							</div>
@@ -169,6 +217,5 @@
 		chosenSelect('.chosen_select');
 		jsSwitch('.switcher', '#ED5565');
 		rcpTable('#rcp_table', []);
-		datePicker('#data_1 .input-group.date');
 	});
 </script>

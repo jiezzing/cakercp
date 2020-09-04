@@ -53,11 +53,11 @@
 											<ul class="list-group clear-list">
 												<li class="list-group-item fist-item">
 													<span class="float-right">Username</span>
-													<?php echo $profile['UserAccount']['username'] ?>
+													<?php echo $profile['User']['username'] ?>
 												</li>
 												<li class="list-group-item">
 													<span class="float-right">Email Address</span>
-													<?php echo $profile['UserAccount']['email'] ?>
+													<?php echo $profile['User']['email'] ?>
 												</li>
 											</ul>
 										<hr>

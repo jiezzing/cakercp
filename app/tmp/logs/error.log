@@ -46517,3 +46517,21 @@ Request URL: /rcp/img/ic_launcher-playstore.ico
 Stack Trace:
 #0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2020-09-02 06:47:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-03 10:02:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

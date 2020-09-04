@@ -23,16 +23,16 @@
 			<li class="special_link">
 				<a href="<?php echo $this->params->webroot . 'create'?>"><i class="fa fa-file-text"></i> <span class="nav-label">Create RCP</span></a>
 			</li>
-			<li>
+			<li class="<?php if ($this->params->controller == "dashboard") echo "active" ?>">
 				<a href="<?php echo $this->params->webroot . 'dashboard'?>"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
 			</li>
-			<li>
+			<li class="<?php if ($this->params->controller == "rcp") echo "active" ?>">
 				<a href="<?php echo $this->params->webroot . 'rcps'?>"><i class="fa fa-copy"></i> <span class="nav-label">RCP</span></a>
 			</li>
-			<li>
+			<li class="<?php if ($this->params->controller == "reports") echo "active" ?>">
 				<a href="index.html"><i class="fa fa-clipboard"></i> <span class="nav-label">Report Generation</span></a>
 			</li>
-			<li>
+			<li class="<?php if ($this->params->controller == "users") echo "active" ?>">
 				<a href="<?php echo $this->params->webroot . 'profile/' . AuthComponent::user('id')?>"><i class="fa fa-vcard"></i> <span class="nav-label">Profile</span></a>
 			</li>
 		</ul>

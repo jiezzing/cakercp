@@ -53,12 +53,27 @@
 			);
 
 			$details = $this->Rcp->details($condition, 'first', $this->joinCondtion);
+
+			if (empty($details)) {
+				$this->layout = 'error500';
+			}
 			$particulars = $this->Rcp->particulars($id);
 			$rush = $this->Rcp->rush($id);
 
 			$this->set('detail', $details);
 			$this->set('particulars', $particulars);
-			$this->set('rush', $rush);
+
+			if ($rush) {
+				$this->set('rush', $rush['RcpRush']);
+			}
+			else {
+				$rush = array(
+					'due_date' => '---',
+					'justification' => '---'
+				);
+
+				$this->set('rush', $rush);
+			}
 		}
 
 		// edit rcp

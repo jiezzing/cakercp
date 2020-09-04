@@ -1,80 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php if (AuthComponent::user('id')) : ?>
-	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-	<script>
-		var userId = <?php echo AuthComponent::user('id') ?>;
-		var url = "<?php echo $this->params->webroot . 'update_player_id' ?>";
-		var OneSignal =  window.OneSignal || [];
-
-		OneSignal.push(function() {
-			OneSignal.init({
-				appId: "e986f8c5-25e9-4579-a96d-a611536dbbef"
-			});
-
-			OneSignal.on('customPromptClick', function(promptClickResult) {
-				if (promptClickResult.result == "denied") {
-					toastr.error("You must enable the PUSH NOTIFICATION to receive real-time notifications. ", "Error")
-				}
-				console.log('HTTP Pop-Up Prompt click result:', promptClickResult);
-			});
-
-			OneSignal.on('subscriptionChange', function (isSubscribed) {
-				console.log("The user's subscription state is now:", isSubscribed);
-				OneSignal.sendTag("user_id", userId, function(tagsSent) {
-					console.log("Tags has finished sending:", tagsSent);
-				});
-
-				if (isSubscribed == true) {
-					OneSignal.getUserId().then(function(playerId) {
-						console.log("Player ID: " + playerId)
-						$.ajax({
-							type: 'POST',
-							url: url,
-							cache: false,
-							data: {
-								id: userId,
-								playerId: playerId
-							},
-							dataType: 'json',
-							success: function(response) {
-								if (response.status) {
-									return toastr.success(response.message, response.type)
-								}
-								else {
-									return toastr.error(response.message, response.type)
-								}
-							},
-							error: function (response, desc, exception) {
-								alert(exception);
-							}
-						})
-					})
-				}
-
-
-			});
-
-			var isPushSupported = OneSignal.isPushNotificationsSupported();
-
-			if (isPushSupported) {
-				OneSignal.isPushNotificationsEnabled(function(isEnabled) {
-					if (isEnabled) {
-						console.log("Push notifications are enabled!");
-					}
-
-					else {
-						OneSignal.registerForPushNotifications();
-						console.log("Push notifications are not enabled yet.");
-					}
-				});
-			} else {
-				alert("Push notifications are not supported");
-			}
-		});
-	</script>
-	<?php endif ?>
     <?php
         header("Cache-Control: no-cache, no-store, must-revalidate");
         header("Pragma: no-cache");
@@ -83,7 +9,7 @@
         echo $this->Html->charset();
     ?>
 	<title>
-		<?php echo $this->fetch('title') ?>
+		<?php echo $this->fetch('title') == 'Rcp' ? 'RCP' : $this->fetch('title') ?>
 	</title>
 	<?php echo $this->Html->meta('icon', 'img/ic_launcher-playstore.ico');
 

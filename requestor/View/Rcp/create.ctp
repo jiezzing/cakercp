@@ -147,27 +147,27 @@
 											<tbody>
 												<tr>
 													<td>P.O.S. Trans #</td>
-													<td>---</td>
+													<td class="text-center">---</td>
 													<td>Less: VAT</td>
 												</tr>
 												<tr>
 													<td>VATable Sales</td>
-													<td>---</td>
+													<td class="text-center">---</td>
 													<td>Net: VAT</td>
 												</tr>
 												<tr>
 													<td>VAT-Exempt</td>
-													<td>---</td>
+													<td class="text-center">---</td>
 													<td>Less: SC/PWD Discount</td>
 												</tr>
 												<tr>
 													<td>Zero Rated</td>
-													<td>---</td>
+													<td class="text-center">---</td>
 													<td>Amount Due</td>
 												</tr>
 												<tr>
 													<td>VAT Amount</td>
-													<td>---</td>
+													<td class="text-center">---</td>
 													<td>Add: VAT</td>
 												</tr>
 											</tbody>

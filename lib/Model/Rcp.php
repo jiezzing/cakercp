@@ -159,4 +159,38 @@
 
 			return $result;
 		}
+
+		public function tally($id = null) {
+			$pending = $this->find('count', array(
+				'conditions' => array(
+					'Rcp.req_id' => $id,
+					'Rcp.status_id' => 1
+				)
+			));
+
+			$approved = $this->find('count', array(
+				'conditions' => array(
+					'Rcp.req_id' => $id,
+					'Rcp.status_id' => 2
+				)
+			));
+
+			$declined = $this->find('count', array(
+				'conditions' => array(
+					'Rcp.req_id' => $id,
+					'Rcp.status_id' => 3
+				)
+			));
+
+			$all = $this->find('count', array(
+				'conditions' => array('Rcp.req_id' => $id)
+			));
+
+			return array(
+				'pending' => $pending,
+				'approved' => $approved,
+				'declined' => $declined,
+				'all' => $all
+			);
+		}
     }

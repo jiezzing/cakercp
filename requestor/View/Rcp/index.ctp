@@ -20,6 +20,7 @@
 													<th>Created</th>
 													<th>Status</th>
 													<th>Actions</th>
+													<th>Actions</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -48,6 +49,13 @@
 																</li>
 															</ol>
 														</td>
+														<td>
+															<ol class="breadcrumb">
+																<li class="breadcrumb-item">
+																	<a href="#" class="text-navy delete" value="2"><i class="fa fa-file"></i><span class="nav-label"> Delete</span></a>
+																</li>
+															</ol>
+														</td>
 													</tr>
 												<?php endforeach ?>
 											</tbody>
@@ -65,8 +73,10 @@
 
 <script>
 	$(document).ready(function() {
-		dataTable('.table');
-		iChecks('.i-checks');
+		dataTable('.table', [6, "desc"]);
+		$(document).on('click', '.delete', function(e) {
+			$('#DataTables_Table_0').DataTable().row($(this).parents('tr')).remove().draw();
+		})
 	})
 </script>
 

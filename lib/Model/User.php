@@ -32,15 +32,7 @@
 						'conditions' => array(
 							'Project.id = User.proj_id'
 						)
-					),
-					array(
-						'alias' => 'UserAccount',
-						'table' => 'user_accounts',
-						'type' => 'INNER',
-						'conditions' => array(
-							'UserAccount.user_id = User.id'
-						)
-					),
+					)
 				),
 				'conditions' => array(
 					'User.id' => $id

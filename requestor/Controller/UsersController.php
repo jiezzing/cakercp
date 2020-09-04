@@ -50,8 +50,8 @@
 				'Company.name',
 				'Department.name',
 				'Project.name',
-				'UserAccount.username',
-				'UserAccount.email',
+				'User.username',
+				'User.email',
 			);
 			$profile = $this->User->profile($this->Auth->user('id'), $fields);
 

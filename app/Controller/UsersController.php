@@ -51,6 +51,4 @@
 
 			return Output::response($response);
 		}
-
-
 	}
