@@ -28,11 +28,11 @@
 											</li>
 											<li class="list-group-item">
 												<span class="float-right"> Middle Initial </span>
-												Open new shop
+												<?php echo is_null($profile['User']['middle_initial']) ?  '---' : $profile['User']['middle_initial'] ?>
 											</li>
 										</ul>
 									</div>
-									<a href="#" class="btn btn-primary btn-sm btn-block">Update Information</a>
+									<a href="<?php echo $this->params->webroot . 'profile/edit' ?>" class="btn btn-primary btn-sm btn-block">Update Information</a>
 								</div>
 							</di>
 						</div>

@@ -3,21 +3,14 @@
 		<ul class="nav metismenu" id="side-menu" style="">
 			<li class="nav-header">
 				<div class="dropdown profile-element">
-					<img alt="image" class="rounded-circle" src="img/profile_small.jpg">
+					<img width="50" alt="image" class="rounded-circle" src="<?php echo $this->params->base . '/img/person-circle.png' ?>">
 					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-						<span class="block m-t-xs font-bold">David Williams</span>
-						<span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+						<span class="block m-t-xs font-bold"><?php echo $name ?></span>
+						<span class="text-muted text-xs block">Requestor</span>
 					</a>
-					<ul class="dropdown-menu animated fadeInRight m-t-xs">
-						<li><a class="dropdown-item" href="profile.html">Profile</a></li>
-						<li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
-						<li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
-						<li class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="login.html">Logout</a></li>
-					</ul>
 				</div>
 				<div class="logo-element">
-					IN+
+					RCP
 				</div>
 			</li>
 			<li class="special_link">
@@ -29,11 +22,8 @@
 			<li class="<?php if ($this->params->controller == "rcp") echo "active" ?>">
 				<a href="<?php echo $this->params->webroot . 'rcps'?>"><i class="fa fa-copy"></i> <span class="nav-label">RCP</span></a>
 			</li>
-			<li class="<?php if ($this->params->controller == "reports") echo "active" ?>">
-				<a href="index.html"><i class="fa fa-clipboard"></i> <span class="nav-label">Report Generation</span></a>
-			</li>
 			<li class="<?php if ($this->params->controller == "users") echo "active" ?>">
-				<a href="<?php echo $this->params->webroot . 'profile/' . AuthComponent::user('id')?>"><i class="fa fa-vcard"></i> <span class="nav-label">Profile</span></a>
+				<a href="<?php echo $this->params->webroot . 'profile' ?>"><i class="fa fa-vcard"></i> <span class="nav-label">Profile</span></a>
 			</li>
 		</ul>
     </div>

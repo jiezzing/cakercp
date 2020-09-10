@@ -2,16 +2,16 @@
 <html>
 <head>
     <?php
-        header("Cache-Control: no-cache, no-store, must-revalidate"); 
+        header("Cache-Control: no-cache, no-store, must-revalidate");
         header("Pragma: no-cache");
         header("Expires: 0");
-        echo $this->Html->charset(); 
+        echo $this->Html->charset();
     ?>
 	<title>
 		<?php echo $this->fetch('title'); ?>
 	</title>
 	<?php echo $this->Html->meta('icon', 'img/ic_launcher-playstore.ico');
-        
+
 		echo $this->Html->css([
             'bootstrap.min.css',
             'font-awesome/css/font-awesome.css',
@@ -40,14 +40,7 @@
             <div class="error-desc">
                 The server could not verify that you are authorized to access. We apologize.
                 You can go back to main page: <br/>
-                <?php echo $this->Html->link(
-                    $this->Html->tag('button', 'HOME', array('class' => 'btn btn-primary m-t')), array(
-                        'controller' => 'home',
-                        'action' => 'index'
-                    ), array(
-                        'escape' => false
-                    )) 
-                ?>
+				<a href="<?php echo $this->params->webroot . 'dashboard' ?>"><button class="btn btn-primary m-t">Dashboard</button></a>
             </div>
         </div>
     </body>

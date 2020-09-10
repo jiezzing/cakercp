@@ -20,8 +20,6 @@
         ]);
 
         echo $this->Html->script([
-
-            // Main scripts
             'jquery-3.1.1.min.js',
             'popper.min.js',
             'bootstrap.js'
@@ -33,13 +31,12 @@
 	?>
 </head>
     <body class="gray-bg">
-        <div class="middle-box text-center animated fadeInDown">
-            <h1>500</h1>
-            <h3 class="font-bold">Internal Server Error</h3>
+        <div class="middle-box text-center">
+            <h1>:-(</h1>
+            <h3 class="font-bold">Oooops! Something went wrong.</h3>
 
             <div class="error-desc">
                 The server encountered something unexpected that didn't allow it to complete the request. We apologize.<br/>
-                You can go back to main page: <br/>
 				<a href="<?php echo $this->params->webroot . 'dashboard' ?>"><button class="btn btn-primary m-t">Dashboard</button></a>
             </div>
         </div>

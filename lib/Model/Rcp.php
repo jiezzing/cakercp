@@ -147,8 +147,8 @@
 			$rcp['amount'] = preg_replace('/[^\d.]/', '', $data['totalAmount']);
 			$rcp['amount_in_words'] = $data['amountInWords'];
 			$rcp['expense_type'] = $data['expenseType'];
-			$rcp['is_rush'] = $data['is_rush'];
-			$rcp['is_vatable'] = 0;
+			$data['isVatable'] == true ? $rcp['is_vatable'] = 1 : $rcp['is_vatable'] = 0;
+			empty($data['is_rush']) ? $rcp['is_rush'] = 0 : $rcp['is_rush'] = 1;
 			$rcp['is_edited'] = 0;
 			$rcp['created'] = date('Y-m-d H:i:s');
 			$rcp['status_id'] = 1;

@@ -18,7 +18,7 @@
 			}
         }
 
-		public static function createRcpHasEmptyFields($data = array()) {
+		public static function rcp($data = array()) {
 			if (empty($data['department']) || empty($data['project']) ||
 			empty($data['company']) || empty($data['payee'])) {
 				return true;
@@ -31,7 +31,7 @@
 			}
         }
 
-		public static function hasRushEmptyField($data = array()) {
+		public static function rush($data = array()) {
 			if (!empty($data['dueDate']) && empty($data['justification'])) {
 				return true;
 			}
@@ -48,7 +48,7 @@
 			}
         }
 
-		public static function rcpParticularsIsEmpty($data = array()) {
+		public static function particulars($data = array()) {
             if (empty($data['qty'])) {
 				return true;
 			}

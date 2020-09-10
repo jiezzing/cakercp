@@ -180,11 +180,13 @@ class AuthComponent extends Component {
  *
  * @var mixed
  */
-	public $loginAction = array(
-		'controller' => 'users',
-		'action' => 'login',
-		'plugin' => null
-	);
+	// public $loginAction = array(
+	// 	'controller' => 'users',
+	// 	'action' => 'login',
+	// 	'plugin' => null
+	// );
+
+	public $loginAction = "../../login";
 
 /**
  * Normally, if a user is redirected to the $loginAction page, the location they

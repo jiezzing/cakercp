@@ -26,6 +26,10 @@
 			$rcps = $this->Rcp->details($condition, 'all', $join);
 			$tally = $this->Rcp->tally($this->Auth->user('id'));
 
+			foreach ($rcps as $key => $data) {
+				$data['Rcp']['expense_type'] == "DEPARTMENT EXPENSE" ? $rcps[$key]['Rcp']['total_progress'] = 4 : $rcps[$key]['Rcp']['total_progress'] = 2;
+			}
+
 			$this->set('rcps', $rcps);
 			$this->set('tally', $tally);
 		}

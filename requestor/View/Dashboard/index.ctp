@@ -68,7 +68,7 @@
 											<?php endif ?>
 											<td><?php echo $rcp['Rcp']['created'] ?></td>
 											<td><span class="label label-warning"><small><?php echo $rcp['Status']['name'] ?></small></span> </td>
-											<td>0 is to 4</td>
+											<td class="text-center"><?php echo '0 is to <strong>' . $rcp['Rcp']['total_progress'] . '</strong>' ?></td>
 										</tr>
 									<?php endforeach ?>
 								</tbody>

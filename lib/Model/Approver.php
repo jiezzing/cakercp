@@ -7,7 +7,7 @@
 			public $usesTable = 'approvers';
 
 			public function currentApprover($id = null) {
-				$result = $this->find('first', array(
+				return $this->find('first', array(
 					'conditions' => array(
 						'Approver.dept_id' => $id
 					),
@@ -18,7 +18,5 @@
 						'Approver.alt_sec_id'
 					)
 				));
-
-				return $result;
 			}
     }

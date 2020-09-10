@@ -13,6 +13,7 @@
 												<tr>
 													<th>RCP No</th>
 													<th>Approver</th>
+													<th>Expense Type</th>
 													<th>Payee</th>
 													<th>Department</th>
 													<th>Project</th>
@@ -28,6 +29,7 @@
 													<tr class="gradeX">
 														<td><?php echo $rcp['Rcp']['rcp_no'] ?></td>
 														<td><?php echo $rcp['User']['firstname'] . ' ' . $rcp['User']['lastname'] ?></td>
+														<td><?php echo $rcp['Rcp']['expense_type'] ?></td>
 														<td><?php echo $rcp['Rcp']['payee'] ?></td>
 														<td><?php echo $rcp['Department']['name'] ?></td>
 														<td><?php echo $rcp['Project']['name'] ?></td>
@@ -73,8 +75,9 @@
 
 <script>
 	$(document).ready(function() {
-		dataTable('.table', [6, "desc"]);
+		dataTable('.table', [7, "desc"]);
 		$(document).on('click', '.delete', function(e) {
+			e.preventDefault();
 			$('#DataTables_Table_0').DataTable().row($(this).parents('tr')).remove().draw();
 		})
 	})

@@ -3,16 +3,18 @@
 	class RcpController extends AppController {
 
 		public $uses = array(
-			'Company',
-			'Project',
-			'Department',
 			'Approver',
+			'Company',
+			'Department',
+			'Project',
 			'Rcp',
 			'RcpParticular',
 			'RcpRush',
-			'User',
+			'RcpApprover',
+			'RcpVatable',
 			'Notification',
-			'RcpApprover'
+			'User',
+			'Vat'
 		);
 
 		public $joinCondition = null;
@@ -57,11 +59,10 @@
 			if (empty($details)) {
 				$this->layout = 'error500';
 			}
+
 			$particulars = $this->Rcp->particulars($id);
 			$rush = $this->Rcp->rush($id);
-
-			$this->set('detail', $details);
-			$this->set('particulars', $particulars);
+			$vats = $this->RcpVatable->details($id);
 
 			if ($rush) {
 				$this->set('rush', $rush['RcpRush']);
@@ -74,6 +75,10 @@
 
 				$this->set('rush', $rush);
 			}
+
+			$this->set('detail', $details);
+			$this->set('particulars', $particulars);
+			$this->set('vat', $vats);
 		}
 
 		// edit rcp
@@ -89,6 +94,9 @@
 			$departments = $this->Department->find('all');
 			$projects = $this->Project->find('all');
 			$rush = $this->Rcp->rush($id, $this->Auth->user('id'));
+			$projects = $this->Project->find('all');
+			$vatables = $this->Vat->find('all');
+			$vats = $this->RcpVatable->details($id);
 
 			$this->set('detail', $details);
 			$this->set('particulars', $particulars);
@@ -96,7 +104,8 @@
 			$this->set('departments', $departments);
 			$this->set('projects', $projects);
 			$this->set('rush', $rush);
-			$this->render('edit');
+			$this->set('vat', $vats);
+			$this->set('vatables', $vatables);
 		}
 
 		// display the creat rcp page
@@ -104,10 +113,12 @@
 			$companies = $this->Company->find('all');
 			$departments = $this->Department->find('all');
 			$projects = $this->Project->find('all');
+			$vats = $this->Vat->find('all');
 
 			$this->set('companies', $companies);
 			$this->set('departments', $departments);
 			$this->set('projects', $projects);
+			$this->set('vats', $vats);
 		}
 
 		// creates rcp, particulars, rush rcp, send push notification and email to approver when sending rcp
@@ -115,80 +126,72 @@
 			$this->autoRender = false;
 
 			if ($this->request->is('ajax')) {
-				$createRcpHasEmptyFields = Validate::createRcpHasEmptyFields($this->request->data);
-				$hasRushEmptyField = Validate::hasRushEmptyField($this->request->data);
+				$rcpEmpty = Validate::rcp($this->request->data);
+				$rushEmpty = Validate::rush($this->request->data);
 				$isRush = Validate::isRush($this->request->data);
-				$rcpParticularsIsEmpty = Validate::rcpParticularsIsEmpty($this->request->data);
+				$particularsEmpty = Validate::particulars($this->request->data);
 				$allApproverSet = true;
 
-				if ($createRcpHasEmptyFields) {
+				if ($rcpEmpty) {
 					$message = Output::message('emptyField');
 					$response = Output::failed($message);
 				}
-				elseif ($rcpParticularsIsEmpty) {
+				elseif ($particularsEmpty) {
 					$message = Output::message('particularsEmpty');
 					$response = Output::failed($message);
 				}
-				elseif ($hasRushEmptyField) {
+				elseif ($rushEmpty) {
 					$message = Output::message('rush');
 					$response = Output::failed($message);
 				}
 				else {
 					$approver = $this->Approver->currentApprover($this->request->data['department']);
 
-					foreach ($approver['Approver'] as $key => $value) {
-						if (empty($value)) {
-							$allApproverSet = false;
-						}
-					}
-
-					if (!$allApproverSet) {
-						$message = Output::message('allApproverNotSet');
-						$response = Output::failed($message);
+					if ($this->request->data['expenseType'] == "DEPARTMENT EXPENSE") {
+						$approverId = $approver['Approver']['app_id'];
 					}
 					else {
-						if ($this->request->data['expenseType'] == "DEPARTMENT EXPENSE") {
-							$approverId = $approver['Approver']['app_id'];
-						}
-						else {
-							$approverId= $approver['Approver']['sec_id'];
-						}
-
-						$rcpNo = $this->rcpNo($this->request->data['department']);
-
-						$this->request->data['rcp_no'] = $rcpNo;
-						$this->request->data['req_id'] = $this->Auth->user('id');
-						$this->request->data['app_id'] = $approverId;
-						$this->request->data['is_rush'] = (int)$isRush;
-
-						$result = $this->Rcp->store($this->request->data);
-
-						if ($result) {
-							$this->request->data['rcp_id'] = $result['Rcp']['id'];
-
-							$this->RcpParticular->store($this->request->data);
-
-							if ($isRush) {
-								$this->RcpRush->store($this->request->data);
-							}
-
-							$email = array();
-							$email['rcp_id'] = $result['Rcp']['id'];
-							$email['app_id'] = $result['Rcp']['app_id'];
-
-							$this->sendEmail($email);
-							$this->RcpApprover->newApprover($result['Rcp']['id'], $approver['Approver']['app_id']);
-
-							$message = Output::message('rcp');
-							$response = Output::success($message);
-						}
-						else {
-							$message = Output::message('error');
-							$response = Output::failed($message);
-						}
-
-						$response['rcp_no'] = $rcpNo;
+						$approverId= $approver['Approver']['sec_id'];
 					}
+
+					$rcpNo = $this->rcpNo($this->request->data['department']);
+
+					$this->request->data['rcp_no'] = $rcpNo;
+					$this->request->data['req_id'] = $this->Auth->user('id');
+					$this->request->data['app_id'] = $approverId;
+					$this->request->data['is_rush'] = (int)$isRush;
+
+					$result = $this->Rcp->store($this->request->data);
+
+					if ($result) {
+						$this->request->data['rcp_id'] = $result['Rcp']['id'];
+
+						$this->RcpParticular->store($this->request->data);
+
+						if ($isRush) {
+							$this->RcpRush->store($this->request->data);
+						}
+
+						$email = array();
+						$email['rcp_id'] = $result['Rcp']['id'];
+						$email['app_id'] = $result['Rcp']['app_id'];
+
+						$this->sendEmail($email);
+						$this->RcpApprover->newApprover($result['Rcp']['id'], $approver['Approver']['app_id']);
+
+						if ($this->request->data['isVatable'] == 'true') {
+							$this->RcpVatable->store($this->request->data);
+						}
+
+						$message = Output::message('rcp');
+						$response = Output::success($message);
+					}
+					else {
+						$message = Output::message('error');
+						$response = Output::failed($message);
+					}
+
+					$response['rcp_no'] = $rcpNo;
 				}
 			}
 
@@ -324,5 +327,37 @@
 
 				return $departmentCode['Department']['code'] . ' ' . substr(date('y'), -2) . '-' . str_pad(($totalRcp + 1), 4, '0', STR_PAD_LEFT);
 			}
+		}
+
+		public function approvers() {
+			$this->autoRender = false;
+
+			if ($this->request->is('ajax')) {
+				$approver = $this->Approver->currentApprover($this->request->data['id']);
+				$approverSet = true;
+
+				if ($this->request->data['expenseType'] == "DEPARTMENT EXPENSE") {
+					if (empty($approver['Approver']['app_id']) || empty($approver['Approver']['alt_app_id']) ||
+					empty($approver['Approver']['sec_id']) || empty($approver['Approver']['alt_sec_id'])) {
+						$approverSet = false;
+					}
+				}
+				else {
+					if (empty($approver['Approver']['sec_id']) || empty($approver['Approver']['alt_sec_id'])) {
+						$approverSet = false;
+					}
+				}
+
+				if ($approverSet) {
+					$message = Output::message('approverSet');
+					$response = Output::success($message);
+				}
+				else {
+					$message = Output::message('approverNotSet');
+					$response = Output::failed($message);
+				}
+			}
+
+			return Output::response($response);
 		}
 	}

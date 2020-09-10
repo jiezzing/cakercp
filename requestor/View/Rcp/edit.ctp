@@ -40,7 +40,6 @@
 									<div class="col-md-4" data-select2-id="10">
 										<h5>Company</h5>
 										<select class="form-control select2-hidden-accessible chosen_select" id="company" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option value="0">Select Company</option>
 											<?php foreach ($companies as $company) : ?>
 												<?php if ($detail['Rcp']['comp_id'] == $company['Company']['id']) : ?>
 													<option value="<?php echo $company['Company']['id'] ?>" selected><?php echo $company['Company']['name'] ?></option>
@@ -107,18 +106,35 @@
 													<td class="unit" contenteditable="true"><?php echo $particular['RcpParticular']['unit'] ?></td>
 													<td class="particulars" contenteditable="true"><?php echo $particular['RcpParticular']['particulars'] ?></td>
 													<td class="ref_code" contenteditable="true"><?php echo $particular['RcpParticular']['ref_code'] ?></td>
-													<td class="code" contenteditable="true"><?php echo $particular['RcpParticular']['code'] ?></td>
+													<?php if ($detail['Rcp']['expense_type'] == "DEPARTMENT EXPENSE") : ?>
+														<td class="code" contenteditable="true"><?php echo $particular['RcpParticular']['code'] ?></td>
+													<?php else : ?>
+														<td class="code" contenteditable="true"></td>
+													<?php endif ?>
 													<td class="amount" contenteditable="true"><?php echo $particular['RcpParticular']['amount'] ?></td>
 													<td class="text-center"><span><i class="text-navy fa fa-check"></i></span></td>
 												</tr>
 											<?php endforeach ?>
+											<?php if (count($particulars) < 5) : ?>
+												<?php for ($i = count($particulars); $i < 5; $i++) : ?>
+													<tr>
+													<td class="qty" contenteditable="true"></td>
+													<td class="unit" contenteditable="true"></td>
+													<td class="particulars" contenteditable="true"></td>
+													<td class="ref_code" contenteditable="true"></td>
+													<td class="code" contenteditable="true"></td>
+													<td class="amount" contenteditable="true"></td>
+													<td class="text-center"><span><i class="text-navy fa fa-check"></i></span></td>
+													</tr>
+												<?php endfor ?>
+											<?php endif ?>
 											</tbody>
 										</table>
 									</div>
 									<div class="col-md-12 float-right" data-select2-id="20">
 										<div>
 											<span class="float-right">
-											<h1 class="m-b-xs" id="amount"><?php echo number_format($detail['Rcp']['amount'], 2) ?></h1>
+											<h1 class="m-b-xs" id="amount">₱<?php echo number_format($detail['Rcp']['amount'], 2) ?></h1>
 												TOTAL AMOUNT DUE
 											</span>
 										</div>
@@ -135,44 +151,58 @@
 								</div>
 								<div class="ibox-content">
 									<div class="col-md-12" data-select2-id="20">
-										<select class="form-control select2-hidden-accessible chosen_select" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option data-select2-id="8"></option>
-											<option value="Bahamas" data-select2-id="21">Bahamas</option>
-											<option value="Bahrain" data-select2-id="22">Bahrain</option>
-											<option value="Bangladesh" data-select2-id="23">Bangladesh</option>
-											<option value="Barbados" data-select2-id="24">Barbados</option>
-											<option value="Belarus" data-select2-id="25">Belarus</option>
-											<option value="Belgium" data-select2-id="26">Belgium</option>
-											<option value="Belize" data-select2-id="27">Belize</option>
-											<option value="Benin" data-select2-id="28">Benin</option>
+										<select class="form-control select2-hidden-accessible chosen_select" id="vat" data-select2-id="6" tabindex="-1" aria-hidden="true">
+											<?php foreach ($vatables as $vatable) : ?>
+												<?php if ($vatable['Vat']['id'] == $vat['RcpVatable']['vat_id']) : ?>
+													<?php if ($vatable['Vat']['id'] != 4) : ?>
+														<option selected id="<?php echo $vatable['Vat']['id'] ?>" value="<?php echo $vatable['Vat']['id'] ?>"><?php echo $vatable['Vat']['name'] . ' - ' . $vatable['Vat']['percentage'] . '%'?></option>
+													<?php else : ?>
+														<option selected id="<?php echo $vatable['Vat']['id'] ?>" value="<?php echo $vatable['Vat']['id'] ?>"><?php echo $vatable['Vat']['name'] . ' - 0.10 to 0.15%'?></option>
+													<?php endif ?>
+												<?php else : ?>
+													<option id="<?php echo $vatable['Vat']['id'] ?>" value="<?php echo $vatable['Vat']['id'] ?>"><?php echo $vatable['Vat']['name'] . ' - 0.10 to 0.15%'?></option>
+												<?php endif ?>
+											<?php endforeach ?>
 										</select>
 									</div>
-									<div class="col-md-12" data-select2-id="20">
+									<div id="professional-div" hidden>
+										<label class="col-sm-12 col-form-label">Percentage</label>
+										<div class="col-sm-12">
+											<input type="number" class="form-control" id="professional-fee">
+											<span class="form-text" id="professional-banner" hidden>
+												<div class="bg-danger p-xs b-r-sm mt-3">Professional Fee Percentage must be between 10 to 15.</div>
+											</span>
+										</div>
+									</div>
+									<div class="col-md-12 mt-3" data-select2-id="20"><div class="ibox-content ibox-heading">
+										<h4>NOTE</h4>
+										<small>1. The calculation will not take effect if there is no TOTAL AMOUNT detected.</small><br>
+									</div>
 										<table class="table table-bordered mt-3">
 											<tbody>
 												<tr>
 													<td>P.O.S. Trans #</td>
-													<td>---</td>
+													<td class="text-center" id="less-vat"><?php echo !empty($vat['RcpVatable']['less_vat']) ? CakeNumber::currency($vat['RcpVatable']['less_vat']) : '---' ?></td>
 													<td>Less: VAT</td>
 												</tr>
 												<tr>
 													<td>VATable Sales</td>
-													<td>---</td>
+													<td class="text-center" id="net-of-vat"><?php echo !empty($vat['RcpVatable']['net_vat']) ? CakeNumber::currency($vat['RcpVatable']['net_vat']) : '---' ?></td>
 													<td>Net: VAT</td>
 												</tr>
 												<tr>
 													<td>VAT-Exempt</td>
-													<td>---</td>
+													<td class="text-center" id="vat-discount"><?php echo !empty($vat['RcpVatable']['discount']) ? CakeNumber::currency($vat['RcpVatable']['discount']) : '---' ?></td>
 													<td>Less: SC/PWD Discount</td>
 												</tr>
 												<tr>
 													<td>Zero Rated</td>
-													<td>---</td>
+													<td class="text-center" id="vat-amount"><?php echo !empty($vat['RcpVatable']['amount_due']) ? CakeNumber::currency($vat['RcpVatable']['amount_due']) : '---' ?></td>
 													<td>Amount Due</td>
 												</tr>
 												<tr>
 													<td>VAT Amount</td>
-													<td>---</td>
+													<td class="text-center" id="vat-total-amount"><?php echo !empty($vat['RcpVatable']['add_vat']) ? CakeNumber::currency($vat['RcpVatable']['add_vat']) : '---' ?></td>
 													<td>Add: VAT</td>
 												</tr>
 											</tbody>
@@ -354,18 +384,6 @@
 			$("#rcp_table tr td").filter(':nth-child(5)').html('');
 			$('#expense_title').text("PROJECT EXPENSE");
 		}
-		else {
-			keypressToCalculate('.qty', false);
-			keypressToCalculate('.unit', false);
-			keypressToCalculate('.particulars', false);
-			keypressToCalculate('.ref_code', false);
-			keypressToCalculate('.code', false);
-			keypressToCalculate('.amount', false);
-
-			$('#rcp_table > thead > tr > th:nth-child(5)').removeAttr('hidden');
-			$("#rcp_table td").filter(':nth-child(5)').removeAttr('hidden');
-			$('#expense_title').text("DEPARTMENT EXPENSE");
-		}
 
 		$('#update_rcp_btn').on('click', function(event) {
 			event.preventDefault();
@@ -459,5 +477,63 @@
 				}
 			})
 		})
-	});
+
+		$('#vat').on('change', function(){
+			var subtotal = removeCommas($('#amount').text());
+			var vatType = $(this).val();
+			var professionalFee = $('#professional-fee').val();
+			var vat = calculateVat(subtotal, vatType, professionalFee);
+
+			if (subtotal == 0) {
+				$(this).val(0).trigger("chosen:updated");
+				return toastr.error("No total amount detected. Please specify first all the particulars to generate total amount.", "Error")
+			}
+
+			if (vatType == 4) {
+				$('#professional-banner').attr('hidden', false);
+			}
+			else {
+				$('#professional-banner').attr('hidden', true);
+			}
+
+
+			if (vatType == 0) {
+				$('#less-vat').text('---');
+				$('#net-of-vat').text('---');
+				$('#vat-discount').text('---');
+				$('#vat-amount').text('---');
+				$('#vat-total-amount').text('---');
+			}
+			else {
+				$('#less-vat').text(vat['lessVat']);
+				$('#net-of-vat').text(vat['netVat']);
+				$('#vat-discount').text(vat['discount']);
+				$('#vat-amount').text(vat['vatAmount']);
+				$('#vat-total-amount').text(vat['vatAmount']);
+			}
+		})
+
+		$('#professional-fee').on("keypress keyup copy paste",function (event) {
+			var subtotal = removeCommas($('#amount').text());
+			var vatType = $('#vat').val();
+			if ($(this).val() >= 10 && $(this).val() <= 15) {
+				var vat = calculateVat(subtotal, vatType, $(this).val());
+
+				$('#less-vat').text(vat['lessVat']);
+				$('#net-of-vat').text(vat['netVat']);
+				$('#vat-discount').text(vat['discount']);
+				$('#vat-amount').text(vat['vatAmount']);
+				$('#vat-total-amount').text(vat['vatAmount']);
+				$('#professional-banner').attr('hidden', true);
+			}
+			else {
+				$('#professional-banner').attr('hidden', false);
+				$('#less-vat').text('---');
+				$('#net-of-vat').text('---');
+				$('#vat-discount').text('---');
+				$('#vat-amount').text('---');
+				$('#vat-total-amount').text('---');
+			}
+		})
+	})
 </script>

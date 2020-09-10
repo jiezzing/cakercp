@@ -134,44 +134,35 @@
 								</div>
 								<div class="ibox-content">
 									<div class="col-md-12" data-select2-id="20">
-										<select class="form-control select2-hidden-accessible chosen_select" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option data-select2-id="8"></option>
-											<option value="Bahamas" data-select2-id="21">Bahamas</option>
-											<option value="Bahrain" data-select2-id="22">Bahrain</option>
-											<option value="Bangladesh" data-select2-id="23">Bangladesh</option>
-											<option value="Barbados" data-select2-id="24">Barbados</option>
-											<option value="Belarus" data-select2-id="25">Belarus</option>
-											<option value="Belgium" data-select2-id="26">Belgium</option>
-											<option value="Belize" data-select2-id="27">Belize</option>
-											<option value="Benin" data-select2-id="28">Benin</option>
-										</select>
+										<label class="font-normal">Vat Type</label>
+										<input class="form-control" disabled value="<?php echo empty($vat['Vat']['name']) ? 'NOT VATABLE' : $vat['Vat']['name'] . ' - ' . $vat['Vat']['percentage'] ?>">
 									</div>
 									<div class="col-md-12" data-select2-id="20">
 										<table class="table table-bordered mt-3">
 											<tbody>
 												<tr>
 													<td>P.O.S. Trans #</td>
-													<td class="text-center">---</td>
+													<td class="text-center"><?php echo !empty($vat['RcpVatable']['less_vat']) ? CakeNumber::currency($vat['RcpVatable']['less_vat']) : '---' ?></td>
 													<td>Less: VAT</td>
 												</tr>
 												<tr>
 													<td>VATable Sales</td>
-													<td class="text-center">---</td>
+													<td class="text-center"><?php echo !empty($vat['RcpVatable']['net_vat']) ? CakeNumber::currency($vat['RcpVatable']['net_vat']) : '---' ?></td>
 													<td>Net: VAT</td>
 												</tr>
 												<tr>
 													<td>VAT-Exempt</td>
-													<td class="text-center">---</td>
+													<td class="text-center"><?php echo !empty($vat['RcpVatable']['discount']) ? CakeNumber::currency($vat['RcpVatable']['discount']) : '---' ?></td>
 													<td>Less: SC/PWD Discount</td>
 												</tr>
 												<tr>
 													<td>Zero Rated</td>
-													<td class="text-center">---</td>
+													<td class="text-center"><?php echo !empty($vat['RcpVatable']['amount_due']) ? CakeNumber::currency($vat['RcpVatable']['amount_due']) : '---' ?></td>
 													<td>Amount Due</td>
 												</tr>
 												<tr>
 													<td>VAT Amount</td>
-													<td class="text-center">---</td>
+													<td class="text-center"><?php echo !empty($vat['RcpVatable']['add_vat']) ? CakeNumber::currency($vat['RcpVatable']['add_vat']) : '---' ?></td>
 													<td>Add: VAT</td>
 												</tr>
 											</tbody>

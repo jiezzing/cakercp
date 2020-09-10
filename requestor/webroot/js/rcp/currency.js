@@ -131,17 +131,54 @@ function calculateTotalAmount(selector, isChecked) {
 }
 
 function keypressToCalculate(selector, isChecked = false){
-	$(selector).on("keypress keyup paste",function (event) {
+	$(selector).on("keypress keyup copy paste",function (event) {
 		var totalAmount = calculateTotalAmount('#rcp_table > tbody > tr', isChecked);
 		var amountInwords = currencyToWords(totalAmount).substr(0, 1).toUpperCase() + "" + currencyToWords(totalAmount).substr(1).toLowerCase();
 
 		if (totalAmount > 0) {
+			if (totalAmount > 999999999999999) {
+				return toastr.error("Amount due is too large.", "Currency")
+			}
 			totalAmount = currencyWithCommas(totalAmount);
-
 			return $('#amount').text(totalAmount) && $('#amount_in_words').val(amountInwords);
 		}
 		else {
 			return $('#amount').text("0.00") && $('#amount_in_words').val("");
 		}
 	});
+}
+
+function removeCommas(amount) {
+	var currencyNoCommas = amount.replace(/\,/g,'');
+	return currencyNoCommas = Number(currencyNoCommas);
+}
+
+function calculateVat(subtotal, type, professionalFee) {
+	var netVat = subtotal / 1.12;
+	var discount = 0.00;
+
+	$('#professional-div').attr('hidden', true);
+	if (type == 1) {
+		discount = netVat * 0.01;
+	}
+	else if (type == 2) {
+		discount = netVat * 0.02;
+	}
+	else if (type == 3) {
+		discount = netVat * 0.05;
+	}
+	else {
+		$('#professional-div').attr('hidden', false);
+		discount = netVat * (professionalFee / 100);
+	}
+
+	var vatAmount = subtotal - discount;
+	var lessVat = subtotal - netVat;
+
+	return {
+		'lessVat': currencyWithCommas(lessVat),
+		'netVat': currencyWithCommas(netVat),
+		'discount': currencyWithCommas(discount),
+		'vatAmount': currencyWithCommas(vatAmount)
+	};
 }

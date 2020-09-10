@@ -50,6 +50,7 @@ function dataTable(selector, orderBy = []) {
 
 function datePicker(selector) {
 	var mem = $(selector).datepicker({
+		startDate: '-1d',
 		todayBtn: "linked",
 		keyboardNavigation: false,
 		forceParse: false,

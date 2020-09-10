@@ -19,6 +19,15 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="ibox">
+								<div class="alert alert-info">
+									Please select a department to validate if the approvers were all set.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="ibox">
 								<div class="row" data-select2-id="11">
 									<div class="col-md-3" data-select2-id="10">
 										<h5>Department</h5>
@@ -72,7 +81,7 @@
 									</div>
 									<div class="col-md-8" data-select2-id="20">
 										<h5>Amount in Words</h5>
-										<input type="text" placeholder="NO TOTAL AMOUNT DETECTED (Auto Generated)" disabled class="form-control text-center" id="amount_in_words">
+										<input type="text" placeholder="NO TOTAL AMOUNT DETECTED" disabled class="form-control text-center" id="amount_in_words">
 									</div>
 								</div>
 							</div>
@@ -130,44 +139,55 @@
 								</div>
 								<div class="ibox-content">
 									<div class="col-md-12" data-select2-id="20">
-										<select class="form-control select2-hidden-accessible chosen_select" data-select2-id="6" tabindex="-1" aria-hidden="true">
-											<option data-select2-id="8"></option>
-											<option value="Bahamas" data-select2-id="21">Bahamas</option>
-											<option value="Bahrain" data-select2-id="22">Bahrain</option>
-											<option value="Bangladesh" data-select2-id="23">Bangladesh</option>
-											<option value="Barbados" data-select2-id="24">Barbados</option>
-											<option value="Belarus" data-select2-id="25">Belarus</option>
-											<option value="Belgium" data-select2-id="26">Belgium</option>
-											<option value="Belize" data-select2-id="27">Belize</option>
-											<option value="Benin" data-select2-id="28">Benin</option>
+										<select class="form-control select2-hidden-accessible chosen_select" id="vat" data-select2-id="6" tabindex="-1" aria-hidden="true">
+												<option value="0">Select option if vatable</option>
+											<?php foreach ($vats as $vat) : ?>
+												<?php if ($vat['Vat']['id'] != 4) : ?>
+													<option id="<?php echo $vat['Vat']['id'] ?>" value="<?php echo $vat['Vat']['id'] ?>"><?php echo $vat['Vat']['name'] . ' - ' . $vat['Vat']['percentage'] . '%'?></option>
+												<?php else : ?>
+													<option id="<?php echo $vat['Vat']['id'] ?>" value="<?php echo $vat['Vat']['id'] ?>"><?php echo $vat['Vat']['name'] . ' - 0.10 to 0.15%'?></option>
+												<?php endif ?>
+											<?php endforeach ?>
 										</select>
 									</div>
-									<div class="col-md-12" data-select2-id="20">
+									<div id="professional-div" hidden>
+										<label class="col-sm-12 col-form-label">Percentage</label>
+										<div class="col-sm-12">
+											<input type="number" class="form-control" id="professional-fee">
+											<span class="form-text" id="professional-banner" hidden>
+												<div class="bg-danger p-xs b-r-sm mt-3">Professional Fee Percentage must be between 10 to 15.</div>
+											</span>
+										</div>
+									</div>
+									<div class="col-md-12 mt-3" data-select2-id="20"><div class="ibox-content ibox-heading">
+										<h4>NOTE</h4>
+										<small>1. The calculation will not take effect if there is no TOTAL AMOUNT detected.</small><br>
+									</div>
 										<table class="table table-bordered mt-3">
 											<tbody>
 												<tr>
 													<td>P.O.S. Trans #</td>
-													<td class="text-center">---</td>
+													<td class="text-center" id="less-vat">---</td>
 													<td>Less: VAT</td>
 												</tr>
 												<tr>
 													<td>VATable Sales</td>
-													<td class="text-center">---</td>
+													<td class="text-center" id="net-of-vat">---</td>
 													<td>Net: VAT</td>
 												</tr>
 												<tr>
 													<td>VAT-Exempt</td>
-													<td class="text-center">---</td>
+													<td class="text-center" id="vat-discount">---</td>
 													<td>Less: SC/PWD Discount</td>
 												</tr>
 												<tr>
 													<td>Zero Rated</td>
-													<td class="text-center">---</td>
+													<td class="text-center" id="vat-amount">---</td>
 													<td>Amount Due</td>
 												</tr>
 												<tr>
 													<td>VAT Amount</td>
-													<td class="text-center">---</td>
+													<td class="text-center" id="vat-total-amount">---</td>
 													<td>Add: VAT</td>
 												</tr>
 											</tbody>
@@ -185,7 +205,7 @@
 									<div class="form-group" id="data_1">
 										<label class="font-normal">Date</label>
 										<div class="input-group date">
-											<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" id="rush_date" class="form-control">
+											<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" id="rush_date" readonly class="form-control">
 										</div>
 									</div>
 									<div class="form-group">
@@ -199,7 +219,7 @@
 				</div>
 				<div class="ibox-footer">
 					<div class="text-right">
-						<a href="#" class="btn btn-primary" id="send_rcp_btn" url="<?php echo $this->params->webroot . "send_rcp" ?>"><i class="fa fa-send mr-2"></i> SEND REQUEST FOR CHECK PAYMENT</a>
+						<a href="<?php echo $this->params->webroot . "send_rcp" ?>" class="btn btn-primary" id="send_rcp_btn"><i class="fa fa-send mr-2"></i> SEND REQUEST FOR CHECK PAYMENT</a>
 					</div>
 				</div>
 			</div>
@@ -313,6 +333,8 @@
 				$("#rcp_table td").filter(':nth-child(5)').removeAttr('hidden');
 				$('#expense_title').text("DEPARTMENT EXPENSE");
 			}
+
+			$("#department").val(0).trigger("chosen:updated");
 		})
 
 		$(document).on('click', '.remove', function(event) {
@@ -324,8 +346,6 @@
 		$('#send_rcp_btn').on('click', function(event) {
 			event.preventDefault();
 
-			$.LoadingOverlay("show");
-
 			var checked = $('#expense_type').prop("checked");
 			var qtyArr = [];
 			var particularsArr = [];
@@ -336,7 +356,7 @@
 			var hasEmpty = false;
 
 			var data = new FormData();
-			var url = $(this).attr('url');
+			var url = $(this).attr('href');
 			var department = $('#department').val();
 			var approver = $('#approver').val();
 			var project = $('#project').val();
@@ -347,6 +367,7 @@
 			var amountInWords = $('#amount_in_words').val();
 			var dueDate = $('#rush_date').val();
 			var justification = $('#justification').val().trim();
+			var vatType = $('#vat').val();
 
 			$('#rcp_table > tbody > tr').each(function() {
 				var qty = $(this).find("td").eq(0).html();
@@ -392,7 +413,24 @@
 			data.append('amount', amountArr);
 			data.append('dueDate', dueDate);
 			data.append('justification', justification);
-			data.append('origin', window.location.origin);
+
+			if (vatType > 0) {
+				var professionalFee = $('#professional-fee').val();
+				var vat = calculateVat(removeCommas(amount), vatType, professionalFee);
+
+				data.append('isVatable', true);
+				data.append('vatType', vatType);
+				data.append('lessVat', vat['lessVat']);
+				data.append('netVat', vat['netVat']);
+				data.append('discount', vat['discount']);
+				data.append('vatAmount', vat['vatAmount']);
+				data.append('addVat', vat['vatAmount']);
+			}
+			else {
+				data.append('isVatable', false);
+			}
+
+			$.LoadingOverlay("show");
 
 			var request = $.ajax({
 				type: 'POST',
@@ -404,12 +442,16 @@
 				processData: false,
 				success: function(response) {
 					if (response.status) {
-						$("#rcp_form select").val(0).trigger("chosen:updated");
+						$("#department").val(0).trigger("chosen:updated");
+						$("#company").val(0).trigger("chosen:updated");
+						$("#project").val(0).trigger("chosen:updated");
+						$('#expense_type').prop("checked", false)
 						$.LoadingOverlay("hide");
 
 						return toastr.success(response.message, response.rcp_no)
 					}
 					else {
+						$.LoadingOverlay("hide");
 						return toastr.error(response.message, response.type)
 					}
 				},
@@ -418,5 +460,86 @@
 				}
 			})
 		})
-	});
+
+		$('#department').on('change', function(){
+			var id = $(this).val();
+			var url = $(this).attr('url');
+			var expenseType = $('#expense_title').text();
+
+			var request = $.ajax({
+				type: 'POST',
+				url: url,
+				cache: false,
+				data: {
+					id: id,
+					expenseType: expenseType
+				},
+				dataType: 'json',
+				success: function(response) {
+					if (response.status) {
+						$('#page-wrapper > div.wrapper.wrapper-content.animated > div > div > div > div.ibox-footer').attr('hidden', false);
+						return toastr.success(response.message, response.type)
+					}
+					else {
+						$('#page-wrapper > div.wrapper.wrapper-content.animated > div > div > div > div.ibox-footer').attr('hidden', true);
+						return toastr.error(response.message, response.type)
+					}
+				},
+				error: function (response, desc, exception) {
+					alert(exception);
+				}
+			})
+		})
+
+		$('#vat').on('change', function(){
+			var subtotal = removeCommas($('#amount').text());
+			var vatType = $(this).val();
+			var professionalFee = $('#professional-fee').val();
+			var vat = calculateVat(subtotal, vatType, professionalFee);
+
+			if (subtotal == 0) {
+				$(this).val(0).trigger("chosen:updated");
+				return toastr.error("No total amount detected. Please specify first all the particulars to generate total amount.", "Error")
+			}
+
+			if (vatType == 0) {
+				$('#less-vat').text('---');
+				$('#net-of-vat').text('---');
+				$('#vat-discount').text('---');
+				$('#vat-amount').text('---');
+				$('#vat-total-amount').text('---');
+			}
+			else {
+				$('#less-vat').text(vat['lessVat']);
+				$('#net-of-vat').text(vat['netVat']);
+				$('#vat-discount').text(vat['discount']);
+				$('#vat-amount').text(vat['vatAmount']);
+				$('#vat-total-amount').text(vat['vatAmount']);
+			}
+		})
+
+		$('#professional-fee').on("keypress keyup copy paste",function (event) {
+			var subtotal = removeCommas($('#amount').text());
+			var vatType = $('#vat').val();
+
+			if ($(this).val() >= 10 && $(this).val() <= 15) {
+				var vat = calculateVat(subtotal, vatType, $(this).val());
+
+				$('#less-vat').text(vat['lessVat']);
+				$('#net-of-vat').text(vat['netVat']);
+				$('#vat-discount').text(vat['discount']);
+				$('#vat-amount').text(vat['vatAmount']);
+				$('#vat-total-amount').text(vat['vatAmount']);
+				$('#professional-banner').attr('hidden', true);
+			}
+			else {
+				$('#professional-banner').attr('hidden', false);
+				$('#less-vat').text('---');
+				$('#net-of-vat').text('---');
+				$('#vat-discount').text('---');
+				$('#vat-amount').text('---');
+				$('#vat-total-amount').text('---');
+			}
+		});
+	})
 </script>

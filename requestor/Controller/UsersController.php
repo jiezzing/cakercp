@@ -14,36 +14,12 @@
 
 		public function index() {
 			if(!$this->Auth->loggedIn()) {
-                return $this->redirect($this->Auth->logoutRedirect);
+                return $this->redirect(Redirect::login());
             }
 		}
 
-		public function updatePlayerId() {
-			$this->autoRender = false;
-
-			if ($this->request->is('ajax')) {
-				$result = $this->UserAccount->updateAll(array(
-						'UserAccount.player_id' => "'{$this->request->data['playerId']}'"
-					), array(
-						'UserAccount.user_id' => $this->request->data['id']
-					)
-				);
-
-				if ($result) {
-					$message = Output::message('onesignal');
-					$response = Output::success($message);;
-				}
-				else {
-					$message = Output::message('failed');
-					$response = Output::failed($message);
-				}
-			}
-
-			return Output::response($response);
-		}
-
-		public function profile($id = null) {
-			$fields = array(
+		public function profile() {
+			$profile = $this->User->profile($this->Auth->user('id'), array(
 				'User.firstname',
 				'User.lastname',
 				'User.middle_initial',
@@ -51,11 +27,14 @@
 				'Department.name',
 				'Project.name',
 				'User.username',
-				'User.email',
-			);
-			$profile = $this->User->profile($this->Auth->user('id'), $fields);
+				'User.email'
+			));
 
 			$this->set('profile', $profile);
+		}
+
+		public function edit() {
+			$this->profile();
 		}
 
 		public function logout() {

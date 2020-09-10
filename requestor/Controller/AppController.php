@@ -28,7 +28,15 @@
 			App::uses('Email', 'Lib');
 
 			$currentYear = date('Y');
+			$user = ClassRegistry::init('User');
+
+			$profile = $user->profile($this->Auth->user('id'));
+
+			is_null($profile['User']['middle_initial']) ?
+				$name = $profile['User']['firstname'] . ' ' . $profile['User']['lastname'] :
+				$name = $profile['User']['firstname'] . ' ' . $profile['User']['middle_initial'] . '. ' . $profile['User']['lastname'];
 
 			$this->set('currentYear', $currentYear);
+			$this->set('name', $name);
 		}
 	}
