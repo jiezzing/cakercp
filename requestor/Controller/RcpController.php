@@ -56,6 +56,8 @@
 
 			$details = $this->Rcp->details($condition, 'first', $this->joinCondtion);
 
+			debug($details);
+
 			if (empty($details)) {
 				$this->layout = 'error500';
 			}
@@ -359,5 +361,16 @@
 			}
 
 			return Output::response($response);
+		}
+
+		public function preview($id = null) {
+			$condition = array(
+				'Rcp.req_id' => $this->Auth->user('id'),
+				'Rcp.id' =>  $id
+			);
+
+			$details = $this->Rcp->details($condition, 'first', $this->joinCondtion);
+
+			$this->set('details', $details);
 		}
 	}

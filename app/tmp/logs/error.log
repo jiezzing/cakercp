@@ -46625,3 +46625,75 @@ Request URL: /rcp/img/ic_launcher-playstore.ico
 Stack Trace:
 #0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2020-09-11 07:30:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/js/popper.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-11 07:30:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-14 10:20:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-14 10:36:18 Error: [MissingControllerException] Controller class SdController could not be found.
+Exception Attributes: array (
+  'class' => 'SdController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/sd/rcps
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-14 10:36:41 Error: [MissingControllerException] Controller class LgoinController could not be found.
+Exception Attributes: array (
+  'class' => 'LgoinController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/lgoin
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-14 10:36:50 Error: [MissingControllerException] Controller class AsdController could not be found.
+Exception Attributes: array (
+  'class' => 'AsdController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/asd/dashboard
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-14 14:36:26 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-16 10:53:54 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /rcp/img/ic_launcher-playstore.ico
+Stack Trace:
+#0 C:\xampp\htdocs\rcp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

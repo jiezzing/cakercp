@@ -21,7 +21,7 @@
 													<th>Created</th>
 													<th>Status</th>
 													<th>Actions</th>
-													<th>Actions</th>
+													<!-- <th>Actions</th> -->
 												</tr>
 											</thead>
 											<tbody>
@@ -49,15 +49,18 @@
 																<li class="breadcrumb-item">
 																	<a href="<?php echo $this->params->webroot . 'details/' . $rcp['Rcp']['id'] ?>" class="text-navy" value="2"><i class="fa fa-file"></i><span class="nav-label"> Details</span></a>
 																</li>
+																<li class="breadcrumb-item">
+																	<a href="<?php echo $this->params->webroot . 'preview/' . $rcp['Rcp']['id'] . '.pdf'?>" target="_blank" class="text-info" value="2"><i class="fa fa-file"></i><span class="nav-label"> Open PDF</span></a>
+																</li>
 															</ol>
 														</td>
-														<td>
+														<!-- <td>
 															<ol class="breadcrumb">
 																<li class="breadcrumb-item">
 																	<a href="#" class="text-navy delete" value="2"><i class="fa fa-file"></i><span class="nav-label"> Delete</span></a>
 																</li>
 															</ol>
-														</td>
+														</td> -->
 													</tr>
 												<?php endforeach ?>
 											</tbody>

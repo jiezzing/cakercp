@@ -11,6 +11,7 @@
 	Router::connect('/edit/*', array('controller' => 'rcp', 'action' => 'edit'));
 	Router::connect('/update_rcp', array('controller' => 'rcp', 'action' => 'updateRcp'));
 	Router::connect('/approvers', array('controller' => 'rcp', 'action' => 'approvers'));
+	Router::connect('/preview/*', array('controller' => 'rcp', 'action' => 'preview'));
 
 	// users
 	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));

@@ -7,7 +7,11 @@
 
 	class AppController extends Controller {
 		public $components = array(
-			'RequestHandler',
+			'RequestHandler' => array(
+				'viewClassMap' => array(
+					'pdf' => 'CakeTCPDF.Pdf'
+				)
+			),
 			'Session',
 			'Auth'
 		);
