@@ -53,4 +53,12 @@
 				return true;
 			}
         }
+
+		public static function hasEmpty($data = array()) {
+            foreach ($data as $value) {
+				if (empty($value)) {
+					return true;
+				}
+			}
+        }
 	}

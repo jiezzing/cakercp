@@ -20,21 +20,24 @@
 					IN+
 				</div>
 			</li>
-			<li>
+			<li class="<?php echo $this->params->controller == 'dashboard' ? "active" : "" ?>">
 				<a href="<?php echo $this->params->base . '/dashboard'?>"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
 			</li>
-			<li>
+			<li class="<?php echo $this->params->controller == 'rcp' ? "active" : "" ?>">
 				<a href="<?php echo $this->params->base . '/rcp'?>"><i class="fa fa-file"></i> <span class="nav-label">RCP</span></a>
 			</li>
-			<li>
+			<li class="<?php echo $this->params->controller == 'approvers' ? "active" : "" ?>">
+				<a href="<?php echo $this->params->base . '/approvers'?>"><i class="fa fa-th-large"></i> <span class="nav-label">Approver</span></a>
+			</li>
+			<li class="<?php echo $this->params->controller == 'departments' || $this->params->controller == 'companies' || $this->params->controller == 'projects' ? "active" : "" ?>">
 				<a href="#"><i class="fa fa-home fa-lg"></i><span class="nav-label">Organizations </span><span class="fa arrow"></span></a>
 				<ul class="nav nav-second-level collapse" aria-expanded="false">
-					<li><a href="<?php echo $this->params->base . '/departments' ?>">Departments</a></li>
-					<li><a href="<?php echo $this->params->base . '/companies' ?>">Companies</a></li>
-					<li><a href="<?php echo $this->params->base . '/projects' ?>">Projects</a></li>
+					<li class="<?php echo $this->params->controller == 'departments' ? "active" : "" ?>"><a href="<?php echo $this->params->base . '/departments' ?>">Departments</a></li>
+					<li class="<?php echo $this->params->controller == 'companies' ? "active" : "" ?>"><a href="<?php echo $this->params->base . '/companies' ?>">Companies</a></li>
+					<li class="<?php echo $this->params->controller == 'projects' ? "active" : "" ?>"><a href="<?php echo $this->params->base . '/projects' ?>">Projects</a></li>
 				</ul>
 			</li>
-			<li>
+			<li class="<?php echo $this->params->controller == 'users' ? "active" : "" ?>">
 				<a href="<?php echo $this->params->base . '/users'?>"><i class="fa fa-users"></i> <span class="nav-label">Users</span></a>
 			</li>
 		</ul>

@@ -1,3 +1,5 @@
+<?php echo $this->element('modals/company') ?>
+
 <div class="wrapper wrapper-content animated">
 	<div class="row">
 		<div class="col-lg-12">
@@ -6,7 +8,6 @@
 				<table class="table table-bordered table-hover dataTables-example">
 					<thead>
 						<tr>
-						<th><input type="checkbox" class="i-checks" name="input[]"></th>
 							<th>Code</th>
 							<th>Company</th>
 							<th>Created</th>
@@ -17,9 +18,6 @@
 					<tbody>
 						<?php foreach($companies as $company) : ?>
 							<tr class="gradeX">
-								<td>
-									<input type="checkbox" class="i-checks" name="input[]">
-								</td>
 								<td><?php echo $company['Company']['code'] ?></td>
 								<td><?php echo $company['Company']['name'] ?></td>
 								<td><?php echo $company['Company']['created'] ?></td>
@@ -46,9 +44,14 @@
 
 <script>
 	$(document).ready(function() {
-		var text = "Add Company";
+		var action = {
+			text: "Add Company",
+			action: function (e, dt, node, config) {
+				$('#add_company_modal').modal("show");
+			}
+		}
 
-		organizationTable('.table', text);
+		organizationTable('.table', action);
 		iChecks('.i-checks');
 	})
 </script>

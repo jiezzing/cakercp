@@ -269,7 +269,7 @@
 							), false);
 						}
 
-						$message = Output::message('updated');
+						$message = Output::message('updateRcp');
 						$response = Output::success($message);
 					}
 					else {

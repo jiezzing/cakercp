@@ -7,7 +7,7 @@
         public $usesTable = 'users';
 
 		public function profile($id = null, $fields = array()) {
-			$result = $this->find('first', array(
+			return $this->find('first', array(
 				'joins' => array(
 					array(
 						'alias' => 'Company',
@@ -39,8 +39,6 @@
 				),
 				'fields' => $fields
 			));
-
-			return $result;
 		}
 
 		// register new user
@@ -72,7 +70,7 @@
 
 		// login using username and password
 		public function login($data = array()) {
-			$result = $this->find('first', array(
+			return $this->find('first', array(
 					'conditions' => array(
 						'User.username' => $data['username'],
 						'User.password' => AuthComponent::password($data['password'])
@@ -82,7 +80,17 @@
 						'User.type_id'
 					)
 			));
+		}
 
-			return $result;
+		// fetch all approver users depend of the type passed in the params
+		public function approvers($typeId = null) {
+			return $this->find('all', array(
+					'conditions' => array('User.type_id' => $typeId),
+					'fields' => array(
+						'User.id',
+						'User.firstname',
+						'User.lastname'
+					)
+			));
 		}
     }

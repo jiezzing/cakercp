@@ -60,9 +60,14 @@
 
 <script>
 	$(document).ready(function() {
-		var text = "Add New User";
+		var action = {
+			text: "Add User",
+			action: function (e, dt, node, config) {
+				window.location.href = location.href + "/create";
+			}
+		}
 
-		organizationTable('.table', text);
+		organizationTable('.table', action);
 		iChecks('.i-checks');
 	})
 </script>

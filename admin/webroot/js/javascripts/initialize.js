@@ -14,7 +14,7 @@ function jsSwitch(selector, hexColor) {
 	});
 }
 
-function organizationTable(selector, text) {
+function organizationTable(selector, buttonAction = {}) {
 	$(selector).DataTable({
 		pageLength: 25,
 		bPaginate: true,
@@ -23,12 +23,21 @@ function organizationTable(selector, text) {
 		responsive: true,
 		searching: true,
 		dom: '<"html5buttons"B>lTfgitp',
-        buttons: [{
-			text: text,
-			action: function (e, dt, node, config) {
-				window.location.href = location.href + "/create";
-			}
-		}]
+        buttons: [buttonAction]
+    });
+}
+
+function dataTable(selector, orderBy = []) {
+	$(selector).DataTable({
+		pageLength: 25,
+		bPaginate: true,
+		info: true,
+		ordering: true,
+		responsive: true,
+		order: [orderBy],
+		searching: true,
+		dom: '<"html5buttons"B>lTfgitp',
+		buttons: []
     });
 }
 

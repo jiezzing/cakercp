@@ -47,7 +47,7 @@
 				array_push($joinArray, $pushJoinCondition);
 			}
 
-			$result = $this->find($query, array(
+			return $this->find($query, array(
 				'joins' => $joinArray,
 				'conditions' => $conditions,
 				'fields' => array(
@@ -73,12 +73,10 @@
 					'Status.name',
 				)
 			));
-
-			return $result;
 		}
 
 		public function particulars($id = null) {
-			$result = $this->find('all', array(
+			return $this->find('all', array(
 				'joins' => array(
 					array(
 						'alias' => 'RcpParticular',
@@ -101,13 +99,11 @@
 					'RcpParticular.amount',
 				)
 			));
-
-			return $result;
 		}
 
 		// requestor rcp rush
 		public function rush($id = null) {
-			$result = $this->find('first', array(
+			return $this->find('first', array(
 				'joins' => array(
 					array(
 						'alias' => 'RcpRush',
@@ -127,8 +123,6 @@
 					'RcpRush.supporting_file'
 				)
 			));
-
-			return $result;
 		}
 
 		public function store($data = array()) {
